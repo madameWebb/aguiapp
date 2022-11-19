@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_registro" xml:lang="es">
+<title>Referencia de la Clase Registro</title>
+<indexterm><primary>Registro</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos estáticos    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">devolverDatos</link> ($preparada, $consulta)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_registro_1aae89645791b5bd4bcc53d1c848581fbb">operarCommit</link> ($preparada, $consulta)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_registro_1acb747799e31d48a44ed3ef7dfa157ad5">operarCommitDoble</link> ($preparada, $preparadaP, $consulta, $consultaP)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_registro_1a55d9773271a0d729e41b359810cfbed0">buscarInvitado</link> ($usuario, $mail)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_registro_1a2d35583dbaa4ad155253a54bbea69b1e">insertarInvitado</link> ($consulta, $consultaP)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7">verificarClave</link> ($consulta, $clave)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_registro_1a13be3667d2ba06febbac356fdd724855">devolverUsuario</link> ($tabla, $tipoLogin, $consulta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</formalpara>
+<formalpara><title>Ver también</title>
+
+<para>class <link linkend="_class_persona">Persona</link> </para>
+
+<para>class <link linkend="_class_torreta">Torreta</link> </para>
+
+<para>class <link linkend="_class_validar">Validar</link> Clase estática que recoge las funciones de registro de usuarios y especies </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00025">25</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_registro_1a55d9773271a0d729e41b359810cfbed0"/><section>
+    <title>buscarInvitado()</title>
+<indexterm><primary>buscarInvitado</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>buscarInvitado</secondary></indexterm>
+<para><computeroutput>static buscarInvitado ( $usuario,  $mail)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Función de acceso público, comprueba si existe el usuario en la tabla &apos;usuarios&apos; a través del usuario y el mail, los cuales han de ser únicos. Comunica si el usuario o el mail están en uso con un mensaje y devuelve una excepción si se produce algún error.</para>
+
+<para>****Solo se usa para registrar invitados</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$usuario</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$mail</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00147">147</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+Gráfico de llamadas para esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dc8/class_registro_a55d9773271a0d729e41b359810cfbed0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522"/><section>
+    <title>devolverDatos()</title>
+<indexterm><primary>devolverDatos</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>devolverDatos</secondary></indexterm>
+<para><computeroutput>static devolverDatos ( $preparada,  $consulta)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Busca y devuelve los datos que se le piden a la bbdd</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$preparada</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$consulta</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean | array false si no se puede realizar la operación o un array con los datos </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00050">50</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+Gráfico de llamadas a esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dc8/class_registro_a28d5a0c3fe3a9478cfee8132c5c9e522_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_registro_1a13be3667d2ba06febbac356fdd724855"/><section>
+    <title>devolverUsuario()</title>
+<indexterm><primary>devolverUsuario</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>devolverUsuario</secondary></indexterm>
+<para><computeroutput>static devolverUsuario ( $tabla,  $tipoLogin,  $consulta)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Función para crear un objeto con los datos rescatados de la BBDD</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$tabla</entry><entry>
+<para>en la que buscar los datos (&apos;biologos&apos; o &apos;invitados&apos;) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$tipoLogin</entry><entry>
+<para>indica si es &apos;dni&apos;, &apos;mail&apos; o &apos;usuario&apos; </para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$consulta</entry><entry>
+<para>el dato a consultar</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean|\Biologo|\Invitado falso o el objeto creado </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00244">244</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+Gráfico de llamadas para esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dc8/class_registro_a13be3667d2ba06febbac356fdd724855_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Gráfico de llamadas a esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dc8/class_registro_a13be3667d2ba06febbac356fdd724855_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_registro_1a2d35583dbaa4ad155253a54bbea69b1e"/><section>
+    <title>insertarInvitado()</title>
+<indexterm><primary>insertarInvitado</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>insertarInvitado</secondary></indexterm>
+<para><computeroutput>static insertarInvitado ( $consulta,  $consultaP)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>****Solo se usa para registrar invitados Tiene que sacar el id del invitado y el commit tiene que ser completo</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>array</entry><entry>$consulta</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$consultaP</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00167">167</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+</section>
+<anchor xml:id="_class_registro_1aae89645791b5bd4bcc53d1c848581fbb"/><section>
+    <title>operarCommit()</title>
+<indexterm><primary>operarCommit</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>operarCommit</secondary></indexterm>
+<para><computeroutput>static operarCommit ( $preparada,  $consulta)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Realiza diversas operaciones(insert, select, update) sobre una tabla.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$preparada</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$consulta</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean verdadero o falso según se complete o no la operación </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00073">73</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+</section>
+<anchor xml:id="_class_registro_1acb747799e31d48a44ed3ef7dfa157ad5"/><section>
+    <title>operarCommitDoble()</title>
+<indexterm><primary>operarCommitDoble</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>operarCommitDoble</secondary></indexterm>
+<para><computeroutput>static operarCommitDoble ( $preparada,  $preparadaP,  $consulta,  $consultaP)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Realiza diversas operaciones(insert, select, update) sobre la base de datos. Actúa sobre dos tablas relacionadas, biologos y personas, invitados y personas, especimenes y especies...</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$preparada</entry><entry>
+<para>la select a llevar a cabo en la primera tabla </para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$preparadaP</entry><entry>
+<para>la select a llevar a cabo en la segunda tabla </para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$consulta</entry><entry>
+<para>la consulta sobre la select en la primera tabla </para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$consultaP</entry><entry>
+<para>la consulta sobre la select en la segunda tabla</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean verdadero o falso según se complete o no la operación </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00106">106</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+</section>
+<anchor xml:id="_class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7"/><section>
+    <title>verificarClave()</title>
+<indexterm><primary>verificarClave</primary><secondary>Registro</secondary></indexterm>
+<indexterm><primary>Registro</primary><secondary>verificarClave</secondary></indexterm>
+<para><computeroutput>static verificarClave ( $consulta,  $clave)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Función para verificar si la clave introducida corresponde con el usuario introducido</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$consulta</entry><entry>
+<para>puede ser mail, dni o nombre de usuario </para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$clave</entry><entry>
+<para>de acceso al sitio web</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>boolean si la contraseña es correcta o falsa </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__registro_8php_source_1l00202">202</link> del archivo <link linkend="__registro_8php_source">Registro.php</link>.</para>
+Gráfico de llamadas para esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dc8/class_registro_a0fe9616fbc1399e34e0b429ce50e23f7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Gráfico de llamadas a esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dc8/class_registro_a0fe9616fbc1399e34e0b429ce50e23f7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/<link linkend="__registro_8php">Registro.php</link></section>
+</section>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8c6319639ed28b9831044e73ac5ec164" xml:lang="es">
+<title>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona</title>
+<indexterm><primary>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona</primary></indexterm>
+Gráfico de dependencias de directorios para persona:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8c6319639ed28b9831044e73ac5ec164_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__biologo_8php">Biologo.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__invitado_8php">Invitado.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__persona_8php">Persona.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

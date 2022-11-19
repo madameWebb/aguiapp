@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_torreta" xml:lang="es">
+<title>Referencia de la Clase Torreta</title>
+<indexterm><primary>Torreta</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_torreta_1a39ec8b69cdf0d370a28a3b252e17cc79">getIdTorreta</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a93ba7aea38db5233bb5445bf9f6918b1">getChip</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a9e3ea400ed1304ea376e3d8dda881a9f">getFechasEntrada</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a6cb673a9893c891305fa03f460f100fd">getFechasSalida</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a03c1a29603dd7c9f4ed12172b667bb7b">agregarFechaEntrada</link> ($fecha)</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a99d7baf88e389297b60ca2a768b0d4b4">agregarFechaSalida</link> ($fecha)</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a55b697261a342768891b7650bd8668c6">recogerChip</link> ($chip)</para>
+</listitem>
+            <listitem><para><link linkend="_class_torreta_1a3072bd4e19a202ea45a4c6b3bb648fb5">identificarTorreta</link> ($idTorreta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</formalpara>
+<formalpara><title>Ver también</title>
+
+<para>class Especimen </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00016">16</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_torreta_1a03c1a29603dd7c9f4ed12172b667bb7b"/><section>
+    <title>agregarFechaEntrada()</title>
+<indexterm><primary>agregarFechaEntrada</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>agregarFechaEntrada</secondary></indexterm>
+<para><computeroutput>agregarFechaEntrada ( $fecha)</computeroutput></para>
+<para>Agrega una fecha de entrada al array de fechas de entrada</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$fecha</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00072">72</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a99d7baf88e389297b60ca2a768b0d4b4"/><section>
+    <title>agregarFechaSalida()</title>
+<indexterm><primary>agregarFechaSalida</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>agregarFechaSalida</secondary></indexterm>
+<para><computeroutput>agregarFechaSalida ( $fecha)</computeroutput></para>
+<para>Agrega una fecha de salida al array de fechas de salida</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$fecha</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00082">82</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a93ba7aea38db5233bb5445bf9f6918b1"/><section>
+    <title>getChip()</title>
+<indexterm><primary>getChip</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>getChip</secondary></indexterm>
+<para><computeroutput>getChip ( )</computeroutput></para>
+<para>Muestra el número de registro del especimen</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00046">46</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a9e3ea400ed1304ea376e3d8dda881a9f"/><section>
+    <title>getFechasEntrada()</title>
+<indexterm><primary>getFechasEntrada</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>getFechasEntrada</secondary></indexterm>
+<para><computeroutput>getFechasEntrada ( )</computeroutput></para>
+<para>Muestra el registro de las fechas de entrada del especimen</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00054">54</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a6cb673a9893c891305fa03f460f100fd"/><section>
+    <title>getFechasSalida()</title>
+<indexterm><primary>getFechasSalida</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>getFechasSalida</secondary></indexterm>
+<para><computeroutput>getFechasSalida ( )</computeroutput></para>
+<para>Muestra el registro de las fechas de salida del especimen</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00062">62</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a39ec8b69cdf0d370a28a3b252e17cc79"/><section>
+    <title>getIdTorreta()</title>
+<indexterm><primary>getIdTorreta</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>getIdTorreta</secondary></indexterm>
+<para><computeroutput>getIdTorreta ( )</computeroutput></para>
+<para>Muestra el id de la <link linkend="_class_torreta">Torreta</link></para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00038">38</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a3072bd4e19a202ea45a4c6b3bb648fb5"/><section>
+    <title>identificarTorreta()</title>
+<indexterm><primary>identificarTorreta</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>identificarTorreta</secondary></indexterm>
+<para><computeroutput>identificarTorreta ( $idTorreta)</computeroutput></para>
+<para>Identifica la <link linkend="_class_torreta">Torreta</link> en uso</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$idTorreta</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00102">102</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<anchor xml:id="_class_torreta_1a55b697261a342768891b7650bd8668c6"/><section>
+    <title>recogerChip()</title>
+<indexterm><primary>recogerChip</primary><secondary>Torreta</secondary></indexterm>
+<indexterm><primary>Torreta</primary><secondary>recogerChip</secondary></indexterm>
+<para><computeroutput>recogerChip ( $chip)</computeroutput></para>
+<para>Recoge el número de registro de un especimen</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$fecha</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__torreta_8php_source_1l00092">92</link> del archivo <link linkend="__torreta_8php_source">Torreta.php</link>.</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/<link linkend="__torreta_8php">Torreta.php</link></section>
+</section>

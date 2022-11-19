@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__persona_8php_source" xml:lang="es">
+<title>Persona.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__persona_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__persona_8php_source_1l00002"/>00002 
+<anchor xml:id="__persona_8php_source_1l00013"/>00013 require&#32;<emphasis role="stringliteral">&apos;clasesPHP/persona/Biologo.php&apos;</emphasis>;
+<anchor xml:id="__persona_8php_source_1l00017"/>00017 require&#32;<emphasis role="stringliteral">&apos;clasesPHP/persona/Invitado.php&apos;</emphasis>;
+<anchor xml:id="__persona_8php_source_1l00021"/><link linkend="_class_persona">00021</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_persona">Persona</link>{
+<anchor xml:id="__persona_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$nombreApellido;
+<anchor xml:id="__persona_8php_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$dni;
+<anchor xml:id="__persona_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$mail;
+<anchor xml:id="__persona_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$telefono;
+<anchor xml:id="__persona_8php_source_1l00048"/><link linkend="_class_persona_1a8ea2a892653f4a90b68682905c97965f">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1a8ea2a892653f4a90b68682905c97965f">__construct</link>($nombreApellido,&#32;$dni,&#32;$mail,&#32;$telefono)&#32;{
+<anchor xml:id="__persona_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;nombreApellido&#32;=&#32;$nombreApellido;
+<anchor xml:id="__persona_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dni&#32;=&#32;$dni;
+<anchor xml:id="__persona_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;mail&#32;=&#32;$mail;
+<anchor xml:id="__persona_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;telefono&#32;=&#32;$telefono;
+<anchor xml:id="__persona_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00059"/><link linkend="_class_persona_1ae2d57a823882316c4e3c66c58b950e69">00059</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ae2d57a823882316c4e3c66c58b950e69">getNombreApellido</link>()&#32;{
+<anchor xml:id="__persona_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;nombreApellido;
+<anchor xml:id="__persona_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00067"/><link linkend="_class_persona_1a7174a173fa25c24567751085fd41e74a">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1a7174a173fa25c24567751085fd41e74a">getDni</link>()&#32;{
+<anchor xml:id="__persona_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;dni;
+<anchor xml:id="__persona_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00075"/><link linkend="_class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba">00075</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba">getMail</link>()&#32;{
+<anchor xml:id="__persona_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;mail;
+<anchor xml:id="__persona_8php_source_1l00077"/>00077 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00083"/><link linkend="_class_persona_1a5dc8566458b8859d2c6fba633adf726e">00083</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1a5dc8566458b8859d2c6fba633adf726e">getTelefono</link>()&#32;{
+<anchor xml:id="__persona_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;telefono;
+<anchor xml:id="__persona_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00093"/><link linkend="_class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7">00093</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7">setNombreApellido</link>($nombreApellido)&#32;{
+<anchor xml:id="__persona_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;nombreApellido&#32;=&#32;$nombreApellido;
+<anchor xml:id="__persona_8php_source_1l00095"/>00095 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00103"/><link linkend="_class_persona_1ad48eec89c13b763a71956306f8bb3d1d">00103</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ad48eec89c13b763a71956306f8bb3d1d">setDni</link>($dni)&#32;{
+<anchor xml:id="__persona_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dni&#32;=&#32;$dni;
+<anchor xml:id="__persona_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00113"/><link linkend="_class_persona_1ad29599d95c9acdfa9966234fe761bf21">00113</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ad29599d95c9acdfa9966234fe761bf21">setMail</link>($mail)&#32;{
+<anchor xml:id="__persona_8php_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;mail&#32;=&#32;$mail;
+<anchor xml:id="__persona_8php_source_1l00115"/>00115 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00123"/><link linkend="_class_persona_1a3265463c162b7031c5f0a0592a35d9cf">00123</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1a3265463c162b7031c5f0a0592a35d9cf">setTelefono</link>($telefono)&#32;{
+<anchor xml:id="__persona_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;telefono&#32;=&#32;$telefono;
+<anchor xml:id="__persona_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00131"/><link linkend="_class_persona_1ada450b5eb68e37ce0022cbe40987fb3d">00131</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</link>(){
+<anchor xml:id="__persona_8php_source_1l00132"/>00132 &#32;&#32;&#32;&#32;?&gt;
+<anchor xml:id="__persona_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;nombre&quot;</emphasis>/&gt;Nombre:&#32;
+<anchor xml:id="__persona_8php_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;text&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;nombre&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;$this-&gt;nombreApellido;?&gt;&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;off&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__persona_8php_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;dni&quot;</emphasis>/&gt;NIF:&#32;&#32;&lt;?php&#32;echo&#32;$this-&gt;dni;?&gt;&#32;
+<anchor xml:id="__persona_8php_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;mail&quot;</emphasis>/&gt;Mail:&#32;
+<anchor xml:id="__persona_8php_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;text&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;mail&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;$this-&gt;mail;?&gt;&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;off&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__persona_8php_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;telefono&quot;</emphasis>/&gt;Teléfono:&#32;
+<anchor xml:id="__persona_8php_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;text&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;telefono&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;$this-&gt;telefono;?&gt;&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;off&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__persona_8php_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&lt;?php&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__persona_8php_source_1l00141"/>00141 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00147"/><link linkend="_class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2">00147</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</link>(){
+<anchor xml:id="__persona_8php_source_1l00148"/>00148 &#32;&#32;&#32;&#32;?&gt;
+<anchor xml:id="__persona_8php_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;table&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;tablaP&quot;</emphasis>&gt;
+<anchor xml:id="__persona_8php_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tbody&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;tbodyP&quot;</emphasis>&gt;
+<anchor xml:id="__persona_8php_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__persona_8php_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Nombre:&#32;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;nombreApellido;?&gt;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__persona_8php_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__persona_8php_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;NIF:&#32;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;dni;?&gt;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__persona_8php_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__persona_8php_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Email:&#32;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;mail;?&gt;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__persona_8php_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__persona_8php_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Teléfono:&#32;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;telefono;?&gt;&lt;/td&gt;
+<anchor xml:id="__persona_8php_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__persona_8php_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tbody&gt;
+<anchor xml:id="__persona_8php_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/table&gt;
+<anchor xml:id="__persona_8php_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&lt;?php
+<anchor xml:id="__persona_8php_source_1l00170"/>00170 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__persona_8php_source_1l00171"/>00171 }
+<anchor xml:id="__persona_8php_source_1l00172"/>00172 ?&gt;
+</programlisting></section>

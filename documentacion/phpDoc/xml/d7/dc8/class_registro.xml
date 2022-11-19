@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d7/dc8/class_registro" kind="class" language="PHP" prot="public">
+    <compoundname>Registro</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d7/dc8/class_registro_1a96fbc82c274ea9ce45b97695eca2d567" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static establecerConexion</definition>
+        <argsstring>()</argsstring>
+        <name>establecerConexion</name>
+        <qualifiedname>Registro\establecerConexion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="31" column="29" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="31" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static devolverDatos</definition>
+        <argsstring>($preparada, $consulta)</argsstring>
+        <name>devolverDatos</name>
+        <qualifiedname>Registro\devolverDatos</qualifiedname>
+        <param>
+          <declname>$preparada</declname>
+        </param>
+        <param>
+          <declname>$consulta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Busca y devuelve los datos que se le piden a la bbdd</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$preparada</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consulta</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean | array false si no se puede realizar la operación o un array con los datos </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="50" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="50" bodyend="64"/>
+        <referencedby refid="d7/dc8/class_registro_1a55d9773271a0d729e41b359810cfbed0" compoundref="da/d2a/_registro_8php" startline="147" endline="157">buscarInvitado</referencedby>
+        <referencedby refid="d7/dc8/class_registro_1a13be3667d2ba06febbac356fdd724855" compoundref="da/d2a/_registro_8php" startline="244" endline="282">devolverUsuario</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/dc8/class_registro_1aae89645791b5bd4bcc53d1c848581fbb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static operarCommit</definition>
+        <argsstring>($preparada, $consulta)</argsstring>
+        <name>operarCommit</name>
+        <qualifiedname>Registro\operarCommit</qualifiedname>
+        <param>
+          <declname>$preparada</declname>
+        </param>
+        <param>
+          <declname>$consulta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Realiza diversas operaciones(insert, select, update) sobre una tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$preparada</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consulta</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean verdadero o falso según se complete o no la operación </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="73" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="73" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dc8/class_registro_1acb747799e31d48a44ed3ef7dfa157ad5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static operarCommitDoble</definition>
+        <argsstring>($preparada, $preparadaP, $consulta, $consultaP)</argsstring>
+        <name>operarCommitDoble</name>
+        <qualifiedname>Registro\operarCommitDoble</qualifiedname>
+        <param>
+          <declname>$preparada</declname>
+        </param>
+        <param>
+          <declname>$preparadaP</declname>
+        </param>
+        <param>
+          <declname>$consulta</declname>
+        </param>
+        <param>
+          <declname>$consultaP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Realiza diversas operaciones(insert, select, update) sobre la base de datos. Actúa sobre dos tablas relacionadas, biologos y personas, invitados y personas, especimenes y especies...</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$preparada</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la select a llevar a cabo en la primera tabla </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$preparadaP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la select a llevar a cabo en la segunda tabla </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consulta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la consulta sobre la select en la primera tabla </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consultaP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la consulta sobre la select en la segunda tabla</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean verdadero o falso según se complete o no la operación </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="106" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="106" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dc8/class_registro_1a55d9773271a0d729e41b359810cfbed0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static buscarInvitado</definition>
+        <argsstring>($usuario, $mail)</argsstring>
+        <name>buscarInvitado</name>
+        <qualifiedname>Registro\buscarInvitado</qualifiedname>
+        <param>
+          <declname>$usuario</declname>
+        </param>
+        <param>
+          <declname>$mail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Función de acceso público, comprueba si existe el usuario en la tabla &apos;usuarios&apos; a través del usuario y el mail, los cuales han de ser únicos. Comunica si el usuario o el mail están en uso con un mensaje y devuelve una excepción si se produce algún error.</para>
+<para>****Solo se usa para registrar invitados</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$mail</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="147" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="147" bodyend="157"/>
+        <references refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" compoundref="da/d2a/_registro_8php" startline="50" endline="64">devolverDatos</references>
+      </memberdef>
+      <memberdef kind="function" id="d7/dc8/class_registro_1a2d35583dbaa4ad155253a54bbea69b1e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static insertarInvitado</definition>
+        <argsstring>($consulta, $consultaP)</argsstring>
+        <name>insertarInvitado</name>
+        <qualifiedname>Registro\insertarInvitado</qualifiedname>
+        <param>
+          <declname>$consulta</declname>
+        </param>
+        <param>
+          <declname>$consultaP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>****Solo se usa para registrar invitados Tiene que sacar el id del invitado y el commit tiene que ser completo</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consulta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consultaP</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="167" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="167" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dc8/class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static verificarClave</definition>
+        <argsstring>($consulta, $clave)</argsstring>
+        <name>verificarClave</name>
+        <qualifiedname>Registro\verificarClave</qualifiedname>
+        <param>
+          <declname>$consulta</declname>
+        </param>
+        <param>
+          <declname>$clave</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Función para verificar si la clave introducida corresponde con el usuario introducido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$consulta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puede ser mail, dni o nombre de usuario </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$clave</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de acceso al sitio web</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean si la contraseña es correcta o falsa </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="202" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="202" bodyend="234"/>
+        <references refid="d3/dcd/class_validar_1a3aa59f416560da1fa48cf48aa16a356b" compoundref="d5/de0/_validar_8php" startline="81" endline="91">Validar\dni</references>
+        <references refid="d3/dcd/class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2" compoundref="d5/de0/_validar_8php" startline="98" endline="105">Validar\mail</references>
+        <references refid="d3/dcd/class_validar_1a1d0932ada0413381b868162863f89397" compoundref="d5/de0/_validar_8php" startline="48" endline="54">Validar\usuario</references>
+        <referencedby refid="d3/d1a/login_8php_1abf38aefdd61588b76917d66782f97788" compoundref="d3/d1a/login_8php" startline="24" endline="110">comprobarClave</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/dc8/class_registro_1a13be3667d2ba06febbac356fdd724855" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static devolverUsuario</definition>
+        <argsstring>($tabla, $tipoLogin, $consulta)</argsstring>
+        <name>devolverUsuario</name>
+        <qualifiedname>Registro\devolverUsuario</qualifiedname>
+        <param>
+          <declname>$tabla</declname>
+        </param>
+        <param>
+          <declname>$tipoLogin</declname>
+        </param>
+        <param>
+          <declname>$consulta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Función para crear un objeto con los datos rescatados de la BBDD</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$tabla</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>en la que buscar los datos (&apos;biologos&apos; o &apos;invitados&apos;) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$tipoLogin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indica si es &apos;dni&apos;, &apos;mail&apos; o &apos;usuario&apos; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$consulta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>el dato a consultar</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean|\Biologo|\Invitado falso o el objeto creado </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="244" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="244" bodyend="282"/>
+        <references refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" compoundref="da/d2a/_registro_8php" startline="50" endline="64">devolverDatos</references>
+        <referencedby refid="d3/d1a/login_8php_1abf38aefdd61588b76917d66782f97788" compoundref="d3/d1a/login_8php" startline="24" endline="110">comprobarClave</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</simplesect>
+<simplesect kind="see"><para>class <ref refid="d3/dfd/class_persona" kindref="compound">Persona</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>class <ref refid="d7/d69/class_torreta" kindref="compound">Torreta</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>class <ref refid="d3/dcd/class_validar" kindref="compound">Validar</ref> Clase estática que recoge las funciones de registro de usuarios y especies </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" line="25" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php" bodystart="25" bodyend="283"/>
+    <listofallmembers>
+      <member refid="d7/dc8/class_registro_1a55d9773271a0d729e41b359810cfbed0" prot="public" virt="non-virtual"><scope>Registro</scope><name>buscarInvitado</name></member>
+      <member refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" prot="public" virt="non-virtual"><scope>Registro</scope><name>devolverDatos</name></member>
+      <member refid="d7/dc8/class_registro_1a13be3667d2ba06febbac356fdd724855" prot="public" virt="non-virtual"><scope>Registro</scope><name>devolverUsuario</name></member>
+      <member refid="d7/dc8/class_registro_1a96fbc82c274ea9ce45b97695eca2d567" prot="private" virt="non-virtual"><scope>Registro</scope><name>establecerConexion</name></member>
+      <member refid="d7/dc8/class_registro_1a2d35583dbaa4ad155253a54bbea69b1e" prot="public" virt="non-virtual"><scope>Registro</scope><name>insertarInvitado</name></member>
+      <member refid="d7/dc8/class_registro_1aae89645791b5bd4bcc53d1c848581fbb" prot="public" virt="non-virtual"><scope>Registro</scope><name>operarCommit</name></member>
+      <member refid="d7/dc8/class_registro_1acb747799e31d48a44ed3ef7dfa157ad5" prot="public" virt="non-virtual"><scope>Registro</scope><name>operarCommitDoble</name></member>
+      <member refid="d7/dc8/class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7" prot="public" virt="non-virtual"><scope>Registro</scope><name>verificarClave</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="dir_5782b46b58fb37adcb3eeb68588d3901" kind="dir">
+    <compoundname>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php</compoundname>
+    <innerdir refid="dir_4db6d89cba772986c629bc69bc5a7d33">G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP</innerdir>
+    <innerfile refid="d1/d7c/comprobar_codigo_8php">comprobarCodigo.php</innerfile>
+    <innerfile refid="d3/d1a/login_8php">login.php</innerfile>
+    <innerfile refid="de/d2f/modificar_datos_01copy_8php">modificarDatos copy.php</innerfile>
+    <innerfile refid="db/dc2/modificar_datos_8php">modificarDatos.php</innerfile>
+    <innerfile refid="de/d2f/operaciones_biologos_8php">operacionesBiologos.php</innerfile>
+    <innerfile refid="d8/d52/operaciones_invitados_8php">operacionesInvitados.php</innerfile>
+    <innerfile refid="db/d96/recoger_usuario_8php">recogerUsuario.php</innerfile>
+    <innerfile refid="da/dba/redirecciones_8php">redirecciones.php</innerfile>
+    <innerfile refid="da/dc0/registrarse_8php">registrarse.php</innerfile>
+    <innerfile refid="d1/d3b/salir_8php">salir.php</innerfile>
+    <innerfile refid="d3/de5/sesion_activa_8php">sesionActiva.php</innerfile>
+    <innerfile refid="d7/d23/tiempo_8php">tiempo.php</innerfile>
+    <innerfile refid="dd/d0a/usuarios_8php">usuarios.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__validar_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php</primary></indexterm>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_validar">Validar</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

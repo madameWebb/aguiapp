@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="dir_4db6d89cba772986c629bc69bc5a7d33" kind="dir">
+    <compoundname>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP</compoundname>
+    <innerdir refid="dir_55b668912e1a6c23a65bc5d93ff36533">G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies</innerdir>
+    <innerdir refid="dir_8c6319639ed28b9831044e73ac5ec164">G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona</innerdir>
+    <innerfile refid="da/d2a/_registro_8php">Registro.php</innerfile>
+    <innerfile refid="d5/de0/_validar_8php">Validar.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/"/>
+  </compounddef>
+</doxygen>

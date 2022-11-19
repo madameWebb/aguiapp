@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Parque Ecológico: Fichero Fuente G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logoAnimado.svg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Parque Ecológico<span id="projectnumber">&#160;V18</span>
+   </div>
+   <div id="projectbrief">Aplicación webb para gestionar parques naturales</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_934f46a345653ef2b3014a1b37a162c1.html">G:</a></li><li class="navelem"><a class="el" href="../../dir_3ff98f908caf33b14b49336239d1ff31.html">xamppVZ</a></li><li class="navelem"><a class="el" href="../../dir_a5b0a9dc330cc554753250a3ba14fde6.html">htdocs</a></li><li class="navelem"><a class="el" href="../../dir_18a66ae6617e6f6f1b2daa0a4ccc1ba9.html">000_TAREA_CONJUNTA</a></li><li class="navelem"><a class="el" href="../../dir_067a06abf01e0ec94afcc856d2f72981.html">ParqueEcologicoBoostrap_V18</a></li><li class="navelem"><a class="el" href="../../dir_5782b46b58fb37adcb3eeb68588d3901.html">php</a></li><li class="navelem"><a class="el" href="../../dir_4db6d89cba772986c629bc69bc5a7d33.html">clasesPHP</a></li><li class="navelem"><a class="el" href="../../dir_55b668912e1a6c23a65bc5d93ff36533.html">especies</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Especie.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/dab/_especie_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html">   15</a></span> <span class="keyword">class </span><a class="code hl_class" href="../../da/d23/class_especie.html">Especie</a>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">private</span> $especie;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span> $reino;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span> $clase;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> $orden;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> $familia;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span> $periodoMigratorio;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">private</span> $poblacion;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#a4f24b74ec17e26731b1c3a7f6719a776">   58</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#a4f24b74ec17e26731b1c3a7f6719a776">agregarEspecie</a>($especie, $reino, $clase, $orden, $familia, $periodoMigratorio) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        $this-&gt;especie = $especie;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        $this-&gt;reino = $reino;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        $this-&gt;clase = $clase;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        $this-&gt;orden = $orden;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        $this-&gt;familia = $familia;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        $this-&gt;periodoMigratorio = $periodoMigratorio;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#ac84a8bd3cf89a32f165f6817de4f5232">   71</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#ac84a8bd3cf89a32f165f6817de4f5232">getEspecie</a>() {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> $this-&gt;especie;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#a833ba25687a77d8e5eed0573a78d62a6">   79</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#a833ba25687a77d8e5eed0573a78d62a6">getReino</a>() {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> $this-&gt;reino;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#aeba4e7bddeb1e67c0eb12b6c3a1ab47f">   87</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#aeba4e7bddeb1e67c0eb12b6c3a1ab47f">getClase</a>() {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> $this-&gt;clase;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#ab5d4a0c2716582a6d775f137c958fe3d">   95</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#ab5d4a0c2716582a6d775f137c958fe3d">getOrden</a>() {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> $this-&gt;orden;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#a37700a0e9a0a977c34b915cf6e9ce38b">  103</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#a37700a0e9a0a977c34b915cf6e9ce38b">getFamilia</a>() {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">return</span> $this-&gt;familia;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#ab8a562625ee57e974886656655fcddde">  111</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#ab8a562625ee57e974886656655fcddde">getPeriodoMigratorio</a>() {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> $this-&gt;periodoMigratorio;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#aed60a16f5fe67375aae45739f4c303a4">  119</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#aed60a16f5fe67375aae45739f4c303a4">getPoblacion</a>() {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> $this-&gt;poblacion;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#a65af7704af00f28ca302c1c26d70a634">  129</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#a65af7704af00f28ca302c1c26d70a634">setPoblacion</a>($poblacion) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        $this-&gt;poblacion = $poblacion;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#a00bb1e1275d894b016b23afcefebd9cc">  139</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#a00bb1e1275d894b016b23afcefebd9cc">sumarPoblacion</a>(){</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        $this-&gt;poblacion++;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="../../da/d23/class_especie.html#a9c51801438566f0610595b40bd71c34f">  148</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="../../da/d23/class_especie.html#a9c51801438566f0610595b40bd71c34f">restarPoblacion</a>(){</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        $this-&gt;poblacion--;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> }</div>
+<div class="ttc" id="aclass_especie_html"><div class="ttname"><a href="../../da/d23/class_especie.html">Especie</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00015">Especie.php:15</a></div></div>
+<div class="ttc" id="aclass_especie_html_a00bb1e1275d894b016b23afcefebd9cc"><div class="ttname"><a href="../../da/d23/class_especie.html#a00bb1e1275d894b016b23afcefebd9cc">Especie\sumarPoblacion</a></div><div class="ttdeci">static sumarPoblacion()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00139">Especie.php:139</a></div></div>
+<div class="ttc" id="aclass_especie_html_a37700a0e9a0a977c34b915cf6e9ce38b"><div class="ttname"><a href="../../da/d23/class_especie.html#a37700a0e9a0a977c34b915cf6e9ce38b">Especie\getFamilia</a></div><div class="ttdeci">static getFamilia()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00103">Especie.php:103</a></div></div>
+<div class="ttc" id="aclass_especie_html_a4f24b74ec17e26731b1c3a7f6719a776"><div class="ttname"><a href="../../da/d23/class_especie.html#a4f24b74ec17e26731b1c3a7f6719a776">Especie\agregarEspecie</a></div><div class="ttdeci">agregarEspecie($especie, $reino, $clase, $orden, $familia, $periodoMigratorio)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00058">Especie.php:58</a></div></div>
+<div class="ttc" id="aclass_especie_html_a65af7704af00f28ca302c1c26d70a634"><div class="ttname"><a href="../../da/d23/class_especie.html#a65af7704af00f28ca302c1c26d70a634">Especie\setPoblacion</a></div><div class="ttdeci">static setPoblacion($poblacion)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00129">Especie.php:129</a></div></div>
+<div class="ttc" id="aclass_especie_html_a833ba25687a77d8e5eed0573a78d62a6"><div class="ttname"><a href="../../da/d23/class_especie.html#a833ba25687a77d8e5eed0573a78d62a6">Especie\getReino</a></div><div class="ttdeci">static getReino()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00079">Especie.php:79</a></div></div>
+<div class="ttc" id="aclass_especie_html_a9c51801438566f0610595b40bd71c34f"><div class="ttname"><a href="../../da/d23/class_especie.html#a9c51801438566f0610595b40bd71c34f">Especie\restarPoblacion</a></div><div class="ttdeci">static restarPoblacion()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00148">Especie.php:148</a></div></div>
+<div class="ttc" id="aclass_especie_html_ab5d4a0c2716582a6d775f137c958fe3d"><div class="ttname"><a href="../../da/d23/class_especie.html#ab5d4a0c2716582a6d775f137c958fe3d">Especie\getOrden</a></div><div class="ttdeci">static getOrden()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00095">Especie.php:95</a></div></div>
+<div class="ttc" id="aclass_especie_html_ab8a562625ee57e974886656655fcddde"><div class="ttname"><a href="../../da/d23/class_especie.html#ab8a562625ee57e974886656655fcddde">Especie\getPeriodoMigratorio</a></div><div class="ttdeci">static getPeriodoMigratorio()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00111">Especie.php:111</a></div></div>
+<div class="ttc" id="aclass_especie_html_ac84a8bd3cf89a32f165f6817de4f5232"><div class="ttname"><a href="../../da/d23/class_especie.html#ac84a8bd3cf89a32f165f6817de4f5232">Especie\getEspecie</a></div><div class="ttdeci">static getEspecie()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00071">Especie.php:71</a></div></div>
+<div class="ttc" id="aclass_especie_html_aeba4e7bddeb1e67c0eb12b6c3a1ab47f"><div class="ttname"><a href="../../da/d23/class_especie.html#aeba4e7bddeb1e67c0eb12b6c3a1ab47f">Especie\getClase</a></div><div class="ttdeci">static getClase()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00087">Especie.php:87</a></div></div>
+<div class="ttc" id="aclass_especie_html_aed60a16f5fe67375aae45739f4c303a4"><div class="ttname"><a href="../../da/d23/class_especie.html#aed60a16f5fe67375aae45739f4c303a4">Especie\getPoblacion</a></div><div class="ttdeci">static getPoblacion()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dab/_especie_8php_source.html#l00119">Especie.php:119</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

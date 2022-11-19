@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usuarios_8php_source" xml:lang="es">
+<title>usuarios.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/usuarios.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="_usuarios_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="_usuarios_8php_source_1l00002"/>00002 
+<anchor xml:id="_usuarios_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;require&#32;<emphasis role="stringliteral">&apos;clasesPHP/Registro.php&apos;</emphasis>;
+<anchor xml:id="_usuarios_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;
+<anchor xml:id="_usuarios_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;session_start();
+<anchor xml:id="_usuarios_8php_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="comment">//Se&#32;comprueba&#32;si&#32;hay&#32;una&#32;sesión&#32;activa</emphasis>
+<anchor xml:id="_usuarios_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(count($_SESSION)&#32;!=&#32;0&#32;&amp;&amp;&#32;isset($_SESSION[<emphasis role="stringliteral">&apos;tipoLogin&apos;</emphasis>])){
+<anchor xml:id="_usuarios_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Se&#32;comprueba&#32;que&#32;los&#32;datos&#32;de&#32;sesión&#32;y&#32;usuario&#32;coinciden</emphasis>
+<anchor xml:id="_usuarios_8php_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($_POST[<emphasis role="stringliteral">&apos;tipoUsuario&apos;</emphasis>])&#32;&amp;&amp;&#32;isset($_SESSION[<emphasis role="stringliteral">&apos;tipoUsuario&apos;</emphasis>])&#32;&amp;&amp;&#32;
+<anchor xml:id="_usuarios_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$_POST[<emphasis role="stringliteral">&apos;tipoUsuario&apos;</emphasis>]&#32;==&#32;$_SESSION[<emphasis role="stringliteral">&apos;tipoUsuario&apos;</emphasis>]){
+<anchor xml:id="_usuarios_8php_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario&#32;=&#32;$_SESSION[<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>];
+<anchor xml:id="_usuarios_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Si&#32;existe&#32;el&#32;índice&#32;&apos;mostrar&apos;,&#32;se&#32;muestran&#32;los&#32;datos&#32;de&#32;usuario</emphasis>
+<anchor xml:id="_usuarios_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($_POST[<emphasis role="stringliteral">&apos;mostrar&apos;</emphasis>])){
+<anchor xml:id="_usuarios_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario-&gt;mostrarInformacion();
+<anchor xml:id="_usuarios_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//si&#32;existe&#32;el&#32;índice&#32;&apos;editar&apos;,&#32;se&#32;da&#32;acceso&#32;a&#32;la&#32;edición&#32;de&#32;datos</emphasis>
+<anchor xml:id="_usuarios_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($_POST[<emphasis role="stringliteral">&apos;editar&apos;</emphasis>])){
+<anchor xml:id="_usuarios_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario-&gt;editarInformacion();
+<anchor xml:id="_usuarios_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//si&#32;existe&#32;el&#32;índice&#32;&apos;eliminar&apos;,&#32;entonces&#32;se&#32;eliminan&#32;los&#32;datos&#32;de&#32;</emphasis>
+<anchor xml:id="_usuarios_8php_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//la&#32;bbdd</emphasis>
+<anchor xml:id="_usuarios_8php_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($_POST[<emphasis role="stringliteral">&apos;eliminar&apos;</emphasis>])){
+<anchor xml:id="_usuarios_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($usuario&#32;instanceof&#32;<link linkend="_class_invitado">Invitado</link>){
+<anchor xml:id="_usuarios_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$nombreUsuario&#32;=&#32;$_POST[<emphasis role="stringliteral">&apos;eliminar&apos;</emphasis>];
+<anchor xml:id="_usuarios_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$consulta[]&#32;=&#32;$nombreUsuario;
+<anchor xml:id="_usuarios_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$auxiliar&#32;=&#32;<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&quot;select&#32;id&#32;from&#32;invitados&#32;where&#32;usuario&#32;=&#32;?&quot;</emphasis>,&#32;$consulta);
+<anchor xml:id="_usuarios_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$resultado&#32;=&#32;$auxiliar;
+<anchor xml:id="_usuarios_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$idUsuario[]&#32;=&#32;$resultado[0][<emphasis role="stringliteral">&apos;id&apos;</emphasis>];
+<anchor xml:id="_usuarios_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!<link linkend="_class_registro_1acb747799e31d48a44ed3ef7dfa157ad5">Registro::operarCommitDoble</link>(<emphasis role="stringliteral">&quot;delete&#32;from&#32;invitados&#32;where&#32;usuario&#32;=&#32;?&#32;&quot;</emphasis>,&#32;
+<anchor xml:id="_usuarios_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;delete&#32;from&#32;personas&#32;where&#32;idInvitado&#32;=&#32;?&quot;</emphasis>,&#32;$consulta,&#32;$idUsuario)){
+<anchor xml:id="_usuarios_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_usuarios_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_usuarios_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;Todos&#32;tus&#32;datos&#32;han&#32;sido&#32;correctamente&#32;eliminados.&#32;&apos;</emphasis>;
+<anchor xml:id="_usuarios_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_usuarios_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;No&#32;tienes&#32;permiso&#32;para&#32;estar&#32;aquí.&#32;&apos;</emphasis>;
+<anchor xml:id="_usuarios_8php_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_usuarios_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;false&apos;</emphasis>;
+<anchor xml:id="_usuarios_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00050"/><link linkend="_usuarios_8php_1a90b41e6744dba2d09774c5ba88d0e2f8">00050</link> &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_usuarios_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;header(<emphasis role="stringliteral">&apos;Location:&#32;../php/redirecciones.php&apos;</emphasis>);
+<anchor xml:id="_usuarios_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_usuarios_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;
+</programlisting></section>

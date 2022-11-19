@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: comunes.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: comunes.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*
+ * Proyecto Parque Eocológico
+ * 
+ * @version pq-_V18
+ * @autor Virginia M. García Álvarez
+ */
+
+/**
+ * @type Invitado|Biologo
+ */
+var usuario;
+/**
+ * Es una copia del usuario cargado origina.
+ 
+ * @type Objects
+ */
+var usuarioCopia;
+/**
+ * Recoge los datos que han sido modificados por el usuario.
+ * 
+ * @type Map
+ */
+var camposModificados = new Map();
+/**
+ * Vigila los eventos click que se producen en esta página.
+ * 
+ * @param {string} usuarioTipo Invitado o Biologo
+ * 
+ * @return {undefined}
+ */
+function vigilarClickComunes(usuarioTipo){
+    document.getElementById('miCuenta').addEventListener('click', function(){
+        mostrarMiCuenta(usuarioTipo);
+        Pagina.modificarClases('miCuenta', 'navbarSupportedContent', 'show', null, 'text-light');
+        Pagina.modificarClases('coment', null, null, 'text-light', null);
+        Pagina.modificarClases('todoEspecies', null, null, 'text-light', null);
+        Pagina.escribirMigas('coment', 'todoEspecies', 'miCuenta');
+        document.getElementById('vueltaP').addEventListener('click', function(){
+            escucharVolverP();
+            cargarContenido('inicio');
+        }, false);
+    }, false);
+    document.getElementById('logo').addEventListener('click', function(){
+        Pagina.modificarClases(null, 'navbarSupportedContent', 'show');
+    }, false);
+    document.getElementById('main').addEventListener('click', function(){
+        Pagina.modificarClases(null, 'navbarSupportedContent', 'show');
+    }, false);
+    document.getElementById('informacion').addEventListener('click', function(){
+        Pagina.modificarClases(null, 'navbarSupportedContent', 'show');
+    }, false);
+    document.getElementById('principio').addEventListener('click', function(){
+        escucharVolverP();
+    }, false);
+    document.getElementById('irLogin').addEventListener('click', function(){
+        Registro.cerrarSesion();
+        Registro.reCerrarSesion('../login.html');
+    }, false);
+    document.getElementById('cerrarSesion').addEventListener('click', function(){
+        Registro.cerrarSesion();
+        Registro.reCerrarSesion('../index.html');
+    }, false);
+}
+/**
+ * Escucha el id de volver al área de usuario del breadcrumbs
+ * 
+ * @return {undefined}
+ */
+function escucharVolverP(){
+    Pagina.modificarClases('miCuenta', 'navbarSupportedContent', 'show', 'text-light', null);
+    Pagina.modificarClases('coment', null, null, 'text-light', null);
+    Pagina.modificarClases('todoEspecies', null, null, 'text-light', null);
+    Pagina.escribirMigas('coment', 'todoEspecies', 'miCuenta');
+}
+/**
+ * Crea el contenedor de datos y los muestra
+ * 
+ * @param {string} usuarioTipo Invitado o Biologo
+ * 
+ * @return {undefined}
+ */
+function mostrarMiCuenta(usuarioTipo){
+    if(Pagina.crearContenedorVariable('main', 'contenidoVariable', 'contenido')){
+        Pagina.crearTituloVariable('contenido', 'h2', 'tituloCV');
+        let madre = document.getElementById('contenido');
+        madre.getElementsByTagName('h2').item(0).appendChild(document.createTextNode
+                ('Tus datos de registro'));
+        madre.appendChild(document.createElement('div'));
+        madre.getElementsByTagName('div').item(0).setAttribute('id', 'mostrar');
+        mostrarDatosPersonales(usuarioTipo);
+    } else {
+        Pagina.crearContenedorVariable('main', 'contenido', 'contenidoVariable');
+        mostrarMiCuenta(usuarioTipo);
+    }
+}
+/**
+ * Muestra los datos personales del usuario, recibe un parámetro que
+ * indica de que clase es el usuario
+ * 
+ * @param {string} usuarioTipo Invitado o Biologo
+ * 
+ * @return {undefined}
+ */
+ function mostrarDatosPersonales(tipoUsuario){
+    let recibirDatos = new XMLHttpRequest();
+    recibirDatos.onreadystatechange = function(){
+        if(this.readyState === 4 &amp;&amp; this.status === 200){
+            let padre = document.getElementById('mostrar');
+            if(this.responseText === 'false'){
+                padre.appendChild(document.createElement('p'));
+                padre.getElementsByTagName('p').item(0).appendChild(document.
+                        createTextNode('Ha ocurrido un error, no se ha iniciado sesión'));
+                padre.getElementsByTagName('p').item(0).style.color = 'red';
+            } else {
+                usuario = Registro.cargarUsuario();
+                //Se copia al usuario. Se le asigna el objeto Objeto porque si no, lo que hace es una referencia
+                //y si cambias el valor de uno, también se modifica el valor del otro.
+                usuarioCopia = Object.assign({}, usuario);
+                padre.innerHTML = this.responseText;
+                padre.appendChild(document.createElement('input'));
+                padre.getElementsByTagName('input').
+                        item(padre.getElementsByTagName('input').length - 1).setAttribute('id', 'editar');
+                document.getElementById('editar').setAttribute('type', 'button');
+                document.getElementById('editar').setAttribute('value', 'Editar');
+                //Si el usuario es un Invitado
+                if(usuario instanceof Invitado){
+                    padre.appendChild(document.createElement('input'));
+                    padre.getElementsByTagName('input').
+                                item(padre.getElementsByTagName('input').length - 1).setAttribute('id', 'eliminar');
+                    document.getElementById('eliminar').setAttribute('type', 'button');
+                    document.getElementById('eliminar').setAttribute('value', 'Eliminar cuenta');
+                    //Se llama a esta función
+                    eliminarCuenta();
+                }
+                padre.appendChild(document.createElement('input'));
+                padre.getElementsByTagName('input').
+                            item(padre.getElementsByTagName('input').length - 1).setAttribute('id', 'cancelar');
+                document.getElementById('cancelar').setAttribute('type', 'button');
+                document.getElementById('cancelar').setAttribute('value', 'Cancelar');
+                document.getElementById('cancelar').addEventListener('click', function(){
+                    window.location. reload();
+                }, false);
+                //Se llama a esta función
+                editarDatosPersonales(tipoUsuario);
+            }
+        }
+    };
+    Registro.comunicarServidor(recibirDatos, '../php/usuarios.php', 'tipoUsuario=' + tipoUsuario + '&amp;mostrar=');
+}
+/**
+ * Permite modificar los datos del usuario. Recibe como parámetro
+ * de que tipo de usuario se trata.
+ * 
+ * @param {string} usuarioTipo Invitado o Biologo
+ * 
+ * @return {undefined}
+ */
+ function editarDatosPersonales(tipoUsuario){
+    document.getElementById('editar').addEventListener('click', function(){
+        let editaDatos = new XMLHttpRequest();
+        editaDatos.onreadystatechange = function(){
+            if(this.readyState === 4 &amp;&amp; this.status === 200){
+                let padre = document.getElementById('mostrar');
+                if(this.responseText === 'false'){
+                    padre.appendChild(document.createElement('p'));
+                    padre.getElementsByTagName('p').item(0).appendChild(document.
+                            createTextNode('Ha ocurrido un error, no se ha iniciado sesión'));
+                    padre.getElementsByTagName('p').item(0).style.color = 'red';
+                } else {
+                    padre.innerHTML = '&lt;h3>Modifica tus datos&lt;/h3>' + this.responseText;
+                    padre.appendChild(document.createElement('input'));
+                    padre.getElementsByTagName('input').
+                            item(padre.getElementsByTagName('input').length - 1).setAttribute('id', 'guardar');
+                    document.getElementById('guardar').setAttribute('type', 'button');
+                    document.getElementById('guardar').setAttribute('value', 'Guardar');
+                    padre.appendChild(document.createElement('input'));
+                    padre.getElementsByTagName('input').
+                            item(padre.getElementsByTagName('input').length - 1).setAttribute('id', 'cancelar');
+                    document.getElementById('cancelar').setAttribute('type', 'button');
+                    document.getElementById('cancelar').setAttribute('value', 'Cancelar');
+                    //Se solicita la verificación de los campos
+                    verificarCampos();
+                    //Se escucha si el usuario pulsa guardar
+                    document.getElementById('guardar').addEventListener('click', function(){
+                        verificarTodo(tipoUsuario);
+                    }, false);
+                    //O si se arrepiente
+                    document.getElementById('cancelar').addEventListener('click', function(){
+                        mostrarDatosPersonales(tipoUsuario);
+                    }, false);
+                }
+            }
+        };
+        Registro.comunicarServidor(editaDatos, '../php/usuarios.php', 'tipoUsuario=' + tipoUsuario + '&amp;editar=');
+    }, false);
+}
+/**
+ * Elimina la cuenta de usuario de cualquier usuario que no sea
+ * un Biologo.
+ * 
+ * @return {undefined}
+ */
+function eliminarCuenta(){
+    /*
+     * Comunica al servidor la cuenta de usuario que debe eliminar 
+     * @return {undefined}
+     */
+    function eliminarDatos(){
+        let eliminaDatos = new XMLHttpRequest();
+        eliminaDatos.onreadystatechange = function(){
+            if(this.readyState === 4 &amp;&amp; this.status === 200){
+                continuar(this.responseText);
+            }
+        };
+        Registro.comunicarServidor(eliminaDatos, '../php/usuarios.php', 'eliminar=' + usuario.usuario + '&amp;tipoUsuario=invitados');
+    }
+    //Se escucha el botón eliminar
+    document.getElementById('eliminar').addEventListener('click', function(){
+        //Se vuelve a comprobar que es un Invitado
+        if(usuario instanceof Invitado){
+            if(window.confirm('¿Estás seguro de eliminar tu cuenta?\nTodos tus datos serán eliminados.')){
+                //Y se pide confirmación antes de eliminar los datos
+                eliminarDatos();
+            }
+        }
+    }, false);
+}
+/**
+ * Verifica que los campos a modificar cumplan los patrones establecidos.
+ * 
+ * @return {undefined}
+ */
+function verificarCampos(){
+    document.getElementById('nombre').addEventListener('blur', function(){
+        if(!Validar.nombre(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('nombre', this.value);
+    }, false);
+    document.getElementById('mail').addEventListener('blur', function(){
+        if(!Validar.email(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('mail', this.value);
+    }, false);
+    document.getElementById('claveM').addEventListener('blur', function(){
+        if(!Validar.clave(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('claveM', this.value);
+    }, false);
+    if(usuario instanceof Biologo){
+        verificarCamposB();
+    } 
+}
+/**
+ * Verifica que los campos a modificar cumplan los patrones establecidos.
+ * 
+ * @return {undefined}
+ */
+function verificarCamposB(){
+    document.getElementById('telefono').addEventListener('blur', function(){
+        if(!Validar.telefono(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('telefono', this.value);
+    }, false);
+    document.getElementById('direccion').addEventListener('blur', function(){
+        if(!Validar.direccion(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('direccion', this.value);
+    }, false);
+    document.getElementById('provincia').addEventListener('blur', function(){
+        if(!Validar.provincia(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('provincia', this.value);
+    }, false);
+    document.getElementById('fechaTitulacion').addEventListener('blur', function(){
+        if(!Validar.fecha(this)) this.style.backgroundColor = 'pink';
+        else camposModificados.set('fechaTitulacion', this.value);
+    }, false);
+}
+/**
+ * Verifica que todos los campos a modificar sean correctos y pide confirmación
+ * para el cambio.
+ * 
+ * @return {undefined}
+ */
+function verificarTodo(tipoUsuario){
+    /**
+     * Función para crear el mensaje a mostrar en la ventana de confirmación
+     * 
+     * @return {string}
+     */
+    function crearMensaje(){
+        let mensaje = 'Vas a modificar tus datos guardados por: \n';
+            for (let [key, value] of camposModificados){
+                mensaje += '\t' + key + ': ' + value + '\n';
+            }
+        return mensaje += '¿Deseas continuar?: ';    
+    }
+    //Si el Map lleva algo
+    if(camposModificados.size !== 0){
+        if(window.confirm(crearMensaje())){
+            //Si existe el indice 'nombre' se cambia el nombre del usuario y por
+            // el del Map, si no, nombre es igual al nombre del usuario copiado
+            //Y así con todos los campos
+            let nombre = camposModificados.has('nombre') ? 
+                usuario.setNombreApellido(camposModificados.get('nombre')) : usuarioCopia.nombreApellido;
+            let mail = camposModificados.has('mail') ? usuario.setMail(camposModificados.get('mail')) : usuarioCopia.mail;
+            let claveM = camposModificados.has('claveM') ? 
+                usuario.setClaveAcceso(camposModificados.get('claveM')) : usuarioCopia.claveAcceso;
+            if(usuario instanceof Biologo){
+                let telefono = camposModificados.has('telefono') ? 
+                    usuario.setTelefono(camposModificados.get('telefono')) : usuarioCopia.telefono; 
+                let direccion = camposModificados.has('direccion') ?
+                    usuario.setDireccion(camposModificados.get('direccion')) : usuarioCopia.direccion;
+                let provincia = camposModificados.has('provincia') ? 
+                    usuario.setProvincia(camposModificados.get('provincia')) : usuarioCopia.provincia;
+                let fecha = camposModificados.has('fechaTitulacion') ? 
+                    usuario.setFechaTitulacion(camposModificados.get('fechaTitulacion')) : usuarioCopia.fechaTitulacion;
+            }
+            //Se comunican los datos
+            comunicarDatos();  
+        }  
+    //Y si no
+    } else {
+        //Se vuelve a mostrar los datos
+        mostrarDatosPersonales(tipoUsuario);
+    }
+}
+/**
+ * Comunica los datos modificados al servidor y recibe una respuesta en función 
+ * del tipo de objeto enviado
+ * 
+ * @return {undefined}
+ */
+function comunicarDatos(){
+    let tipo;
+    let datosM = JSON.stringify(usuario);
+    let comunicaDatos = new XMLHttpRequest();
+    comunicaDatos.onreadystatechange = function(){
+        if(this.readyState === 4 &amp;&amp; this.status === 200){
+            console.log(this.responseText);
+            continuar(this.responseText);
+        }
+    };
+    if(usuario instanceof Biologo) tipo = 'biologos';
+    if(usuario instanceof Invitado) tipo = 'invitados';
+    Registro.comunicarServidor(comunicaDatos, '../php/modificarDatos.php', 'datosM=' + datosM + '&amp;tipo=' + tipo);
+}
+/**
+ * Escribe el código html preciso para mostrar la respuesta del servidor.
+ * 
+ * @param {string} respuesta
+ * 
+ * @return {undefined}
+ */
+function continuar(respuesta){
+    let padre = document.getElementById('main');
+    padre.removeChild(document.getElementById('contenido'));
+    padre.appendChild(document.createElement('p'));
+    padre.getElementsByTagName('p').item(0).style.color = 'green';
+    let madre = padre.getElementsByTagName('p').item(0);
+    madre.appendChild(document.createTextNode(respuesta + ' '));
+    madre.appendChild(document.createElement('a'));
+    madre.getElementsByTagName('a').item(0).setAttribute('id', 'aqui');
+    madre.getElementsByTagName('a').item(0).setAttribute('href', '');
+    madre.getElementsByTagName('a').item(0).appendChild(document.createTextNode('Pincha aquí para continuar'));
+    madre.appendChild(document.createTextNode('. '));
+    
+    Registro.cerrarSesion();
+    
+    document.getElementById('aqui').addEventListener('click', function(){
+        window.location.href = '../login.html';
+    }, false);
+}
+/**
+ * Inicia la ejecución de la página, escuchando los links de miCuenta y 
+ * cerrarSesion
+ * 
+ * @return {undefined}
+ */
+function ejecutarPagina(){
+    Pagina.iniciarPagina();
+    let usuarioTipo = Registro.definirUsuario();
+    Pagina.escribirNoScript('primerD', 'usuarios');
+    Pagina.escribrirNav('comunes', usuarioTipo);
+    Pagina.escribirFooter();
+    Pagina.escribirModal();
+    vigilarClickComunes(usuarioTipo);
+}
+window.addEventListener('load', ejecutarPagina, false);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Biologo.html">Biologo</a></li><li><a href="Especie.html">Especie</a></li><li><a href="Especimen.html">Especimen</a></li><li><a href="Invitado.html">Invitado</a></li><li><a href="Pagina.html">Pagina</a></li><li><a href="Registro.html">Registro</a></li><li><a href="Torreta.html">Torreta</a></li><li><a href="Validar.html">Validar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#camposB">camposB</a></li><li><a href="global.html#camposModificados">camposModificados</a></li><li><a href="global.html#camposU">camposU</a></li><li><a href="global.html#cargarComentarios">cargarComentarios</a></li><li><a href="global.html#cargarContenido">cargarContenido</a></li><li><a href="global.html#cargarRegistro">cargarRegistro</a></li><li><a href="global.html#cargarUltimas">cargarUltimas</a></li><li><a href="global.html#clan">clan</a></li><li><a href="global.html#clanArray">clanArray</a></li><li><a href="global.html#comprobarCampos">comprobarCampos</a></li><li><a href="global.html#comprobarCamposB">comprobarCamposB</a></li><li><a href="global.html#comprobarCamposI">comprobarCamposI</a></li><li><a href="global.html#comprobarDatos">comprobarDatos</a></li><li><a href="global.html#comprobarFormulario">comprobarFormulario</a></li><li><a href="global.html#comunesClan">comunesClan</a></li><li><a href="global.html#comunicarDatos">comunicarDatos</a></li><li><a href="global.html#comunicarLogin">comunicarLogin</a></li><li><a href="global.html#construirCondiciones">construirCondiciones</a></li><li><a href="global.html#construirFormulario">construirFormulario</a></li><li><a href="global.html#contadorErrores">contadorErrores</a></li><li><a href="global.html#continuar">continuar</a></li><li><a href="global.html#crearBoton">crearBoton</a></li><li><a href="global.html#crearCaracImg">crearCaracImg</a></li><li><a href="global.html#crearContComentarios">crearContComentarios</a></li><li><a href="global.html#crearContenedor">crearContenedor</a></li><li><a href="global.html#crearFormularioEspecies">crearFormularioEspecies</a></li><li><a href="global.html#crearFormularioEspecimenes">crearFormularioEspecimenes</a></li><li><a href="global.html#crearFormularioInicial">crearFormularioInicial</a></li><li><a href="global.html#crearFormularios">crearFormularios</a></li><li><a href="global.html#crearSiEsTrue">crearSiEsTrue</a></li><li><a href="global.html#darAtributosForm">darAtributosForm</a></li><li><a href="global.html#definirTipoLogin">definirTipoLogin</a></li><li><a href="global.html#dirigirEnlaces">dirigirEnlaces</a></li><li><a href="global.html#editarDatosPersonales">editarDatosPersonales</a></li><li><a href="global.html#ejecutarPagina">ejecutarPagina</a></li><li><a href="global.html#eliminarCuenta">eliminarCuenta</a></li><li><a href="global.html#enviarComentario">enviarComentario</a></li><li><a href="global.html#enviarServidor">enviarServidor</a></li><li><a href="global.html#esCorrecto">esCorrecto</a></li><li><a href="global.html#escucharArrepentidos">escucharArrepentidos</a></li><li><a href="global.html#escucharComentarios">escucharComentarios</a></li><li><a href="global.html#escucharInfoTorretas">escucharInfoTorretas</a></li><li><a href="global.html#escucharModal">escucharModal</a></li><li><a href="global.html#escucharVolverP">escucharVolverP</a></li><li><a href="global.html#esIncorrecto">esIncorrecto</a></li><li><a href="global.html#guardarObjeto">guardarObjeto</a></li><li><a href="global.html#guardarValidos">guardarValidos</a></li><li><a href="global.html#hacerComentario">hacerComentario</a></li><li><a href="global.html#individuo">individuo</a></li><li><a href="global.html#individuoArray">individuoArray</a></li><li><a href="global.html#iniciar">iniciar</a></li><li><a href="global.html#iniciarLogin">iniciarLogin</a></li><li><a href="global.html#iniciarRegistro">iniciarRegistro</a></li><li><a href="global.html#llamarFormularios">llamarFormularios</a></li><li><a href="global.html#mostrarDatosPersonales">mostrarDatosPersonales</a></li><li><a href="global.html#mostrarMiCuenta">mostrarMiCuenta</a></li><li><a href="global.html#mostrarRespuesta">mostrarRespuesta</a></li><li><a href="global.html#pasarServidor">pasarServidor</a></li><li><a href="global.html#recogerCampos">recogerCampos</a></li><li><a href="global.html#recogerUsuario">recogerUsuario</a></li><li><a href="global.html#registro">registro</a></li><li><a href="global.html#sonValidosCampos">sonValidosCampos</a></li><li><a href="global.html#torreta">torreta</a></li><li><a href="global.html#torretaArray">torretaArray</a></li><li><a href="global.html#usuario">usuario</a></li><li><a href="global.html#usuarioCopia">usuarioCopia</a></li><li><a href="global.html#verificarCampos">verificarCampos</a></li><li><a href="global.html#verificarCamposB">verificarCamposB</a></li><li><a href="global.html#verificarFormulario">verificarFormulario</a></li><li><a href="global.html#verificarTodo">verificarTodo</a></li><li><a href="global.html#vigilarClickComunes">vigilarClickComunes</a></li><li><a href="global.html#vigilarClickLogin">vigilarClickLogin</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri May 20 2022 11:40:46 GMT+0200 (hora de verano de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

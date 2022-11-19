@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="dir_8c6319639ed28b9831044e73ac5ec164" kind="dir">
+    <compoundname>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona</compoundname>
+    <innerfile refid="d8/d8f/_biologo_8php">Biologo.php</innerfile>
+    <innerfile refid="dd/d88/_invitado_8php">Invitado.php</innerfile>
+    <innerfile refid="dd/d5f/_persona_8php">Persona.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/"/>
+  </compounddef>
+</doxygen>

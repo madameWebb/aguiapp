@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Parque Ecológico: Fichero Fuente G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/login.php</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logoAnimado.svg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Parque Ecológico<span id="projectnumber">&#160;V18</span>
+   </div>
+   <div id="projectbrief">Aplicación webb para gestionar parques naturales</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_934f46a345653ef2b3014a1b37a162c1.html">G:</a></li><li class="navelem"><a class="el" href="../../dir_3ff98f908caf33b14b49336239d1ff31.html">xamppVZ</a></li><li class="navelem"><a class="el" href="../../dir_a5b0a9dc330cc554753250a3ba14fde6.html">htdocs</a></li><li class="navelem"><a class="el" href="../../dir_18a66ae6617e6f6f1b2daa0a4ccc1ba9.html">000_TAREA_CONJUNTA</a></li><li class="navelem"><a class="el" href="../../dir_067a06abf01e0ec94afcc856d2f72981.html">ParqueEcologicoBoostrap_V18</a></li><li class="navelem"><a class="el" href="../../dir_5782b46b58fb37adcb3eeb68588d3901.html">php</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">login.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d1a/login_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    include <span class="stringliteral">&#39;clasesPHP/Registro.php&#39;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">//Se inicia la sesion</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    session_set_cookie_params(0);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    session_start();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d3/d1a/login_8php.html#abf38aefdd61588b76917d66782f97788">   24</a></span>    <span class="keyword">function</span> <a class="code hl_function" href="../../d3/d1a/login_8php.html#abf38aefdd61588b76917d66782f97788">comprobarClave</a>($usuario, $clave, $tipoLogin, $tipoUsuario){</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d7/dc8/class_registro.html#a0fe9616fbc1399e34e0b429ce50e23f7">Registro::verificarClave</a>($usuario, $clave)){</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            echo <span class="stringliteral">&#39;La contraseña no es correcta&#39;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            $auxReg = <a class="code hl_function" href="../../d7/dc8/class_registro.html#a13be3667d2ba06febbac356fdd724855">Registro::devolverUsuario</a>($tipoUsuario, $tipoLogin, array($usuario));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span>($auxReg){</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                $_SESSION[<span class="stringliteral">&#39;tipoLogin&#39;</span>] = $tipoLogin;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                $_SESSION[<span class="stringliteral">&#39;tipoUsuario&#39;</span>] = $tipoUsuario;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                $_SESSION[<span class="stringliteral">&#39;claveI&#39;</span>] = $clave;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                $_SESSION[<span class="stringliteral">&#39;usuario&#39;</span>] = $auxReg;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                echo <span class="stringliteral">&#39;true&#39;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">//Si existe el índice &#39;datos&#39; en el Array $_POST...</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span>(isset($_POST[<span class="stringliteral">&#39;datos&#39;</span>])){</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        $login = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        $datos = json_decode($_POST[<span class="stringliteral">&#39;datos&#39;</span>], <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        $tipoUsuario = $datos[<span class="stringliteral">&#39;tipoUsuario&#39;</span>];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        $tipoLogin = $datos[<span class="stringliteral">&#39;tipoLogin&#39;</span>];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span>(isset($datos[<span class="stringliteral">&#39;clave&#39;</span>])){</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            $claveR = <a class="code hl_function" href="../../d3/dcd/class_validar.html#ab64de9f6fe5eef644364ec51d18d909f">Validar::clave</a>($datos[<span class="stringliteral">&#39;clave&#39;</span>]);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            $claveR = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        $errores = 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">//Si el tipo de usuario es invitado, hace una cosa</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span>($tipoUsuario == <span class="stringliteral">&#39;invitados&#39;</span>){</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span>($tipoLogin == <span class="stringliteral">&#39;usuario&#39;</span>){</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                $usuario = <a class="code hl_function" href="../../d3/dcd/class_validar.html#a1d0932ada0413381b868162863f89397">Validar::usuario</a>($datos[<span class="stringliteral">&#39;usuario&#39;</span>]);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">if</span>(!$usuario){ </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    echo <span class="stringliteral">&#39;El nombre de usuario no es correcto. &#39;</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    $errores++;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>($tipoLogin == <span class="stringliteral">&#39;mail&#39;</span>){</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                $mail = <a class="code hl_function" href="../../d3/dcd/class_validar.html#a3c84d75078fbadfe7a0b4ec9a9c032e2">Validar::mail</a>($datos[<span class="stringliteral">&#39;usuario&#39;</span>]);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordflow">if</span>(!$mail){ </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    echo <span class="stringliteral">&#39;El mail de usuario no es correcto. &#39;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    $errores++;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">if</span>(!$claveR){</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                echo <span class="stringliteral">&#39;La contraseña no es correcta. &#39;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                $errores++;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span>($errores == 0){</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span>($tipoLogin == <span class="stringliteral">&#39;usuario&#39;</span>){</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="comment">//Si el usuario no está registrado ya no se comprueba la contraseña</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d7/dc8/class_registro.html#a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</a>(<span class="stringliteral">&#39;select * from invitados where usuario = ?&#39;</span>,array($usuario))){</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        echo <span class="stringliteral">&#39;El usuario no está registrado&#39;</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        <a class="code hl_function" href="../../d3/d1a/login_8php.html#abf38aefdd61588b76917d66782f97788">comprobarClave</a>($usuario, $claveR, $tipoLogin, $tipoUsuario);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>($tipoLogin == <span class="stringliteral">&#39;mail&#39;</span>){</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d7/dc8/class_registro.html#a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</a>(<span class="stringliteral">&#39;select * from invitados where mail = ?&#39;</span>, array($mail))){</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        echo <span class="stringliteral">&#39;El email no está registrado&#39;</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                        <a class="code hl_function" href="../../d3/d1a/login_8php.html#abf38aefdd61588b76917d66782f97788">comprobarClave</a>($mail, $claveR, $tipoLogin, $tipoUsuario);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                echo <span class="stringliteral">&#39;La identificación no se ha realizado correctamente&#39;</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="comment">//Si es Biólogo, hace otra</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span>($tipoUsuario == <span class="stringliteral">&#39;biologos&#39;</span>){</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            $usuario = <a class="code hl_function" href="../../d3/dcd/class_validar.html#a3aa59f416560da1fa48cf48aa16a356b">Validar::dni</a>($datos[<span class="stringliteral">&#39;usuario&#39;</span>]);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span>(!$usuario){</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                echo <span class="stringliteral">&#39;El usuario no es correcto. &#39;</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                $errores++;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">if</span>(!$claveR){</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                echo <span class="stringliteral">&#39;La contraseña no es correcta. &#39;</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                $errores++;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">if</span>($errores == 0){</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d7/dc8/class_registro.html#a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</a>(<span class="stringliteral">&#39;select * from biologos where dni = ?&#39;</span>, array($usuario))){</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    echo <span class="stringliteral">&#39;El biologo no está registrado&#39;</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    <a class="code hl_function" href="../../d3/d1a/login_8php.html#abf38aefdd61588b76917d66782f97788">comprobarClave</a>($usuario, $claveR, $tipoLogin, $tipoUsuario);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                echo <span class="stringliteral">&#39;La identificación no se ha realizado correctamente&#39;</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="ttc" id="aclass_registro_html_a0fe9616fbc1399e34e0b429ce50e23f7"><div class="ttname"><a href="../../d7/dc8/class_registro.html#a0fe9616fbc1399e34e0b429ce50e23f7">Registro\verificarClave</a></div><div class="ttdeci">static verificarClave($consulta, $clave)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/_registro_8php_source.html#l00202">Registro.php:202</a></div></div>
+<div class="ttc" id="aclass_registro_html_a13be3667d2ba06febbac356fdd724855"><div class="ttname"><a href="../../d7/dc8/class_registro.html#a13be3667d2ba06febbac356fdd724855">Registro\devolverUsuario</a></div><div class="ttdeci">static devolverUsuario($tabla, $tipoLogin, $consulta)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/_registro_8php_source.html#l00244">Registro.php:244</a></div></div>
+<div class="ttc" id="aclass_registro_html_a28d5a0c3fe3a9478cfee8132c5c9e522"><div class="ttname"><a href="../../d7/dc8/class_registro.html#a28d5a0c3fe3a9478cfee8132c5c9e522">Registro\devolverDatos</a></div><div class="ttdeci">static devolverDatos($preparada, $consulta)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/_registro_8php_source.html#l00050">Registro.php:50</a></div></div>
+<div class="ttc" id="aclass_validar_html_a1d0932ada0413381b868162863f89397"><div class="ttname"><a href="../../d3/dcd/class_validar.html#a1d0932ada0413381b868162863f89397">Validar\usuario</a></div><div class="ttdeci">static usuario($variable)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/_validar_8php_source.html#l00048">Validar.php:48</a></div></div>
+<div class="ttc" id="aclass_validar_html_a3aa59f416560da1fa48cf48aa16a356b"><div class="ttname"><a href="../../d3/dcd/class_validar.html#a3aa59f416560da1fa48cf48aa16a356b">Validar\dni</a></div><div class="ttdeci">static dni($variable)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/_validar_8php_source.html#l00081">Validar.php:81</a></div></div>
+<div class="ttc" id="aclass_validar_html_a3c84d75078fbadfe7a0b4ec9a9c032e2"><div class="ttname"><a href="../../d3/dcd/class_validar.html#a3c84d75078fbadfe7a0b4ec9a9c032e2">Validar\mail</a></div><div class="ttdeci">static mail($variable)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/_validar_8php_source.html#l00098">Validar.php:98</a></div></div>
+<div class="ttc" id="aclass_validar_html_ab64de9f6fe5eef644364ec51d18d909f"><div class="ttname"><a href="../../d3/dcd/class_validar.html#ab64de9f6fe5eef644364ec51d18d909f">Validar\clave</a></div><div class="ttdeci">static clave($variable)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/_validar_8php_source.html#l00221">Validar.php:221</a></div></div>
+<div class="ttc" id="alogin_8php_html_abf38aefdd61588b76917d66782f97788"><div class="ttname"><a href="../../d3/d1a/login_8php.html#abf38aefdd61588b76917d66782f97788">comprobarClave</a></div><div class="ttdeci">comprobarClave($usuario, $clave, $tipoLogin, $tipoUsuario)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d1a/login_8php_source.html#l00024">login.php:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

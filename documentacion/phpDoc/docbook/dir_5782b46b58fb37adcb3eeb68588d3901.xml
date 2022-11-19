@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5782b46b58fb37adcb3eeb68588d3901" xml:lang="es">
+<title>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php</title>
+<indexterm><primary>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php</primary></indexterm>
+Gráfico de dependencias de directorios para php:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_5782b46b58fb37adcb3eeb68588d3901_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_4db6d89cba772986c629bc69bc5a7d33">clasesPHP</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="_comprobar_codigo_8php">comprobarCodigo.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_login_8php">login.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_modificar_datos_01copy_8php">modificarDatos copy.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_modificar_datos_8php">modificarDatos.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_operaciones_biologos_8php">operacionesBiologos.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_operaciones_invitados_8php">operacionesInvitados.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_recoger_usuario_8php">recogerUsuario.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_redirecciones_8php">redirecciones.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_registrarse_8php">registrarse.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_salir_8php">salir.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_sesion_activa_8php">sesionActiva.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_tiempo_8php">tiempo.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="_usuarios_8php">usuarios.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

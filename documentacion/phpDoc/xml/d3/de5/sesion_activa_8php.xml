@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d3/de5/sesion_activa_8php" kind="file" language="PHP">
+    <compoundname>sesionActiva.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d3/de5/sesion_activa_8php_1a581d9e0e87bb91dd70667b7ec2d1c924" prot="public" static="no" mutable="no">
+        <type>if(count($_SESSION) !=0 &amp;&amp;array_key_exists(&apos;tipoLogin&apos;, $_SESSION))</type>
+        <definition>if (count( $_SESSION) !=0 &amp;&amp;array_key_exists( &apos;tipoLogin&apos;, $_SESSION)) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+        echo &apos;<ref refid="da/dc0/registrarse_8php_1a5df37b7f02e5cdc7d9412b7f872b8e01" kindref="member">false</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/sesionActiva.php" line="17" column="6" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/sesionActiva.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//Simplemente<sp/>comprueba<sp/>que<sp/>la<sp/>sesión<sp/>está<sp/>abierta<sp/>y<sp/>activa.si<sp/>existe<sp/>el<sp/>índice<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//usuario<sp/>es<sp/>que<sp/>hay<sp/>una<sp/>sesión<sp/>activa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">session_start();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($_SESSION)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;tipoLogin&apos;</highlight><highlight class="normal">,<sp/>$_SESSION)){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&apos;true&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17" refid="d3/de5/sesion_activa_8php_1a581d9e0e87bb91dd70667b7ec2d1c924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&apos;false&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/sesionActiva.php"/>
+  </compounddef>
+</doxygen>

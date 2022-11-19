@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__especie_8php_source" xml:lang="es">
+<title>Especie.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__especie_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__especie_8php_source_1l00002"/>00002 
+<anchor xml:id="__especie_8php_source_1l00015"/><link linkend="_class_especie">00015</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_especie">Especie</link>{
+<anchor xml:id="__especie_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$especie;
+<anchor xml:id="__especie_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$reino;
+<anchor xml:id="__especie_8php_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$clase;
+<anchor xml:id="__especie_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$orden;
+<anchor xml:id="__especie_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$familia;
+<anchor xml:id="__especie_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$periodoMigratorio;
+<anchor xml:id="__especie_8php_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$poblacion;
+<anchor xml:id="__especie_8php_source_1l00058"/><link linkend="_class_especie_1a4f24b74ec17e26731b1c3a7f6719a776">00058</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1a4f24b74ec17e26731b1c3a7f6719a776">agregarEspecie</link>($especie,&#32;$reino,&#32;$clase,&#32;$orden,&#32;$familia,&#32;$periodoMigratorio)&#32;{
+<anchor xml:id="__especie_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;especie&#32;=&#32;$especie;
+<anchor xml:id="__especie_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;reino&#32;=&#32;$reino;
+<anchor xml:id="__especie_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;clase&#32;=&#32;$clase;
+<anchor xml:id="__especie_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;orden&#32;=&#32;$orden;
+<anchor xml:id="__especie_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;familia&#32;=&#32;$familia;
+<anchor xml:id="__especie_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;periodoMigratorio&#32;=&#32;$periodoMigratorio;
+<anchor xml:id="__especie_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00071"/><link linkend="_class_especie_1ac84a8bd3cf89a32f165f6817de4f5232">00071</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1ac84a8bd3cf89a32f165f6817de4f5232">getEspecie</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;especie;
+<anchor xml:id="__especie_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00079"/><link linkend="_class_especie_1a833ba25687a77d8e5eed0573a78d62a6">00079</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1a833ba25687a77d8e5eed0573a78d62a6">getReino</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;reino;
+<anchor xml:id="__especie_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00087"/><link linkend="_class_especie_1aeba4e7bddeb1e67c0eb12b6c3a1ab47f">00087</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1aeba4e7bddeb1e67c0eb12b6c3a1ab47f">getClase</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;clase;
+<anchor xml:id="__especie_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00095"/><link linkend="_class_especie_1ab5d4a0c2716582a6d775f137c958fe3d">00095</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1ab5d4a0c2716582a6d775f137c958fe3d">getOrden</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;orden;
+<anchor xml:id="__especie_8php_source_1l00097"/>00097 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00103"/><link linkend="_class_especie_1a37700a0e9a0a977c34b915cf6e9ce38b">00103</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1a37700a0e9a0a977c34b915cf6e9ce38b">getFamilia</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;familia;
+<anchor xml:id="__especie_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00111"/><link linkend="_class_especie_1ab8a562625ee57e974886656655fcddde">00111</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1ab8a562625ee57e974886656655fcddde">getPeriodoMigratorio</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;periodoMigratorio;
+<anchor xml:id="__especie_8php_source_1l00113"/>00113 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00119"/><link linkend="_class_especie_1aed60a16f5fe67375aae45739f4c303a4">00119</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1aed60a16f5fe67375aae45739f4c303a4">getPoblacion</link>()&#32;{
+<anchor xml:id="__especie_8php_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;poblacion;
+<anchor xml:id="__especie_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00129"/><link linkend="_class_especie_1a65af7704af00f28ca302c1c26d70a634">00129</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1a65af7704af00f28ca302c1c26d70a634">setPoblacion</link>($poblacion)&#32;{
+<anchor xml:id="__especie_8php_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;poblacion&#32;=&#32;$poblacion;
+<anchor xml:id="__especie_8php_source_1l00131"/>00131 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00139"/><link linkend="_class_especie_1a00bb1e1275d894b016b23afcefebd9cc">00139</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1a00bb1e1275d894b016b23afcefebd9cc">sumarPoblacion</link>(){
+<anchor xml:id="__especie_8php_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;poblacion++;
+<anchor xml:id="__especie_8php_source_1l00141"/>00141 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00148"/><link linkend="_class_especie_1a9c51801438566f0610595b40bd71c34f">00148</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especie_1a9c51801438566f0610595b40bd71c34f">restarPoblacion</link>(){
+<anchor xml:id="__especie_8php_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;poblacion--;
+<anchor xml:id="__especie_8php_source_1l00150"/>00150 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especie_8php_source_1l00151"/>00151 &#32;}
+</programlisting></section>

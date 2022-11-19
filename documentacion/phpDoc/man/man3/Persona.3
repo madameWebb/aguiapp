@@ -1,0 +1,238 @@
+.TH "Persona" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Persona
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Heredado por \fBBiologo\fP y \fBInvitado\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($nombreApellido, $dni, $mail, $telefono)"
+.br
+.ti -1c
+.RI "\fBgetNombreApellido\fP ()"
+.br
+.ti -1c
+.RI "\fBgetDni\fP ()"
+.br
+.ti -1c
+.RI "\fBgetMail\fP ()"
+.br
+.ti -1c
+.RI "\fBgetTelefono\fP ()"
+.br
+.ti -1c
+.RI "\fBsetNombreApellido\fP ($nombreApellido)"
+.br
+.ti -1c
+.RI "\fBsetDni\fP ($dni)"
+.br
+.ti -1c
+.RI "\fBsetMail\fP ($mail)"
+.br
+.ti -1c
+.RI "\fBsetTelefono\fP ($telefono)"
+.br
+.ti -1c
+.RI "\fBeditarInformacion\fP ()"
+.br
+.ti -1c
+.RI "\fBmostrarInformacion\fP ()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Proyecto Parque Eocológico
+.PP
+\fBVersión\fP
+.RS 4
+pq-_V18 @autor Virginia M\&. García Álvarez 
+.RE
+.PP
+\fBVer también\fP
+.RS 4
+class \fBBiologo\fP 
+.PP
+class \fBInvitado\fP Clase \fBPersona\fP, para crear objetos de tipo persona 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB21\fP del archivo \fBPersona\&.php\fP\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "__construct ( $nombreApellido,  $dni,  $mail,  $telefono)"
+constructor de 4 parámetros, recibe como parámetros los datos solicitados\&.
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$nombreApellido\fP 
+.br
+\fI$dni\fP 
+.br
+\fI$mail\fP 
+.br
+\fI$telefono\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+\fBPersona\fP 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBInvitado\fP\&.
+.PP
+Definición en la línea \fB48\fP del archivo \fBPersona\&.php\fP\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "editarInformacion ()"
+Muestra un formulario para la modificación de los datos guardados
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBBiologo\fP y \fBInvitado\fP\&.
+.PP
+Definición en la línea \fB131\fP del archivo \fBPersona\&.php\fP\&.
+.SS "getDni ()"
+Muestra el NIF de la persona
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB67\fP del archivo \fBPersona\&.php\fP\&.
+.SS "getMail ()"
+Muestra el mail de la persona
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB75\fP del archivo \fBPersona\&.php\fP\&.
+.SS "getNombreApellido ()"
+Muestra el nombre y el apellido de la persona
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBInvitado\fP\&.
+.PP
+Definición en la línea \fB59\fP del archivo \fBPersona\&.php\fP\&.
+.SS "getTelefono ()"
+Muestra el teléfono de la persona
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB83\fP del archivo \fBPersona\&.php\fP\&.
+.SS "mostrarInformacion ()"
+Muestra los datos guardados por el objeto
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBBiologo\fP y \fBInvitado\fP\&.
+.PP
+Definición en la línea \fB147\fP del archivo \fBPersona\&.php\fP\&.
+.SS "setDni ( $dni)"
+Modifica el atributo dni
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$dni\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB103\fP del archivo \fBPersona\&.php\fP\&.
+.SS "setMail ( $mail)"
+Modifica el atributo mail
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$mail\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBInvitado\fP\&.
+.PP
+Definición en la línea \fB113\fP del archivo \fBPersona\&.php\fP\&.
+.SS "setNombreApellido ( $nombreApellido)"
+Modifica el atributo nombreApellido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$nombreApellido\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBInvitado\fP\&.
+.PP
+Definición en la línea \fB93\fP del archivo \fBPersona\&.php\fP\&.
+.SS "setTelefono ( $telefono)"
+Modifica el atributo teléfono
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$telefono\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB123\fP del archivo \fBPersona\&.php\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

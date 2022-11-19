@@ -1,0 +1,64 @@
+.TH "G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesBiologos.php" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesBiologos.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "\fBtratarImagenes\fP ()"
+.br
+.ti -1c
+.RI "\fBescribirRespuesta\fP ($verdadero)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "if(count($_SESSION) !=0 && $_SESSION['tipoUsuario']=='biologos') \fBelse\fP"
+.br
+.in -1c
+.SH "Documentación de las funciones"
+.PP 
+.SS "escribirRespuesta ( $verdadero)"
+Escribe la respuesta pertinente según el parámetro recibido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$verdadero\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB48\fP del archivo \fBoperacionesBiologos\&.php\fP\&.
+.SS "tratarImagenes ()"
+Función para tratar las imágenes recibidas, se guardan en una carpeta concreta y se recogen los nombres de los archivos en un archivo json
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean|string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB20\fP del archivo \fBoperacionesBiologos\&.php\fP\&.
+.SH "Documentación de las variables"
+.PP 
+.SS "if (count( $_SESSION) !=0 &&$_SESSION[ 'tipoUsuario']=='biologos') else"
+\fBValor inicial:\fP
+.PP
+.nf
+{
+        
+        header('Location: \&.\&./php/redirecciones\&.php')
+.fi
+.PP
+Definición en la línea \fB164\fP del archivo \fBoperacionesBiologos\&.php\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

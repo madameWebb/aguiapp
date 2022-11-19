@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_tiempo_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb">$apiKeyT</link> = &quot;cbc35f2e21aeb553bcc014213b8791d6&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3">$cityId</link> = &quot;3105971&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_tiempo_8php_1a08398f14660ca12324da8b31f495b96c">$googleApiUrl</link> = &quot;http://api.openweathermap.org/data/2.5/weather?id=&quot; . $cityId . &quot;&amp;lang=es&amp;units=metric&amp;APPID=&quot; . $apiKeyT</para>
+</listitem>
+            <listitem><para><link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link> = curl_init()</para>
+</listitem>
+            <listitem><para><link linkend="_tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99">$response</link> = curl_exec($ch)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb"/><section>
+    <title>$apiKeyT</title>
+<indexterm><primary>$apiKeyT</primary><secondary>tiempo.php</secondary></indexterm>
+<indexterm><primary>tiempo.php</primary><secondary>$apiKeyT</secondary></indexterm>
+<para><computeroutput>$apiKeyT = &quot;cbc35f2e21aeb553bcc014213b8791d6&quot;</computeroutput></para>
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="_tiempo_8php_source_1l00011">11</link> del archivo <link linkend="_tiempo_8php_source">tiempo.php</link>.</para>
+</section>
+<anchor xml:id="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca"/><section>
+    <title>$ch</title>
+<indexterm><primary>$ch</primary><secondary>tiempo.php</secondary></indexterm>
+<indexterm><primary>tiempo.php</primary><secondary>$ch</secondary></indexterm>
+<para><computeroutput>$ch = curl_init()</computeroutput></para><para>
+Definición en la línea <link linkend="_tiempo_8php_source_1l00016">16</link> del archivo <link linkend="_tiempo_8php_source">tiempo.php</link>.</para>
+</section>
+<anchor xml:id="_tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3"/><section>
+    <title>$cityId</title>
+<indexterm><primary>$cityId</primary><secondary>tiempo.php</secondary></indexterm>
+<indexterm><primary>tiempo.php</primary><secondary>$cityId</secondary></indexterm>
+<para><computeroutput>$cityId = &quot;3105971&quot;</computeroutput></para><para>
+Definición en la línea <link linkend="_tiempo_8php_source_1l00012">12</link> del archivo <link linkend="_tiempo_8php_source">tiempo.php</link>.</para>
+</section>
+<anchor xml:id="_tiempo_8php_1a08398f14660ca12324da8b31f495b96c"/><section>
+    <title>$googleApiUrl</title>
+<indexterm><primary>$googleApiUrl</primary><secondary>tiempo.php</secondary></indexterm>
+<indexterm><primary>tiempo.php</primary><secondary>$googleApiUrl</secondary></indexterm>
+<para><computeroutput>$googleApiUrl = &quot;http://api.openweathermap.org/data/2.5/weather?id=&quot; . $cityId . &quot;&amp;lang=es&amp;units=metric&amp;APPID=&quot; . $apiKeyT</computeroutput></para><para>
+Definición en la línea <link linkend="_tiempo_8php_source_1l00014">14</link> del archivo <link linkend="_tiempo_8php_source">tiempo.php</link>.</para>
+</section>
+<anchor xml:id="_tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99"/><section>
+    <title>$response</title>
+<indexterm><primary>$response</primary><secondary>tiempo.php</secondary></indexterm>
+<indexterm><primary>tiempo.php</primary><secondary>$response</secondary></indexterm>
+<para><computeroutput>$response = curl_exec($ch)</computeroutput></para><para>
+Definición en la línea <link linkend="_tiempo_8php_source_1l00024">24</link> del archivo <link linkend="_tiempo_8php_source">tiempo.php</link>.</para>
+</section>
+</section>
+</section>

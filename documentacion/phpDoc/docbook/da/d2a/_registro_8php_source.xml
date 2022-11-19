@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__registro_8php_source" xml:lang="es">
+<title>Registro.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Registro.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__registro_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__registro_8php_source_1l00002"/>00002 
+<anchor xml:id="__registro_8php_source_1l00013"/>00013 require&#32;<emphasis role="stringliteral">&apos;persona/Persona.php&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00017"/>00017 require&#32;<emphasis role="stringliteral">&apos;especies/Torreta.php&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00021"/>00021 require&#32;<emphasis role="stringliteral">&apos;Validar.php&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00025"/><link linkend="_class_registro">00025</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_registro">Registro</link>{
+<anchor xml:id="__registro_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__registro_8php_source_1l00027"/>00027 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;Función&#32;privada&#32;establece&#32;la&#32;conexión&#32;con&#32;la&#32;BBDD</emphasis>
+<anchor xml:id="__registro_8php_source_1l00028"/>00028 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;</emphasis>
+<anchor xml:id="__registro_8php_source_1l00029"/>00029 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;boolean</emphasis>
+<anchor xml:id="__registro_8php_source_1l00030"/>00030 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__registro_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;establecerConexion(){
+<anchor xml:id="__registro_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$cadena_conexion&#32;=&#32;<emphasis role="stringliteral">&apos;mysql:dbname=parque_ecologico;host=127.0.0.1&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$user&#32;=&#32;<emphasis role="stringliteral">&apos;root&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$clave&#32;=&#32;<emphasis role="stringliteral">&apos;&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$bd&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;PDO($cadena_conexion,&#32;$user,&#32;$clave,&#32;array(PDO::ATTR_PERSISTENT&#32;=&gt;&#32;<emphasis role="keyword">true</emphasis>));
+<anchor xml:id="__registro_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(Exception&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00050"/><link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">devolverDatos</link>($preparada,&#32;$consulta){
+<anchor xml:id="__registro_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;=&#32;Registro::establecerConexion();
+<anchor xml:id="__registro_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$devuelveDatos&#32;=&#32;$bd-&gt;prepare($preparada);
+<anchor xml:id="__registro_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result&#32;=&#32;$devuelveDatos-&gt;execute($consulta);
+<anchor xml:id="__registro_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result){
+<anchor xml:id="__registro_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$devuelveDatos-&gt;fetchAll(PDO::FETCH_ASSOC);
+<anchor xml:id="__registro_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00073"/><link linkend="_class_registro_1aae89645791b5bd4bcc53d1c848581fbb">00073</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1aae89645791b5bd4bcc53d1c848581fbb">operarCommit</link>($preparada,&#32;$consulta){
+<anchor xml:id="__registro_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;=&#32;Registro::establecerConexion();
+<anchor xml:id="__registro_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//se&#32;inicia&#32;la&#32;transacción</emphasis>
+<anchor xml:id="__registro_8php_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd-&gt;&#32;beginTransaction();
+<anchor xml:id="__registro_8php_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$tabla&#32;=&#32;$bd-&gt;prepare($preparada);
+<anchor xml:id="__registro_8php_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result&#32;=&#32;$tabla-&gt;execute($consulta);
+<anchor xml:id="__registro_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//si&#32;algo&#32;no&#32;va&#32;bien&#32;se&#32;vuelve&#32;al&#32;principio&#32;y&#32;no&#32;se&#32;lleva&#32;a&#32;cabo</emphasis>
+<anchor xml:id="__registro_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result){
+<anchor xml:id="__registro_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;rollBack();
+<anchor xml:id="__registro_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Se&#32;finaliza&#32;la&#32;operación</emphasis>
+<anchor xml:id="__registro_8php_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;commit();
+<anchor xml:id="__registro_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__registro_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00106"/><link linkend="_class_registro_1acb747799e31d48a44ed3ef7dfa157ad5">00106</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1acb747799e31d48a44ed3ef7dfa157ad5">operarCommitDoble</link>($preparada,&#32;$preparadaP,&#32;$consulta,&#32;$consultaP){
+<anchor xml:id="__registro_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;=&#32;Registro::establecerConexion();
+<anchor xml:id="__registro_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//se&#32;inicia&#32;la&#32;transacción</emphasis>
+<anchor xml:id="__registro_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd-&gt;&#32;beginTransaction();
+<anchor xml:id="__registro_8php_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$tablaPrincipal&#32;=&#32;$bd-&gt;prepare($preparada);
+<anchor xml:id="__registro_8php_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result1&#32;=&#32;$tablaPrincipal-&gt;execute($consulta);
+<anchor xml:id="__registro_8php_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//si&#32;algo&#32;no&#32;va&#32;bien&#32;se&#32;vuelve&#32;al&#32;principio&#32;y&#32;no&#32;se&#32;lleva&#32;a&#32;cabo</emphasis>
+<anchor xml:id="__registro_8php_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result1){
+<anchor xml:id="__registro_8php_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;rollBack();
+<anchor xml:id="__registro_8php_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$segundaTabla&#32;=&#32;$bd-&gt;prepare($preparadaP);
+<anchor xml:id="__registro_8php_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result2&#32;=&#32;$segundaTabla-&gt;execute($consultaP);
+<anchor xml:id="__registro_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result2){
+<anchor xml:id="__registro_8php_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;rollBack();
+<anchor xml:id="__registro_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Se&#32;finaliza&#32;la&#32;operación</emphasis>
+<anchor xml:id="__registro_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;commit();
+<anchor xml:id="__registro_8php_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00147"/><link linkend="_class_registro_1a55d9773271a0d729e41b359810cfbed0">00147</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1a55d9773271a0d729e41b359810cfbed0">buscarInvitado</link>($usuario,&#32;$mail){
+<anchor xml:id="__registro_8php_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&apos;select&#32;*&#32;from&#32;invitados&#32;where&#32;usuario&#32;=&#32;?&apos;</emphasis>,&#32;array($usuario))){
+<anchor xml:id="__registro_8php_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;usuario&#32;introducido&#32;ya&#32;está&#32;en&#32;uso&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&apos;select&#32;*&#32;from&#32;invitados&#32;where&#32;mail&#32;=&#32;?&apos;</emphasis>,&#32;array($mail))){
+<anchor xml:id="__registro_8php_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;email&#32;introducido&#32;ya&#32;está&#32;en&#32;uso&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00157"/>00157 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00167"/><link linkend="_class_registro_1a2d35583dbaa4ad155253a54bbea69b1e">00167</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1a2d35583dbaa4ad155253a54bbea69b1e">insertarInvitado</link>($consulta,&#32;$consultaP){
+<anchor xml:id="__registro_8php_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;=&#32;Registro::establecerConexion();
+<anchor xml:id="__registro_8php_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd-&gt;&#32;beginTransaction();
+<anchor xml:id="__registro_8php_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$invitado&#32;=&#32;$bd-&gt;prepare(<emphasis role="stringliteral">&apos;insert&#32;into&#32;invitados&#32;(usuario,&#32;mail,&#32;claveAcceso)&#32;values(?,&#32;?,&#32;?)&apos;</emphasis>);
+<anchor xml:id="__registro_8php_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result1&#32;=&#32;$invitado-&gt;execute($consulta);
+<anchor xml:id="__registro_8php_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result1){
+<anchor xml:id="__registro_8php_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;rollBack();
+<anchor xml:id="__registro_8php_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$consultaP[]&#32;=&#32;$bd&#32;-&gt;lastInsertId();
+<anchor xml:id="__registro_8php_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$persona&#32;=&#32;$bd-&gt;prepare(<emphasis role="stringliteral">&apos;insert&#32;into&#32;personas&#32;(nombreApellido,&#32;mail,&#32;idInvitado)&#32;values(?,&#32;?,&#32;?)&apos;</emphasis>);
+<anchor xml:id="__registro_8php_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result2&#32;=&#32;$persona-&gt;execute($consultaP);
+<anchor xml:id="__registro_8php_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result2){
+<anchor xml:id="__registro_8php_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;rollBack();
+<anchor xml:id="__registro_8php_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;-&gt;commit();
+<anchor xml:id="__registro_8php_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00192"/>00192 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00202"/><link linkend="_class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7">00202</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7">verificarClave</link>($consulta,&#32;$clave){
+<anchor xml:id="__registro_8php_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_validar_1a3aa59f416560da1fa48cf48aa16a356b">Validar::dni</link>($consulta)){
+<anchor xml:id="__registro_8php_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$preparada&#32;=&#32;<emphasis role="stringliteral">&apos;select&#32;claveAcceso&#32;from&#32;biologos&#32;where&#32;dni&#32;=&#32;?&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2">Validar::mail</link>($consulta)){
+<anchor xml:id="__registro_8php_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$preparada&#32;=&#32;<emphasis role="stringliteral">&apos;select&#32;claveAcceso&#32;from&#32;invitados&#32;where&#32;mail&#32;=&#32;?&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_validar_1a1d0932ada0413381b868162863f89397">Validar::usuario</link>($consulta)){
+<anchor xml:id="__registro_8php_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$preparada&#32;=&#32;<emphasis role="stringliteral">&apos;select&#32;claveAcceso&#32;from&#32;invitados&#32;where&#32;usuario&#32;=&#32;?&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;No&#32;se&#32;ha&#32;podido&#32;validar&#32;el&#32;dato.&#32;&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$bd&#32;=&#32;Registro::establecerConexion();
+<anchor xml:id="__registro_8php_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$buscarUsuario&#32;=&#32;$bd-&gt;prepare($preparada);
+<anchor xml:id="__registro_8php_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$result&#32;=&#32;$buscarUsuario-&gt;execute(array($consulta));
+<anchor xml:id="__registro_8php_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($buscarUsuario-&gt;rowCount()&#32;==&#32;1){
+<anchor xml:id="__registro_8php_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;($buscarUsuario&#32;as&#32;$usuario)&#32;{
+<anchor xml:id="__registro_8php_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(password_verify($clave,&#32;$usuario[<emphasis role="stringliteral">&apos;claveAcceso&apos;</emphasis>]))&#32;{
+<anchor xml:id="__registro_8php_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!$result){
+<anchor xml:id="__registro_8php_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print_r($bd-&gt;errorInfo());
+<anchor xml:id="__registro_8php_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00234"/>00234 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00244"/><link linkend="_class_registro_1a13be3667d2ba06febbac356fdd724855">00244</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_registro_1a13be3667d2ba06febbac356fdd724855">devolverUsuario</link>($tabla,&#32;$tipoLogin,&#32;$consulta){
+<anchor xml:id="__registro_8php_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__registro_8php_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Guarda&#32;los&#32;datos&#32;devueltos&#32;en&#32;la&#32;consulta</emphasis>
+<anchor xml:id="__registro_8php_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$datos&#32;=&#32;<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&quot;select&#32;*&#32;from&#32;$tabla&#32;where&#32;$tipoLogin&#32;=&#32;BINARY&#32;?&quot;</emphasis>,&#32;$consulta);
+<anchor xml:id="__registro_8php_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//si&#32;no&#32;hay&#32;datos,&#32;devuelve&#32;false</emphasis>
+<anchor xml:id="__registro_8php_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$datos){
+<anchor xml:id="__registro_8php_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;No&#32;hay&#32;datos,&#32;el&#32;usuario&#32;no&#32;está&#32;registrado.&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//si&#32;el&#32;se&#32;tipoLogin&#32;es&#32;un&#32;usuario&#32;o&#32;mail,&#32;es&#32;un&#32;invitado,&#32;se&#32;busca&#32;</emphasis>
+<anchor xml:id="__registro_8php_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//en&#32;la&#32;tabla&#32;persona&#32;por&#32;el&#32;idInviatos,&#32;ya&#32;que&#32;el&#32;campo&#32;usuario</emphasis>
+<anchor xml:id="__registro_8php_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//no&#32;existe&#32;en&#32;esa&#32;tabla&#32;y&#32;el&#32;mail&#32;tampoco&#32;es&#32;único&#32;en&#32;ella.</emphasis>
+<anchor xml:id="__registro_8php_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>&#32;||&#32;$tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;mail&apos;</emphasis>){
+<anchor xml:id="__registro_8php_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$auxiliarInvitado[]&#32;=&#32;$datos[0][<emphasis role="stringliteral">&apos;id&apos;</emphasis>];
+<anchor xml:id="__registro_8php_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$persona&#32;=&#32;<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&quot;select&#32;*&#32;from&#32;personas&#32;where&#32;idInvitado&#32;=&#32;?&quot;</emphasis>,&#32;$auxiliarInvitado);
+<anchor xml:id="__registro_8php_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$persona){
+<anchor xml:id="__registro_8php_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Si&#32;no&#32;hay&#32;persona,&#32;no&#32;hay&#32;usuario,&#32;devuelve&#32;false,&#32;porque&#32;no&#32;está&#32;registrado</emphasis>
+<anchor xml:id="__registro_8php_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;No&#32;hay&#32;persona&#32;invitado&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_invitado">Invitado</link>($datos[0][<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>],&#32;$persona[0][<emphasis role="stringliteral">&apos;nombreApellido&apos;</emphasis>],&#32;$persona[0][<emphasis role="stringliteral">&apos;mail&apos;</emphasis>],&#32;$datos[0][<emphasis role="stringliteral">&apos;claveAcceso&apos;</emphasis>]);
+<anchor xml:id="__registro_8php_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="__registro_8php_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;dni&apos;</emphasis>){
+<anchor xml:id="__registro_8php_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$auxiliarBiologo[]&#32;=&#32;$datos[0][<emphasis role="stringliteral">&apos;dni&apos;</emphasis>];
+<anchor xml:id="__registro_8php_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$persona&#32;=&#32;<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&quot;select&#32;*&#32;from&#32;personas&#32;where&#32;dni&#32;=&#32;?&quot;</emphasis>,&#32;$auxiliarBiologo);
+<anchor xml:id="__registro_8php_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$persona){
+<anchor xml:id="__registro_8php_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;No&#32;hay&#32;persona&#32;biologo&apos;</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_biologo">Biologo</link>($persona[0][<emphasis role="stringliteral">&apos;nombreApellido&apos;</emphasis>],&#32;$persona[0][<emphasis role="stringliteral">&apos;dni&apos;</emphasis>],&#32;
+<anchor xml:id="__registro_8php_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$datos[0][<emphasis role="stringliteral">&apos;fechaTitulacion&apos;</emphasis>],&#32;$datos[0][<emphasis role="stringliteral">&apos;direccion&apos;</emphasis>],&#32;$datos[0][<emphasis role="stringliteral">&apos;provincia&apos;</emphasis>],&#32;
+<anchor xml:id="__registro_8php_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$persona[0][<emphasis role="stringliteral">&apos;mail&apos;</emphasis>],&#32;$persona[0][<emphasis role="stringliteral">&apos;telefono&apos;</emphasis>],&#32;$datos[0][<emphasis role="stringliteral">&apos;claveAcceso&apos;</emphasis>]);
+<anchor xml:id="__registro_8php_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$usuario;
+<anchor xml:id="__registro_8php_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$ex)&#32;{
+<anchor xml:id="__registro_8php_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;$ex-&gt;getMessage();
+<anchor xml:id="__registro_8php_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__registro_8php_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00282"/>00282 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__registro_8php_source_1l00283"/>00283 }
+</programlisting></section>

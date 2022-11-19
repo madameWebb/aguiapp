@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_modificar_datos_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/modificarDatos.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/modificarDatos.php</primary></indexterm>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_modificar_datos_8php_1ace77f3c3c5214f9a9669d249e5d5f619">devolverDatoValido</link> ($indice, $metodo1, $datosM, $usuario, $metodo2)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>if(count($_SESSION) !=0 &amp;&amp;isset($_SESSION[&apos;tipoUsuario&apos;])) <link linkend="_modificar_datos_8php_1a926807eef54eec916e75fca92fbee3d5">else</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_modificar_datos_8php_1ace77f3c3c5214f9a9669d249e5d5f619"/><section>
+    <title>devolverDatoValido()</title>
+<indexterm><primary>devolverDatoValido</primary><secondary>modificarDatos.php</secondary></indexterm>
+<indexterm><primary>modificarDatos.php</primary><secondary>devolverDatoValido</secondary></indexterm>
+<para><computeroutput>devolverDatoValido ( $indice,  $metodo1,  $datosM,  $usuario,  $metodo2)</computeroutput></para>
+<para>Valida y comprueba que el dato a modificar sea válido, y devuelve un string valido. Esta función no sirve para comprobar la clave.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$indice</entry><entry>
+<para>del array </para>
+</entry>
+                            </row>
+                            <row>
+<entry>array</entry><entry>$datosM</entry><entry>
+<para>array asociativo </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Objeto</entry><entry>$usuario</entry><entry>
+<para><link linkend="_class_invitado">Invitado</link> | <link linkend="_class_biologo">Biologo</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>string dato válido </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="_modificar_datos_8php_source_1l00023">23</link> del archivo <link linkend="_modificar_datos_8php_source">modificarDatos.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_modificar_datos_8php_1a926807eef54eec916e75fca92fbee3d5"/><section>
+    <title>else</title>
+<indexterm><primary>else</primary><secondary>modificarDatos.php</secondary></indexterm>
+<indexterm><primary>modificarDatos.php</primary><secondary>else</secondary></indexterm>
+<para><computeroutput>if (count( $_SESSION) !=0 &amp;&amp;isset( $_SESSION[ &apos;tipoUsuario&apos;])) else</computeroutput></para><emphasis role="strong">Valor inicial:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;header(<emphasis role="stringliteral">&apos;Location:../php/redirecciones.php&apos;</emphasis>)
+</programlisting><para>
+Definición en la línea <link linkend="_modificar_datos_8php_source_1l00139">139</link> del archivo <link linkend="_modificar_datos_8php_source">modificarDatos.php</link>.</para>
+</section>
+</section>
+</section>

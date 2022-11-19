@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_operaciones_biologos_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesBiologos.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesBiologos.php</primary></indexterm>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_operaciones_biologos_8php_1aa258d87ea2db135726fada9523b8c843">tratarImagenes</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_operaciones_biologos_8php_1a108e2986ade117c3274bee4df4c335d5">escribirRespuesta</link> ($verdadero)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>if(count($_SESSION) !=0 &amp;&amp; $_SESSION[&apos;tipoUsuario&apos;]==&apos;biologos&apos;) <link linkend="_operaciones_biologos_8php_1a18df4825175de1197dc7357a183c8041">else</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_operaciones_biologos_8php_1a108e2986ade117c3274bee4df4c335d5"/><section>
+    <title>escribirRespuesta()</title>
+<indexterm><primary>escribirRespuesta</primary><secondary>operacionesBiologos.php</secondary></indexterm>
+<indexterm><primary>operacionesBiologos.php</primary><secondary>escribirRespuesta</secondary></indexterm>
+<para><computeroutput>escribirRespuesta ( $verdadero)</computeroutput></para>
+<para>Escribe la respuesta pertinente según el parámetro recibido</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>boolean</entry><entry>$verdadero</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definición en la línea <link linkend="_operaciones_biologos_8php_source_1l00048">48</link> del archivo <link linkend="_operaciones_biologos_8php_source">operacionesBiologos.php</link>.</para>
+</section>
+<anchor xml:id="_operaciones_biologos_8php_1aa258d87ea2db135726fada9523b8c843"/><section>
+    <title>tratarImagenes()</title>
+<indexterm><primary>tratarImagenes</primary><secondary>operacionesBiologos.php</secondary></indexterm>
+<indexterm><primary>operacionesBiologos.php</primary><secondary>tratarImagenes</secondary></indexterm>
+<para><computeroutput>tratarImagenes ( )</computeroutput></para>
+<para>Función para tratar las imágenes recibidas, se guardan en una carpeta concreta y se recogen los nombres de los archivos en un archivo json</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>boolean|string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="_operaciones_biologos_8php_source_1l00020">20</link> del archivo <link linkend="_operaciones_biologos_8php_source">operacionesBiologos.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_operaciones_biologos_8php_1a18df4825175de1197dc7357a183c8041"/><section>
+    <title>else</title>
+<indexterm><primary>else</primary><secondary>operacionesBiologos.php</secondary></indexterm>
+<indexterm><primary>operacionesBiologos.php</primary><secondary>else</secondary></indexterm>
+<para><computeroutput>if (count( $_SESSION) !=0 &amp;&amp;$_SESSION[ &apos;tipoUsuario&apos;]==&apos;biologos&apos;) else</computeroutput></para><emphasis role="strong">Valor inicial:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;header(<emphasis role="stringliteral">&apos;Location:&#32;../php/redirecciones.php&apos;</emphasis>)
+</programlisting><para>
+Definición en la línea <link linkend="_operaciones_biologos_8php_source_1l00164">164</link> del archivo <link linkend="_operaciones_biologos_8php_source">operacionesBiologos.php</link>.</para>
+</section>
+</section>
+</section>

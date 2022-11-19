@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_operaciones_invitados_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesInvitados.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesInvitados.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>if(count($_SESSION) !=0 &amp;&amp; $_SESSION[&apos;tipoUsuario&apos;]==&apos;invitados&apos;) <link linkend="_operaciones_invitados_8php_1ae008a8566da29494e7dc88f703944051">else</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_operaciones_invitados_8php_1ae008a8566da29494e7dc88f703944051"/><section>
+    <title>else</title>
+<indexterm><primary>else</primary><secondary>operacionesInvitados.php</secondary></indexterm>
+<indexterm><primary>operacionesInvitados.php</primary><secondary>else</secondary></indexterm>
+<para><computeroutput>if (count( $_SESSION) !=0 &amp;&amp;$_SESSION[ &apos;tipoUsuario&apos;]==&apos;invitados&apos;) else</computeroutput></para><emphasis role="strong">Valor inicial:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;header(<emphasis role="stringliteral">&apos;Location:&#32;../php/redirecciones.php&apos;</emphasis>)
+</programlisting><para>
+Definición en la línea <link linkend="_operaciones_invitados_8php_source_1l00052">52</link> del archivo <link linkend="_operaciones_invitados_8php_source">operacionesInvitados.php</link>.</para>
+</section>
+</section>
+</section>

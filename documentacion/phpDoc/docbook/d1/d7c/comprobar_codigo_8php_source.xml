@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_comprobar_codigo_8php_source" xml:lang="es">
+<title>comprobarCodigo.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/comprobarCodigo.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="_comprobar_codigo_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="_comprobar_codigo_8php_source_1l00002"/>00002 
+<anchor xml:id="_comprobar_codigo_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;include&#32;<emphasis role="stringliteral">&apos;clasesPHP/Validar.php&apos;</emphasis>;
+<anchor xml:id="_comprobar_codigo_8php_source_1l00012"/>00012 
+<anchor xml:id="_comprobar_codigo_8php_source_1l00019"/><link linkend="_comprobar_codigo_8php_1a24ecad83d3153a6b6859e890dc3c7293">00019</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_comprobar_codigo_8php_1a24ecad83d3153a6b6859e890dc3c7293">comprobarCodigo</link>($variable){
+<anchor xml:id="_comprobar_codigo_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$codigo&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="_comprobar_codigo_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/renaido/&apos;</emphasis>,&#32;$codigo)){
+<anchor xml:id="_comprobar_codigo_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&apos;false&apos;</emphasis>;
+<anchor xml:id="_comprobar_codigo_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_comprobar_codigo_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&apos;true&apos;</emphasis>;
+<anchor xml:id="_comprobar_codigo_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_comprobar_codigo_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="comment">//Recibe&#32;la&#32;petición&#32;de&#32;comprobación&#32;del&#32;código&#32;y&#32;procede</emphasis>
+<anchor xml:id="_comprobar_codigo_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($_POST[<emphasis role="stringliteral">&apos;codigo&apos;</emphasis>])){
+<anchor xml:id="_comprobar_codigo_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$codigo&#32;=&#32;$_POST[<emphasis role="stringliteral">&apos;codigo&apos;</emphasis>];
+<anchor xml:id="_comprobar_codigo_8php_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($codigo)){
+<anchor xml:id="_comprobar_codigo_8php_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<link linkend="_comprobar_codigo_8php_1a24ecad83d3153a6b6859e890dc3c7293">comprobarCodigo</link>($codigo);
+<anchor xml:id="_comprobar_codigo_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_comprobar_codigo_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_comprobar_codigo_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;
+<anchor xml:id="_comprobar_codigo_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;
+</programlisting></section>

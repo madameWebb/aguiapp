@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="da/d23/class_especie" kind="class" language="PHP" prot="public">
+    <compoundname>Especie</compoundname>
+    <derivedcompoundref refid="df/dbc/class_especimenes" prot="public" virt="non-virtual">Especimenes</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d23/class_especie_1a8ffdc2b94c09708050b25f9482864116" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$especie</definition>
+        <argsstring></argsstring>
+        <name>$especie</name>
+        <qualifiedname>Especie\$especie</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="21" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/class_especie_1a8fcb4a9897d4b1d27b4e19d200319fd3" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$reino</definition>
+        <argsstring></argsstring>
+        <name>$reino</name>
+        <qualifiedname>Especie\$reino</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="25" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/class_especie_1a5c05d4eb816e0868924e0d3861ef7ab5" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$clase</definition>
+        <argsstring></argsstring>
+        <name>$clase</name>
+        <qualifiedname>Especie\$clase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="29" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/class_especie_1a88a80e34fe9a9ae69b1810380fd490fc" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$orden</definition>
+        <argsstring></argsstring>
+        <name>$orden</name>
+        <qualifiedname>Especie\$orden</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="33" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/class_especie_1ab0a6ebf11c2c60ce932b5515ef131b10" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$familia</definition>
+        <argsstring></argsstring>
+        <name>$familia</name>
+        <qualifiedname>Especie\$familia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="37" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/class_especie_1a1d9837316c6261df57a771b075b56454" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$periodoMigratorio</definition>
+        <argsstring></argsstring>
+        <name>$periodoMigratorio</name>
+        <qualifiedname>Especie\$periodoMigratorio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="41" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/class_especie_1a2e8fe0d58b56c337d0f560e0eeb24136" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$poblacion</definition>
+        <argsstring></argsstring>
+        <name>$poblacion</name>
+        <qualifiedname>Especie\$poblacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="45" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d23/class_especie_1a4f24b74ec17e26731b1c3a7f6719a776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agregarEspecie</definition>
+        <argsstring>($especie, $reino, $clase, $orden, $familia, $periodoMigratorio)</argsstring>
+        <name>agregarEspecie</name>
+        <qualifiedname>Especie\agregarEspecie</qualifiedname>
+        <reimplementedby refid="df/dbc/class_especimenes_1a4f24b74ec17e26731b1c3a7f6719a776">agregarEspecie</reimplementedby>
+        <param>
+          <declname>$especie</declname>
+        </param>
+        <param>
+          <declname>$reino</declname>
+        </param>
+        <param>
+          <declname>$clase</declname>
+        </param>
+        <param>
+          <declname>$orden</declname>
+        </param>
+        <param>
+          <declname>$familia</declname>
+        </param>
+        <param>
+          <declname>$periodoMigratorio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Agrega los parámetros a la <ref refid="da/d23/class_especie" kindref="compound">Especie</ref> creada</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$especie</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$reino</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$clase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$orden</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$familia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$periodoMigratorio</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="58" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="58" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="da/d23/class_especie_1ac84a8bd3cf89a32f165f6817de4f5232" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getEspecie</definition>
+        <argsstring>()</argsstring>
+        <name>getEspecie</name>
+        <qualifiedname>Especie\getEspecie</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra el nombre de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="71" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1a833ba25687a77d8e5eed0573a78d62a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getReino</definition>
+        <argsstring>()</argsstring>
+        <name>getReino</name>
+        <qualifiedname>Especie\getReino</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra el reino de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="79" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1aeba4e7bddeb1e67c0eb12b6c3a1ab47f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getClase</definition>
+        <argsstring>()</argsstring>
+        <name>getClase</name>
+        <qualifiedname>Especie\getClase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra la clase de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="87" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1ab5d4a0c2716582a6d775f137c958fe3d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getOrden</definition>
+        <argsstring>()</argsstring>
+        <name>getOrden</name>
+        <qualifiedname>Especie\getOrden</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra el orden de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="95" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1a37700a0e9a0a977c34b915cf6e9ce38b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getFamilia</definition>
+        <argsstring>()</argsstring>
+        <name>getFamilia</name>
+        <qualifiedname>Especie\getFamilia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra la familia de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="103" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1ab8a562625ee57e974886656655fcddde" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getPeriodoMigratorio</definition>
+        <argsstring>()</argsstring>
+        <name>getPeriodoMigratorio</name>
+        <qualifiedname>Especie\getPeriodoMigratorio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra el periodo migratorio de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="111" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1aed60a16f5fe67375aae45739f4c303a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getPoblacion</definition>
+        <argsstring>()</argsstring>
+        <name>getPoblacion</name>
+        <qualifiedname>Especie\getPoblacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>muestra la población en el parque de la especie</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="119" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1a65af7704af00f28ca302c1c26d70a634" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static setPoblacion</definition>
+        <argsstring>($poblacion)</argsstring>
+        <name>setPoblacion</name>
+        <qualifiedname>Especie\setPoblacion</qualifiedname>
+        <param>
+          <declname>$poblacion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>modifica la población de la especie</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="129" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1a00bb1e1275d894b016b23afcefebd9cc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static sumarPoblacion</definition>
+        <argsstring>()</argsstring>
+        <name>sumarPoblacion</name>
+        <qualifiedname>Especie\sumarPoblacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Agrega individuos a la especie</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="139" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d23/class_especie_1a9c51801438566f0610595b40bd71c34f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static restarPoblacion</definition>
+        <argsstring>()</argsstring>
+        <name>restarPoblacion</name>
+        <qualifiedname>Especie\restarPoblacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resta individuos a la especie <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="148" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="148" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez Crea una especie con 7 parámetros, sin constructor, ya que los atributos se le asignan después </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Especie</label>
+        <link refid="da/d23/class_especie"/>
+      </node>
+      <node id="2">
+        <label>Especimenes</label>
+        <link refid="df/dbc/class_especimenes"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" line="15" column="2" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especie.php" bodystart="15" bodyend="151"/>
+    <listofallmembers>
+      <member refid="da/d23/class_especie_1a5c05d4eb816e0868924e0d3861ef7ab5" prot="private" virt="non-virtual"><scope>Especie</scope><name>$clase</name></member>
+      <member refid="da/d23/class_especie_1a8ffdc2b94c09708050b25f9482864116" prot="private" virt="non-virtual"><scope>Especie</scope><name>$especie</name></member>
+      <member refid="da/d23/class_especie_1ab0a6ebf11c2c60ce932b5515ef131b10" prot="private" virt="non-virtual"><scope>Especie</scope><name>$familia</name></member>
+      <member refid="da/d23/class_especie_1a88a80e34fe9a9ae69b1810380fd490fc" prot="private" virt="non-virtual"><scope>Especie</scope><name>$orden</name></member>
+      <member refid="da/d23/class_especie_1a1d9837316c6261df57a771b075b56454" prot="private" virt="non-virtual"><scope>Especie</scope><name>$periodoMigratorio</name></member>
+      <member refid="da/d23/class_especie_1a2e8fe0d58b56c337d0f560e0eeb24136" prot="private" virt="non-virtual"><scope>Especie</scope><name>$poblacion</name></member>
+      <member refid="da/d23/class_especie_1a8fcb4a9897d4b1d27b4e19d200319fd3" prot="private" virt="non-virtual"><scope>Especie</scope><name>$reino</name></member>
+      <member refid="da/d23/class_especie_1a4f24b74ec17e26731b1c3a7f6719a776" prot="public" virt="non-virtual"><scope>Especie</scope><name>agregarEspecie</name></member>
+      <member refid="da/d23/class_especie_1aeba4e7bddeb1e67c0eb12b6c3a1ab47f" prot="public" virt="non-virtual"><scope>Especie</scope><name>getClase</name></member>
+      <member refid="da/d23/class_especie_1ac84a8bd3cf89a32f165f6817de4f5232" prot="public" virt="non-virtual"><scope>Especie</scope><name>getEspecie</name></member>
+      <member refid="da/d23/class_especie_1a37700a0e9a0a977c34b915cf6e9ce38b" prot="public" virt="non-virtual"><scope>Especie</scope><name>getFamilia</name></member>
+      <member refid="da/d23/class_especie_1ab5d4a0c2716582a6d775f137c958fe3d" prot="public" virt="non-virtual"><scope>Especie</scope><name>getOrden</name></member>
+      <member refid="da/d23/class_especie_1ab8a562625ee57e974886656655fcddde" prot="public" virt="non-virtual"><scope>Especie</scope><name>getPeriodoMigratorio</name></member>
+      <member refid="da/d23/class_especie_1aed60a16f5fe67375aae45739f4c303a4" prot="public" virt="non-virtual"><scope>Especie</scope><name>getPoblacion</name></member>
+      <member refid="da/d23/class_especie_1a833ba25687a77d8e5eed0573a78d62a6" prot="public" virt="non-virtual"><scope>Especie</scope><name>getReino</name></member>
+      <member refid="da/d23/class_especie_1a9c51801438566f0610595b40bd71c34f" prot="public" virt="non-virtual"><scope>Especie</scope><name>restarPoblacion</name></member>
+      <member refid="da/d23/class_especie_1a65af7704af00f28ca302c1c26d70a634" prot="public" virt="non-virtual"><scope>Especie</scope><name>setPoblacion</name></member>
+      <member refid="da/d23/class_especie_1a00bb1e1275d894b016b23afcefebd9cc" prot="public" virt="non-virtual"><scope>Especie</scope><name>sumarPoblacion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_55b668912e1a6c23a65bc5d93ff36533" xml:lang="es">
+<title>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies</title>
+<indexterm><primary>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies</primary></indexterm>
+Gráfico de dependencias de directorios para especies:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_55b668912e1a6c23a65bc5d93ff36533_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__especie_8php">Especie.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__especimen_8php">Especimen.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__torreta_8php">Torreta.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

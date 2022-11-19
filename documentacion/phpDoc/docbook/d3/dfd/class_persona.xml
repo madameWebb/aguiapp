@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_persona" xml:lang="es">
+<title>Referencia de la Clase Persona</title>
+<indexterm><primary>Persona</primary></indexterm>
+Diagrama de herencias de Persona<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d59/class_persona__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_persona_1a8ea2a892653f4a90b68682905c97965f">__construct</link> ($nombreApellido, $dni, $mail, $telefono)</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ae2d57a823882316c4e3c66c58b950e69">getNombreApellido</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1a7174a173fa25c24567751085fd41e74a">getDni</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba">getMail</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1a5dc8566458b8859d2c6fba633adf726e">getTelefono</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7">setNombreApellido</link> ($nombreApellido)</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ad48eec89c13b763a71956306f8bb3d1d">setDni</link> ($dni)</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ad29599d95c9acdfa9966234fe761bf21">setMail</link> ($mail)</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1a3265463c162b7031c5f0a0592a35d9cf">setTelefono</link> ($telefono)</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</formalpara>
+<formalpara><title>Ver también</title>
+
+<para>class <link linkend="_class_biologo">Biologo</link> </para>
+
+<para>class <link linkend="_class_invitado">Invitado</link> Clase <link linkend="_class_persona">Persona</link>, para crear objetos de tipo persona </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00021">21</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<section>
+<title>Documentación del constructor y destructor</title>
+<anchor xml:id="_class_persona_1a8ea2a892653f4a90b68682905c97965f"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $nombreApellido,  $dni,  $mail,  $telefono)</computeroutput></para>
+<para>constructor de 4 parámetros, recibe como parámetros los datos solicitados.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$nombreApellido</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$dni</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$mail</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$telefono</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para><link linkend="_class_persona">Persona</link> </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_invitado_1a8c5bbbf29457335a0fdef323ddecd72e">Invitado</link>.</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00048">48</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_persona_1ada450b5eb68e37ce0022cbe40987fb3d"/><section>
+    <title>editarInformacion()</title>
+<indexterm><primary>editarInformacion</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>editarInformacion</secondary></indexterm>
+<para><computeroutput>editarInformacion ( )</computeroutput></para>
+<para>Muestra un formulario para la modificación de los datos guardados</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d">Biologo</link> y <link linkend="_class_invitado_1ada450b5eb68e37ce0022cbe40987fb3d">Invitado</link>.</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00131">131</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1a7174a173fa25c24567751085fd41e74a"/><section>
+    <title>getDni()</title>
+<indexterm><primary>getDni</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>getDni</secondary></indexterm>
+<para><computeroutput>getDni ( )</computeroutput></para>
+<para>Muestra el NIF de la persona</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00067">67</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba"/><section>
+    <title>getMail()</title>
+<indexterm><primary>getMail</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>getMail</secondary></indexterm>
+<para><computeroutput>getMail ( )</computeroutput></para>
+<para>Muestra el mail de la persona</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00075">75</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1ae2d57a823882316c4e3c66c58b950e69"/><section>
+    <title>getNombreApellido()</title>
+<indexterm><primary>getNombreApellido</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>getNombreApellido</secondary></indexterm>
+<para><computeroutput>getNombreApellido ( )</computeroutput></para>
+<para>Muestra el nombre y el apellido de la persona</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_invitado_1ae2d57a823882316c4e3c66c58b950e69">Invitado</link>.</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00059">59</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1a5dc8566458b8859d2c6fba633adf726e"/><section>
+    <title>getTelefono()</title>
+<indexterm><primary>getTelefono</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>getTelefono</secondary></indexterm>
+<para><computeroutput>getTelefono ( )</computeroutput></para>
+<para>Muestra el teléfono de la persona</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00083">83</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2"/><section>
+    <title>mostrarInformacion()</title>
+<indexterm><primary>mostrarInformacion</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>mostrarInformacion</secondary></indexterm>
+<para><computeroutput>mostrarInformacion ( )</computeroutput></para>
+<para>Muestra los datos guardados por el objeto</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2">Biologo</link> y <link linkend="_class_invitado_1ada503a905ffc49d2e3b6991b7f94d2a2">Invitado</link>.</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00147">147</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1ad48eec89c13b763a71956306f8bb3d1d"/><section>
+    <title>setDni()</title>
+<indexterm><primary>setDni</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>setDni</secondary></indexterm>
+<para><computeroutput>setDni ( $dni)</computeroutput></para>
+<para>Modifica el atributo dni</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$dni</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00103">103</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1ad29599d95c9acdfa9966234fe761bf21"/><section>
+    <title>setMail()</title>
+<indexterm><primary>setMail</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>setMail</secondary></indexterm>
+<para><computeroutput>setMail ( $mail)</computeroutput></para>
+<para>Modifica el atributo mail</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$mail</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_invitado_1ad29599d95c9acdfa9966234fe761bf21">Invitado</link>.</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00113">113</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7"/><section>
+    <title>setNombreApellido()</title>
+<indexterm><primary>setNombreApellido</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>setNombreApellido</secondary></indexterm>
+<para><computeroutput>setNombreApellido ( $nombreApellido)</computeroutput></para>
+<para>Modifica el atributo nombreApellido</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$nombreApellido</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_invitado_1ac3c2873ffa8ad60b4f2742ac569087f7">Invitado</link>.</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00093">93</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<anchor xml:id="_class_persona_1a3265463c162b7031c5f0a0592a35d9cf"/><section>
+    <title>setTelefono()</title>
+<indexterm><primary>setTelefono</primary><secondary>Persona</secondary></indexterm>
+<indexterm><primary>Persona</primary><secondary>setTelefono</secondary></indexterm>
+<para><computeroutput>setTelefono ( $telefono)</computeroutput></para>
+<para>Modifica el atributo teléfono</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$telefono</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__persona_8php_source_1l00123">123</link> del archivo <link linkend="__persona_8php_source">Persona.php</link>.</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/<link linkend="__persona_8php">Persona.php</link></section>
+</section>

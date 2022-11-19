@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="dir_55b668912e1a6c23a65bc5d93ff36533" kind="dir">
+    <compoundname>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies</compoundname>
+    <innerfile refid="dd/dab/_especie_8php">Especie.php</innerfile>
+    <innerfile refid="d4/de9/_especimen_8php">Especimen.php</innerfile>
+    <innerfile refid="d2/d3b/_torreta_8php">Torreta.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/"/>
+  </compounddef>
+</doxygen>

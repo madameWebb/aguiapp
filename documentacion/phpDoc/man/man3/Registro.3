@@ -1,0 +1,194 @@
+.TH "Registro" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Registro
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static \fBdevolverDatos\fP ($preparada, $consulta)"
+.br
+.ti -1c
+.RI "static \fBoperarCommit\fP ($preparada, $consulta)"
+.br
+.ti -1c
+.RI "static \fBoperarCommitDoble\fP ($preparada, $preparadaP, $consulta, $consultaP)"
+.br
+.ti -1c
+.RI "static \fBbuscarInvitado\fP ($usuario, $mail)"
+.br
+.ti -1c
+.RI "static \fBinsertarInvitado\fP ($consulta, $consultaP)"
+.br
+.ti -1c
+.RI "static \fBverificarClave\fP ($consulta, $clave)"
+.br
+.ti -1c
+.RI "static \fBdevolverUsuario\fP ($tabla, $tipoLogin, $consulta)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Proyecto Parque Eocológico
+.PP
+\fBVersión\fP
+.RS 4
+pq-_V18 @autor Virginia M\&. García Álvarez 
+.RE
+.PP
+\fBVer también\fP
+.RS 4
+class \fBPersona\fP 
+.PP
+class \fBTorreta\fP 
+.PP
+class \fBValidar\fP Clase estática que recoge las funciones de registro de usuarios y especies 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB25\fP del archivo \fBRegistro\&.php\fP\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "static buscarInvitado ( $usuario,  $mail)\fC [static]\fP"
+Función de acceso público, comprueba si existe el usuario en la tabla 'usuarios' a través del usuario y el mail, los cuales han de ser únicos\&. Comunica si el usuario o el mail están en uso con un mensaje y devuelve una excepción si se produce algún error\&.
+.PP
+****Solo se usa para registrar invitados
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$usuario\fP 
+.br
+\fI$mail\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB147\fP del archivo \fBRegistro\&.php\fP\&.
+.SS "static devolverDatos ( $preparada,  $consulta)\fC [static]\fP"
+Busca y devuelve los datos que se le piden a la bbdd
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$preparada\fP 
+.br
+\fI$consulta\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean | array false si no se puede realizar la operación o un array con los datos 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB50\fP del archivo \fBRegistro\&.php\fP\&.
+.SS "static devolverUsuario ( $tabla,  $tipoLogin,  $consulta)\fC [static]\fP"
+Función para crear un objeto con los datos rescatados de la BBDD
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$tabla\fP en la que buscar los datos ('biologos' o 'invitados') 
+.br
+\fI$tipoLogin\fP indica si es 'dni', 'mail' o 'usuario' 
+.br
+\fI$consulta\fP el dato a consultar
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean|\\Biologo|\\Invitado falso o el objeto creado 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB244\fP del archivo \fBRegistro\&.php\fP\&.
+.SS "static insertarInvitado ( $consulta,  $consultaP)\fC [static]\fP"
+****Solo se usa para registrar invitados Tiene que sacar el id del invitado y el commit tiene que ser completo
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$consulta\fP 
+.br
+\fI$consultaP\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB167\fP del archivo \fBRegistro\&.php\fP\&.
+.SS "static operarCommit ( $preparada,  $consulta)\fC [static]\fP"
+Realiza diversas operaciones(insert, select, update) sobre una tabla\&.
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$preparada\fP 
+.br
+\fI$consulta\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean verdadero o falso según se complete o no la operación 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB73\fP del archivo \fBRegistro\&.php\fP\&.
+.SS "static operarCommitDoble ( $preparada,  $preparadaP,  $consulta,  $consultaP)\fC [static]\fP"
+Realiza diversas operaciones(insert, select, update) sobre la base de datos\&. Actúa sobre dos tablas relacionadas, biologos y personas, invitados y personas, especimenes y especies\&.\&.\&.
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$preparada\fP la select a llevar a cabo en la primera tabla 
+.br
+\fI$preparadaP\fP la select a llevar a cabo en la segunda tabla 
+.br
+\fI$consulta\fP la consulta sobre la select en la primera tabla 
+.br
+\fI$consultaP\fP la consulta sobre la select en la segunda tabla
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean verdadero o falso según se complete o no la operación 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB106\fP del archivo \fBRegistro\&.php\fP\&.
+.SS "static verificarClave ( $consulta,  $clave)\fC [static]\fP"
+Función para verificar si la clave introducida corresponde con el usuario introducido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$consulta\fP puede ser mail, dni o nombre de usuario 
+.br
+\fI$clave\fP de acceso al sitio web
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean si la contraseña es correcta o falsa 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB202\fP del archivo \fBRegistro\&.php\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__invitado_8php_source" xml:lang="es">
+<title>Invitado.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Invitado.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__invitado_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__invitado_8php_source_1l00002"/>00002 
+<anchor xml:id="__invitado_8php_source_1l00016"/><link linkend="_class_invitado">00016</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_invitado">Invitado</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_class_persona">Persona</link>{
+<anchor xml:id="__invitado_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$usuario;
+<anchor xml:id="__invitado_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$claveAcceso;
+<anchor xml:id="__invitado_8php_source_1l00035"/><link linkend="_class_invitado_1a8c5bbbf29457335a0fdef323ddecd72e">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1a8c5bbbf29457335a0fdef323ddecd72e">__construct</link>($usuario,&#32;$nombreApellido,&#32;$mail,&#32;$claveAcceso)&#32;{
+<anchor xml:id="__invitado_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::__construct($nombreApellido,&#32;<emphasis role="keyword">null</emphasis>,&#32;$mail,&#32;<emphasis role="keyword">null</emphasis>);
+<anchor xml:id="__invitado_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;usuario&#32;=&#32;$usuario;
+<anchor xml:id="__invitado_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;claveAcceso&#32;=&#32;$claveAcceso;
+<anchor xml:id="__invitado_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00043"/><link linkend="_class_invitado_1a432331ea28feaeec944c62107acf5f1b">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1a432331ea28feaeec944c62107acf5f1b">getClaveAcceso</link>()&#32;{
+<anchor xml:id="__invitado_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;claveAcceso;
+<anchor xml:id="__invitado_8php_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00051"/><link linkend="_class_invitado_1a737e0156e38f0b807c7ec0804edf313b">00051</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1a737e0156e38f0b807c7ec0804edf313b">setClaveAcceso</link>($claveAcceso)&#32;{
+<anchor xml:id="__invitado_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;claveAcceso&#32;=&#32;$claveAcceso;
+<anchor xml:id="__invitado_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00057"/><link linkend="_class_invitado_1a38abe751ca21ffb95d9c90862e0fb96f">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1a38abe751ca21ffb95d9c90862e0fb96f">getUsuario</link>()&#32;{
+<anchor xml:id="__invitado_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;usuario;
+<anchor xml:id="__invitado_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00065"/><link linkend="_class_invitado_1a48255b4550c8d4dc7aedf7837439461a">00065</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1a48255b4550c8d4dc7aedf7837439461a">setUsuario</link>($usuario)&#32;{
+<anchor xml:id="__invitado_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;usuario&#32;=&#32;$usuario;
+<anchor xml:id="__invitado_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00071"/><link linkend="_class_invitado_1ae2d57a823882316c4e3c66c58b950e69">00071</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1ae2d57a823882316c4e3c66c58b950e69">getNombreApellido</link>()&#32;{
+<anchor xml:id="__invitado_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;parent::getNombreApellido();
+<anchor xml:id="__invitado_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00079"/><link linkend="_class_invitado_1ad29599d95c9acdfa9966234fe761bf21">00079</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1ad29599d95c9acdfa9966234fe761bf21">setMail</link>($mail)&#32;{
+<anchor xml:id="__invitado_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::setMail($mail);
+<anchor xml:id="__invitado_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00087"/><link linkend="_class_invitado_1ac3c2873ffa8ad60b4f2742ac569087f7">00087</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1ac3c2873ffa8ad60b4f2742ac569087f7">setNombreApellido</link>($nombreApellido)&#32;{
+<anchor xml:id="__invitado_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::setNombreApellido($nombreApellido);
+<anchor xml:id="__invitado_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00093"/><link linkend="_class_invitado_1ada503a905ffc49d2e3b6991b7f94d2a2">00093</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</link>()&#32;{
+<anchor xml:id="__invitado_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;?&gt;
+<anchor xml:id="__invitado_8php_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;table&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;tablaI&quot;</emphasis>&gt;
+<anchor xml:id="__invitado_8php_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tbody&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;tbodyI&quot;</emphasis>&gt;
+<anchor xml:id="__invitado_8php_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__invitado_8php_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Nombre:&#32;&lt;/td&gt;
+<anchor xml:id="__invitado_8php_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;parent::getNombreApellido();?&gt;&lt;/td&gt;
+<anchor xml:id="__invitado_8php_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__invitado_8php_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__invitado_8php_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Nombre&#32;de&#32;usuario:&#32;&lt;/td&gt;
+<anchor xml:id="__invitado_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;usuario;?&gt;&lt;/td&gt;
+<anchor xml:id="__invitado_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__invitado_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__invitado_8php_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Email:&#32;&lt;/td&gt;
+<anchor xml:id="__invitado_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;parent::getMail();?&gt;&lt;/td&gt;
+<anchor xml:id="__invitado_8php_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__invitado_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tbody&gt;
+<anchor xml:id="__invitado_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/table&gt;
+<anchor xml:id="__invitado_8php_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&lt;?php
+<anchor xml:id="__invitado_8php_source_1l00112"/>00112 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00116"/><link linkend="_class_invitado_1ada450b5eb68e37ce0022cbe40987fb3d">00116</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_invitado_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</link>()&#32;{
+<anchor xml:id="__invitado_8php_source_1l00117"/>00117 &#32;&#32;&#32;&#32;?&gt;
+<anchor xml:id="__invitado_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;nombre&quot;</emphasis>/&gt;Nombre:&#32;
+<anchor xml:id="__invitado_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;text&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;nombre&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;parent::getNombreApellido();?&gt;&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;off&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__invitado_8php_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;usuario&quot;</emphasis>/&gt;Usuario:&#32;&lt;?php&#32;echo&#32;$this-&gt;usuario;?&gt;
+<anchor xml:id="__invitado_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;mail&quot;</emphasis>/&gt;Mail:&#32;
+<anchor xml:id="__invitado_8php_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;text&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;mail&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;parent::getMail();?&gt;&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;off&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__invitado_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;claveM&quot;</emphasis>/&gt;Clave:&#32;
+<anchor xml:id="__invitado_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;password&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;claveM&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;contraseña&quot;</emphasis>&#32;&#32;/&gt;&lt;/p&gt;
+<anchor xml:id="__invitado_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&lt;?php
+<anchor xml:id="__invitado_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__invitado_8php_source_1l00127"/>00127 
+<anchor xml:id="__invitado_8php_source_1l00128"/>00128 }
+</programlisting></section>

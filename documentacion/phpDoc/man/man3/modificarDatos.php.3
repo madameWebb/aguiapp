@@ -1,0 +1,59 @@
+.TH "G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/modificarDatos.php" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/modificarDatos.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "\fBdevolverDatoValido\fP ($indice, $metodo1, $datosM, $usuario, $metodo2)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "if(count($_SESSION) !=0 &&isset($_SESSION['tipoUsuario'])) \fBelse\fP"
+.br
+.in -1c
+.SH "Documentación de las funciones"
+.PP 
+.SS "devolverDatoValido ( $indice,  $metodo1,  $datosM,  $usuario,  $metodo2)"
+Valida y comprueba que el dato a modificar sea válido, y devuelve un string valido\&. Esta función no sirve para comprobar la clave\&.
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$indice\fP del array 
+.br
+\fI$datosM\fP array asociativo 
+.br
+\fI$usuario\fP \fBInvitado\fP | \fBBiologo\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+string dato válido 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB23\fP del archivo \fBmodificarDatos\&.php\fP\&.
+.SH "Documentación de las variables"
+.PP 
+.SS "if (count( $_SESSION) !=0 &&isset( $_SESSION[ 'tipoUsuario'])) else"
+\fBValor inicial:\fP
+.PP
+.nf
+{
+        
+        header('Location:\&.\&./php/redirecciones\&.php')
+.fi
+.PP
+Definición en la línea \fB139\fP del archivo \fBmodificarDatos\&.php\fP\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

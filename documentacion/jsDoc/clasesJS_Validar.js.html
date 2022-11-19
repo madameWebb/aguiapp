@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: clasesJS/Validar.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: clasesJS/Validar.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*
+ * Proyecto Parque Eocológico
+ * 
+ * @version pq-_V18
+ * @autor Virginia M. García Álvarez
+ */
+
+/**
+ * Valida todos los datos introducidos en la web
+ * 
+ * @type Validar
+ */
+class Validar{
+    //PERSONAS
+    /**
+     * Comprueba que el nombre y apellidos respondan a un patrón válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static nombre(variable){
+        let regNombreApellidos = new RegExp(/^([A-ZÑÁÉÍÓÚ]{1}[a-zñáéíóúü]+[\s]){1,2}([A-ZÑÁÉÍÓÚ]{1}[a-zñáéíóúü]+[\s]?){1}$/);
+        return regNombreApellidos.test(variable.value);
+    }
+    /**
+     * Comprueba que la variable responda a un patrón válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static usuario(variable){
+        let regUsuario = new RegExp(/^([A-ZÑÁÉÍÓÚa-zñáéíóúü]){2}([A-ZÑÁÉÍÓÚa-zñáéíóúü0-9]){1,8}$/);
+        return regUsuario.test(variable.value);
+    }
+    /**
+     * Comprueba que la variable responda a un patrón válido y comprueba que 
+     * también sea un nif válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static nif(variable){ 
+        let nif = variable;
+        let esValido = false;
+        let regNif = new RegExp(/^\d{8}[a-zA-Z]$/);
+        if(regNif.test(nif)){
+            let numero = parseInt(nif.substr(0, 8));
+            let letra = nif.substr(8, 9).toUpperCase();
+            if(numero % 23 >= 0 &amp;&amp; numero % 23 &lt;= 22){
+            let letrasNif = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 
+                        'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 
+                        'H', 'L', 'C', 'K', 'E'];
+                if (letrasNif[numero % 23] === letra){
+                    esValido = true;
+                } else {
+                    esValido = false;
+                }         
+            }
+        }
+        return esValido;
+    }
+    /**
+     * Comprueba que la variable responda a un patrón válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static telefono(variable){ 
+        let regTelefono = new RegExp(/^[9876]{1}[0-9]{8}$/);
+        return regTelefono.test(variable.value);
+    }
+    /**
+     * Comprueba que el email responda a un patrón válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static email(variable){
+        let regEmail = new RegExp(/^\w+([\.\+\-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/);
+        return regEmail.test(variable.value);
+    }
+    /**
+     * Coprueba que la contraseña sea válida según un patrón dado
+     * La condición es que tenga entre 6 y 8 caracteres alfanuméricos
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static clave(variable){
+        let regClave = new RegExp(/^(?=(?:.*\d))(?=(?:.*[A-Za-z]))\S{6,8}$/);
+        return regClave.test(variable.value);
+    }
+    /**
+     * Verifica que la dirección corresponda con un patrón válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static direccion(variable){
+        //let regDireccion = new RegExp(/^(\w+\s*){1,50}$/);//Una a 50 palabras
+        let regDireccion = new RegExp(/^(([A-ZÑÁÉÍÓÚa-zñáéíóúü])+\s*){1,10}(\d*\s*)(-*\s*\d*([A-ZÑÁÉÍÓÚa-zñáéíóúü])*\s*)(-*\s*\d*)$/);
+        return regDireccion.test(variable.value);
+    }
+    /**
+     * Verifica que exista una provincia seleccionada
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static provincia(variable){
+        let valido = false;
+        if(variable.selectedIndex !== null &amp;&amp; variable.selectedIndex !== 0){
+            valido = true;
+        }
+        return valido;
+    }
+    //ESPECIES
+    /**
+     * Verifica que el nombre de la especie sea válido
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static especie(variable){
+        let regEspecie = new RegExp(/^[A-ZÑÁÉÍÓÚ]{1}[a-zñáéíóúü\s]{1,49}$/);
+        return regEspecie.test(variable.value);
+    }
+    /**
+     * Verifica que el periodo introducido corresponda con una estación 
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static migracion(variable){
+        let regPMigracion = new RegExp(/^(Primavera|Verano|Otoño|Invierno|No)$/);
+        return regPMigracion.test(variable.value);
+    }
+    /**
+     * Limita el campo textarea a 200 caracteres
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static textarea(variable){
+        let lleno = true;
+        if(variable.value === null || variable.value === '' || variable.value === undefined)
+            lleno = false;
+        return lleno;
+    }
+    /**
+     * Verifica que el código del especimen sea correcto en base al patrón
+     * Este código debe empezar por una consonante mayúscula y estar seguido 
+     * de 4 dígitos
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static codigoE(variable){
+        let regCodigoE = new RegExp(/^[^AEIOUÁÉÍÓÚÑáéíóúña-z]{1}\d{4}$/);
+        return regCodigoE.test(variable.value);
+    }
+    /**
+     * Comprueba que el dato introducido es correcto
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static peso(variable){
+        let regPesoG = new RegExp(/^(\d|\d{2}|\d{3}|\d{4}|(1\d{4})|20000)[\s]?$/);
+        return regPesoG.test(variable.value);
+    }
+    /**
+     * Comprueba que el dato introducido es correcto
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static dimensiones(variable){
+        let regDimensiones = new RegExp(/^(\d|\d{2}|([12]\d{2})|300)(\s\/\s)(\d|\d{2}|([12]\d{2})|300)[\s]?$/);
+        return regDimensiones.test(variable.value);
+    }
+    //TODOS
+    /**
+     * Comprueba que la fecha introducida tenga el formato adecuado
+     * 
+     * @param {string} variable
+     * 
+     * @return {Boolean}
+     */
+    static fecha(variable){
+        let regEntrada = new RegExp(/^((\d){4}[\-](0[1-9]|1[0-2])[\-](0([1-9])|[1-2][\d]|3[0-1]))$/);
+        if(regEntrada.test(variable.value)){
+            let aux = variable.value.split('-');
+            return esCorrectoDia(aux[2], aux[1], aux[0]);
+        }
+        /*
+         * función complementaria para evaluar años bisiestos y que los días 
+         * correspondan con el mes
+         * 
+         * @param {string} dia
+         * @param {string} mes
+         * @param {string} anno
+         * 
+         * @return {Boolean}
+         */
+        function esCorrectoDia(dia, mes, anno){
+            if((new RegExp(/^((0[469]|11))$/)).test(mes)){
+                if((new RegExp(/^(0([1-9])|[1-2][\d]|30)$/)).test(dia)){
+                    return esCorrectaFecha(Number(dia), Number(mes) - 1, Number(anno));
+                } 
+            } else if ((new RegExp(/^((02))$/)).test(mes)){
+                if((new RegExp(/^(0([1-9])|[1-2][\d])$/)).test(dia)){
+                    if((new RegExp(/^(29)$/)).test(dia)){
+                        if ((((Number(anno) % 4 === 0) &amp;&amp; (Number(anno) % 100 !== 0)) || (Number(anno) % 400 === 0))){
+                            return esCorrectaFecha(Number(dia), Number(mes) - 1, Number(anno));
+                        }
+                    } else {
+                        return esCorrectaFecha(Number(dia), Number(mes) - 1, Number(anno));
+                    }									
+                }
+            } else {
+                return esCorrectaFecha(Number(dia), Number(mes) - 1, Number(anno));
+            }
+            /*
+             * Función complementaria, verifica que la fecha introducida no es 
+             * superior a la fecha actual
+             * 
+             * @param {string} dia
+             * @param {string} mes
+             * @param {string} anno
+             * 
+             * @return {Boolean}
+             */
+            function esCorrectaFecha(dia, mes, anno){
+                return (new Date(anno, mes, dia) &lt;= new Date());
+            }
+        }
+    }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Biologo.html">Biologo</a></li><li><a href="Especie.html">Especie</a></li><li><a href="Especimen.html">Especimen</a></li><li><a href="Invitado.html">Invitado</a></li><li><a href="Pagina.html">Pagina</a></li><li><a href="Registro.html">Registro</a></li><li><a href="Torreta.html">Torreta</a></li><li><a href="Validar.html">Validar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#camposB">camposB</a></li><li><a href="global.html#camposModificados">camposModificados</a></li><li><a href="global.html#camposU">camposU</a></li><li><a href="global.html#cargarComentarios">cargarComentarios</a></li><li><a href="global.html#cargarContenido">cargarContenido</a></li><li><a href="global.html#cargarRegistro">cargarRegistro</a></li><li><a href="global.html#cargarUltimas">cargarUltimas</a></li><li><a href="global.html#clan">clan</a></li><li><a href="global.html#clanArray">clanArray</a></li><li><a href="global.html#comprobarCampos">comprobarCampos</a></li><li><a href="global.html#comprobarCamposB">comprobarCamposB</a></li><li><a href="global.html#comprobarCamposI">comprobarCamposI</a></li><li><a href="global.html#comprobarDatos">comprobarDatos</a></li><li><a href="global.html#comprobarFormulario">comprobarFormulario</a></li><li><a href="global.html#comunesClan">comunesClan</a></li><li><a href="global.html#comunicarDatos">comunicarDatos</a></li><li><a href="global.html#comunicarLogin">comunicarLogin</a></li><li><a href="global.html#construirCondiciones">construirCondiciones</a></li><li><a href="global.html#construirFormulario">construirFormulario</a></li><li><a href="global.html#contadorErrores">contadorErrores</a></li><li><a href="global.html#continuar">continuar</a></li><li><a href="global.html#crearBoton">crearBoton</a></li><li><a href="global.html#crearCaracImg">crearCaracImg</a></li><li><a href="global.html#crearContComentarios">crearContComentarios</a></li><li><a href="global.html#crearContenedor">crearContenedor</a></li><li><a href="global.html#crearFormularioEspecies">crearFormularioEspecies</a></li><li><a href="global.html#crearFormularioEspecimenes">crearFormularioEspecimenes</a></li><li><a href="global.html#crearFormularioInicial">crearFormularioInicial</a></li><li><a href="global.html#crearFormularios">crearFormularios</a></li><li><a href="global.html#crearSiEsTrue">crearSiEsTrue</a></li><li><a href="global.html#darAtributosForm">darAtributosForm</a></li><li><a href="global.html#definirTipoLogin">definirTipoLogin</a></li><li><a href="global.html#dirigirEnlaces">dirigirEnlaces</a></li><li><a href="global.html#editarDatosPersonales">editarDatosPersonales</a></li><li><a href="global.html#ejecutarPagina">ejecutarPagina</a></li><li><a href="global.html#eliminarCuenta">eliminarCuenta</a></li><li><a href="global.html#enviarComentario">enviarComentario</a></li><li><a href="global.html#enviarServidor">enviarServidor</a></li><li><a href="global.html#esCorrecto">esCorrecto</a></li><li><a href="global.html#escucharArrepentidos">escucharArrepentidos</a></li><li><a href="global.html#escucharComentarios">escucharComentarios</a></li><li><a href="global.html#escucharInfoTorretas">escucharInfoTorretas</a></li><li><a href="global.html#escucharModal">escucharModal</a></li><li><a href="global.html#escucharVolverP">escucharVolverP</a></li><li><a href="global.html#esIncorrecto">esIncorrecto</a></li><li><a href="global.html#guardarObjeto">guardarObjeto</a></li><li><a href="global.html#guardarValidos">guardarValidos</a></li><li><a href="global.html#hacerComentario">hacerComentario</a></li><li><a href="global.html#individuo">individuo</a></li><li><a href="global.html#individuoArray">individuoArray</a></li><li><a href="global.html#iniciar">iniciar</a></li><li><a href="global.html#iniciarLogin">iniciarLogin</a></li><li><a href="global.html#iniciarRegistro">iniciarRegistro</a></li><li><a href="global.html#llamarFormularios">llamarFormularios</a></li><li><a href="global.html#mostrarDatosPersonales">mostrarDatosPersonales</a></li><li><a href="global.html#mostrarMiCuenta">mostrarMiCuenta</a></li><li><a href="global.html#mostrarRespuesta">mostrarRespuesta</a></li><li><a href="global.html#pasarServidor">pasarServidor</a></li><li><a href="global.html#recogerCampos">recogerCampos</a></li><li><a href="global.html#recogerUsuario">recogerUsuario</a></li><li><a href="global.html#registro">registro</a></li><li><a href="global.html#sonValidosCampos">sonValidosCampos</a></li><li><a href="global.html#torreta">torreta</a></li><li><a href="global.html#torretaArray">torretaArray</a></li><li><a href="global.html#usuario">usuario</a></li><li><a href="global.html#usuarioCopia">usuarioCopia</a></li><li><a href="global.html#verificarCampos">verificarCampos</a></li><li><a href="global.html#verificarCamposB">verificarCamposB</a></li><li><a href="global.html#verificarFormulario">verificarFormulario</a></li><li><a href="global.html#verificarTodo">verificarTodo</a></li><li><a href="global.html#vigilarClickComunes">vigilarClickComunes</a></li><li><a href="global.html#vigilarClickLogin">vigilarClickLogin</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri May 20 2022 11:40:46 GMT+0200 (hora de verano de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

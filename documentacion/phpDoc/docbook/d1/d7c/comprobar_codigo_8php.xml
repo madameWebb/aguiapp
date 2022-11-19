@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_comprobar_codigo_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/comprobarCodigo.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/comprobarCodigo.php</primary></indexterm>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_comprobar_codigo_8php_1a24ecad83d3153a6b6859e890dc3c7293">comprobarCodigo</link> ($variable)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_comprobar_codigo_8php_1a24ecad83d3153a6b6859e890dc3c7293"/><section>
+    <title>comprobarCodigo()</title>
+<indexterm><primary>comprobarCodigo</primary><secondary>comprobarCodigo.php</secondary></indexterm>
+<indexterm><primary>comprobarCodigo.php</primary><secondary>comprobarCodigo</secondary></indexterm>
+<para><computeroutput>comprobarCodigo ( $variable)</computeroutput></para>
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez Comprueba que el código para el registro de biólogos es correcto.</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$variable</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="_comprobar_codigo_8php_source_1l00019">19</link> del archivo <link linkend="_comprobar_codigo_8php_source">comprobarCodigo.php</link>.</para>
+Gráfico de llamadas para esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d7c/comprobar_codigo_8php_a24ecad83d3153a6b6859e890dc3c7293_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

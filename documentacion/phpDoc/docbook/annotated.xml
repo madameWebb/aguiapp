@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="es">
+<title>Estructura de datos</title>
+Lista de estructuras con una breve descripción:<link linkend="_class_biologo">Biologo</link><link linkend="_class_especie">Especie</link><link linkend="_class_especimenes">Especimenes</link><link linkend="_class_invitado">Invitado</link><link linkend="_class_persona">Persona</link><link linkend="_class_registro">Registro</link><link linkend="_class_torreta">Torreta</link><link linkend="_class_validar">Validar</link></section>

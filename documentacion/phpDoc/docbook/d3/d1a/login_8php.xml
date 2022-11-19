@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_login_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/login.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/login.php</primary></indexterm>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_login_8php_1abf38aefdd61588b76917d66782f97788">comprobarClave</link> ($usuario, $clave, $tipoLogin, $tipoUsuario)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_login_8php_1abf38aefdd61588b76917d66782f97788"/><section>
+    <title>comprobarClave()</title>
+<indexterm><primary>comprobarClave</primary><secondary>login.php</secondary></indexterm>
+<indexterm><primary>login.php</primary><secondary>comprobarClave</secondary></indexterm>
+<para><computeroutput>comprobarClave ( $usuario,  $clave,  $tipoLogin,  $tipoUsuario)</computeroutput></para>
+<para>Función para verificar la clave y crear las variables de la sesión</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$usuario</entry><entry>
+<para>dni, mail o nombre de usuario </para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$clave</entry><entry>
+<para>clave de acceso </para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$tipoLogin</entry><entry>
+<para>indica si es el dato $usuario será un dni, mail o nombre de usuario </para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$tipoUsuario</entry><entry>
+<para>indica si es &apos;biologos&apos; o &apos;invitados&apos; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definición en la línea <link linkend="_login_8php_source_1l00024">24</link> del archivo <link linkend="_login_8php_source">login.php</link>.</para>
+Gráfico de llamadas para esta función:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/d1a/login_8php_abf38aefdd61588b76917d66782f97788_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

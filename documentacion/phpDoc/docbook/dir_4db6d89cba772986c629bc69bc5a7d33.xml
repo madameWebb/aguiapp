@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_4db6d89cba772986c629bc69bc5a7d33" xml:lang="es">
+<title>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP</title>
+<indexterm><primary>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP</primary></indexterm>
+Gráfico de dependencias de directorios para clasesPHP:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_4db6d89cba772986c629bc69bc5a7d33_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_55b668912e1a6c23a65bc5d93ff36533">especies</link></para>
+</listitem>
+            <listitem><para>directorio <link linkend="_dir_8c6319639ed28b9831044e73ac5ec164">persona</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__registro_8php">Registro.php</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__validar_8php">Validar.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d7/d23/tiempo_8php" kind="file" language="PHP">
+    <compoundname>tiempo.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/d23/tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$apiKeyT</definition>
+        <argsstring></argsstring>
+        <name>$apiKeyT</name>
+        <initializer>= &quot;cbc35f2e21aeb553bcc014213b8791d6&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" line="11" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d23/tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$cityId</definition>
+        <argsstring></argsstring>
+        <name>$cityId</name>
+        <initializer>= &quot;3105971&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" line="12" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d23/tiempo_8php_1a08398f14660ca12324da8b31f495b96c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$googleApiUrl</definition>
+        <argsstring></argsstring>
+        <name>$googleApiUrl</name>
+        <initializer>= &quot;http://api.openweathermap.org/data/2.5/weather?id=&quot; . $cityId . &quot;&amp;lang=es&amp;units=metric&amp;APPID=&quot; . $apiKeyT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" line="14" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$ch</definition>
+        <argsstring></argsstring>
+        <name>$ch</name>
+        <initializer>= curl_init()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" line="16" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d23/tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$response</definition>
+        <argsstring></argsstring>
+        <name>$response</name>
+        <initializer>= curl_exec($ch)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" line="24" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d7/d23/tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb" refkind="member"><highlight class="normal"><ref refid="d7/d23/tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb" kindref="member">$apiKeyT</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cbc35f2e21aeb553bcc014213b8791d6&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12" refid="d7/d23/tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3" refkind="member"><highlight class="normal"><ref refid="d7/d23/tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3" kindref="member">$cityId</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;3105971&quot;</highlight><highlight class="normal">;</highlight><highlight class="comment">//Vigo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d7/d23/tiempo_8php_1a08398f14660ca12324da8b31f495b96c" refkind="member"><highlight class="normal"><ref refid="d7/d23/tiempo_8php_1a08398f14660ca12324da8b31f495b96c" kindref="member">$googleApiUrl</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?id=&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d7/d23/tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3" kindref="member">$cityId</ref><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&amp;lang=es&amp;units=metric&amp;APPID=&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d7/d23/tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb" kindref="member">$apiKeyT</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" refkind="member"><highlight class="normal"><ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref><sp/>=<sp/>curl_init();</highlight><highlight class="comment">//inicia<sp/>la<sp/>petición<sp/>a<sp/>la<sp/>api,<sp/>entre<sp/>paréntisis<sp/>puede<sp/>ir<sp/>algo<sp/>opcionalmente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">curl_setopt(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>,<sp/>CURLOPT_HEADER,<sp/>0);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">curl_setopt(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>,<sp/>CURLOPT_RETURNTRANSFER,<sp/>1);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">curl_setopt(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>,<sp/>CURLOPT_URL,<sp/><ref refid="d7/d23/tiempo_8php_1a08398f14660ca12324da8b31f495b96c" kindref="member">$googleApiUrl</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">curl_setopt(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>,<sp/>CURLOPT_FOLLOWLOCATION,<sp/>1);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">curl_setopt(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>,<sp/>CURLOPT_VERBOSE,<sp/>0);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">curl_setopt(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>,<sp/>CURLOPT_SSL_VERIFYPEER,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24" refid="d7/d23/tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99" refkind="member"><highlight class="normal"><ref refid="d7/d23/tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99" kindref="member">$response</ref><sp/>=<sp/>curl_exec(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>);<sp/></highlight><highlight class="comment">//ejecuta<sp/>la<sp/>petición<sp/>y<sp/>se<sp/>recoge<sp/>en<sp/>una<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">curl_close(<ref refid="d7/d23/tiempo_8php_1a696b903bbc5c02914bdd402e91826eca" kindref="member">$ch</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//echo<sp/>&apos;&lt;pre&gt;&apos;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">echo<sp/><ref refid="d7/d23/tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99" kindref="member">$response</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//echo<sp/>&apos;&lt;/pre&gt;&apos;;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php"/>
+  </compounddef>
+</doxygen>

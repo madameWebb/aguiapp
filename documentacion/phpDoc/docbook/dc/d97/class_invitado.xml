@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_invitado" xml:lang="es">
+<title>Referencia de la Clase Invitado</title>
+<indexterm><primary>Invitado</primary></indexterm>
+Diagrama de herencias de Invitado<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/dce/class_invitado__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Diagrama de colaboración para Invitado:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d2/d16/class_invitado__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_invitado_1a8c5bbbf29457335a0fdef323ddecd72e">__construct</link> ($usuario, $nombreApellido, $mail, $claveAcceso)</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1a432331ea28feaeec944c62107acf5f1b">getClaveAcceso</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1a737e0156e38f0b807c7ec0804edf313b">setClaveAcceso</link> ($claveAcceso)</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1a38abe751ca21ffb95d9c90862e0fb96f">getUsuario</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1a48255b4550c8d4dc7aedf7837439461a">setUsuario</link> ($usuario)</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1ae2d57a823882316c4e3c66c58b950e69">getNombreApellido</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1ad29599d95c9acdfa9966234fe761bf21">setMail</link> ($mail)</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1ac3c2873ffa8ad60b4f2742ac569087f7">setNombreApellido</link> ($nombreApellido)</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_invitado_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez Clase <link linkend="_class_invitado">Invitado</link></para>
+</formalpara>
+persona </para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00016">16</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<section>
+<title>Documentación del constructor y destructor</title>
+<anchor xml:id="_class_invitado_1a8c5bbbf29457335a0fdef323ddecd72e"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $usuario,  $nombreApellido,  $mail,  $claveAcceso)</computeroutput></para>
+<para>Constructor de 4 parámetros; crea y devuelve el objeto <link linkend="_class_invitado">Invitado</link> a partir de los datos solicitados</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>strig</entry><entry>$usuario</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$nombreApellido</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$mail</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$claveAcceso</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para><link linkend="_class_invitado">Invitado</link> </para>
+</formalpara>
+</para>
+<para>
+Reimplementado de <link linkend="_class_persona_1a8ea2a892653f4a90b68682905c97965f">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00035">35</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_invitado_1ada450b5eb68e37ce0022cbe40987fb3d"/><section>
+    <title>editarInformacion()</title>
+<indexterm><primary>editarInformacion</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>editarInformacion</secondary></indexterm>
+<para><computeroutput>editarInformacion ( )</computeroutput></para>
+<para>Permite la recogida de datos para la modificación de los mismos. </para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ada450b5eb68e37ce0022cbe40987fb3d">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00116">116</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1a432331ea28feaeec944c62107acf5f1b"/><section>
+    <title>getClaveAcceso()</title>
+<indexterm><primary>getClaveAcceso</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>getClaveAcceso</secondary></indexterm>
+<para><computeroutput>getClaveAcceso ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string la clave de acceso introducida </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00043">43</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1ae2d57a823882316c4e3c66c58b950e69"/><section>
+    <title>getNombreApellido()</title>
+<indexterm><primary>getNombreApellido</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>getNombreApellido</secondary></indexterm>
+<para><computeroutput>getNombreApellido ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string el nombre introducido </para>
+</formalpara>
+</para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ae2d57a823882316c4e3c66c58b950e69">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00071">71</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1a38abe751ca21ffb95d9c90862e0fb96f"/><section>
+    <title>getUsuario()</title>
+<indexterm><primary>getUsuario</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>getUsuario</secondary></indexterm>
+<para><computeroutput>getUsuario ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string el nombre de usuario introducido </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00057">57</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1ada503a905ffc49d2e3b6991b7f94d2a2"/><section>
+    <title>mostrarInformacion()</title>
+<indexterm><primary>mostrarInformacion</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>mostrarInformacion</secondary></indexterm>
+<para><computeroutput>mostrarInformacion ( )</computeroutput></para>
+<para>Muestra la información del objeto </para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00093">93</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1a737e0156e38f0b807c7ec0804edf313b"/><section>
+    <title>setClaveAcceso()</title>
+<indexterm><primary>setClaveAcceso</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>setClaveAcceso</secondary></indexterm>
+<para><computeroutput>setClaveAcceso ( $claveAcceso)</computeroutput></para>
+<para>Modifica la clave introducida</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$claveAcceso</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00051">51</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1ad29599d95c9acdfa9966234fe761bf21"/><section>
+    <title>setMail()</title>
+<indexterm><primary>setMail</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>setMail</secondary></indexterm>
+<para><computeroutput>setMail ( $mail)</computeroutput></para>
+<para>Modifica el mail introducido</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$mail</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ad29599d95c9acdfa9966234fe761bf21">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00079">79</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1ac3c2873ffa8ad60b4f2742ac569087f7"/><section>
+    <title>setNombreApellido()</title>
+<indexterm><primary>setNombreApellido</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>setNombreApellido</secondary></indexterm>
+<para><computeroutput>setNombreApellido ( $nombreApellido)</computeroutput></para>
+<para>Modifica el nombre y apellido introducido</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$nombreApellido</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00087">87</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<anchor xml:id="_class_invitado_1a48255b4550c8d4dc7aedf7837439461a"/><section>
+    <title>setUsuario()</title>
+<indexterm><primary>setUsuario</primary><secondary>Invitado</secondary></indexterm>
+<indexterm><primary>Invitado</primary><secondary>setUsuario</secondary></indexterm>
+<para><computeroutput>setUsuario ( $usuario)</computeroutput></para>
+<para>Modifica el nombre de usuario</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$usuario</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definición en la línea <link linkend="__invitado_8php_source_1l00065">65</link> del archivo <link linkend="__invitado_8php_source">Invitado.php</link>.</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/<link linkend="__invitado_8php">Invitado.php</link></section>
+</section>

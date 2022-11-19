@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__especimen_8php_source" xml:lang="es">
+<title>Especimen.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Especimen.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__especimen_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__especimen_8php_source_1l00010"/>00010 require&#32;<emphasis role="stringliteral">&apos;Especie.php&apos;</emphasis>;
+<anchor xml:id="__especimen_8php_source_1l00014"/><link linkend="_class_especimenes">00014</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_especimenes">Especimenes</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_class_especie">Especie</link>{
+<anchor xml:id="__especimen_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$codigoRegistro;
+<anchor xml:id="__especimen_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$registrador;
+<anchor xml:id="__especimen_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$especie;
+<anchor xml:id="__especimen_8php_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$peso;
+<anchor xml:id="__especimen_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$dimensiones;
+<anchor xml:id="__especimen_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$caracteristicas;
+<anchor xml:id="__especimen_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$fechaRegistro;
+<anchor xml:id="__especimen_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;
+<anchor xml:id="__especimen_8php_source_1l00057"/><link linkend="_class_especimenes_1a8093691785372f13bd3d6fb6d27d54ec">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especimenes_1a8093691785372f13bd3d6fb6d27d54ec">__construct</link>($codigoRegistro,&#32;$registrador,&#32;$especie,&#32;$peso,&#32;$dimensiones,&#32;$caracteristicas,&#32;$fechaRegistro)&#32;{
+<anchor xml:id="__especimen_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;codigoRegistro&#32;=&#32;$codigoRegistro;
+<anchor xml:id="__especimen_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;registrador&#32;=&#32;$registrador;
+<anchor xml:id="__especimen_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;especie&#32;=&#32;$especie;
+<anchor xml:id="__especimen_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;peso&#32;=&#32;$peso;
+<anchor xml:id="__especimen_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dimensiones&#32;=&#32;$dimensiones;
+<anchor xml:id="__especimen_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;caracteristicas&#32;=&#32;$caracteristicas;
+<anchor xml:id="__especimen_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;fechaRegistro&#32;=&#32;$fechaRegistro;
+<anchor xml:id="__especimen_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especimen_8php_source_1l00079"/><link linkend="_class_especimenes_1a4f24b74ec17e26731b1c3a7f6719a776">00079</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_especimenes_1a4f24b74ec17e26731b1c3a7f6719a776">agregarEspecie</link>($especie,&#32;$reino,&#32;$clase,&#32;$orden,&#32;$familia,&#32;$periodoMigratorio)&#32;{
+<anchor xml:id="__especimen_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::agregarEspecie($especie,&#32;$reino,&#32;$clase,&#32;$orden,&#32;$familia,&#32;$periodoMigratorio);
+<anchor xml:id="__especimen_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__especimen_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="comment">//Teoricamente&#32;no&#32;es&#32;necesario&#32;meter&#32;esto&#32;aquí&#32;porque&#32;el&#32;hijo&#32;ya&#32;accedería&#32;directamente</emphasis>
+<anchor xml:id="__especimen_8php_source_1l00083"/>00083 }
+</programlisting></section>

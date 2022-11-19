@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__validar_8php_source" xml:lang="es">
+<title>Validar.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__validar_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__validar_8php_source_1l00002"/>00002 
+<anchor xml:id="__validar_8php_source_1l00013"/><link linkend="_class_validar">00013</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_validar">Validar</link>{
+<anchor xml:id="__validar_8php_source_1l00021"/><link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">camposTexto</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$limpio&#32;=&#32;htmlspecialchars(trim(strip_tags($variable)),&#32;ENT_QUOTES,&#32;<emphasis role="stringliteral">&quot;ISO-8859-1&quot;</emphasis>);
+<anchor xml:id="__validar_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(empty($limpio)&#32;||&#32;ctype_space($limpio)){
+<anchor xml:id="__validar_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="__validar_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$limpio;
+<anchor xml:id="__validar_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00034"/><link linkend="_class_validar_1a4d15ecb2e671a6af364669cc86a11a36">00034</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a4d15ecb2e671a6af364669cc86a11a36">nombre</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$nombre&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^([A-ZÑÁÉÍÓÚ]{1}[a-zñáéíóúü]+[\s]){1,2}([A-ZÑÁÉÍÓÚ]{1}[a-zñáéíóúü]+[\s]?){1}$/&apos;</emphasis>,&#32;$nombre)){
+<anchor xml:id="__validar_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$nombre;
+<anchor xml:id="__validar_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00048"/><link linkend="_class_validar_1a1d0932ada0413381b868162863f89397">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a1d0932ada0413381b868162863f89397">usuario</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^([A-ZÑÁÉÍÓÚa-zñáéíóúü]){2}([A-ZÑÁÉÍÓÚa-zñáéíóúü0-9]){1,8}$/&apos;</emphasis>,&#32;$usuario)){
+<anchor xml:id="__validar_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$usuario;
+<anchor xml:id="__validar_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;letraDni($numero,&#32;$letra){
+<anchor xml:id="__validar_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$esCorrecto&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($numero&#32;%&#32;23&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;$numero&#32;%&#32;23&#32;&lt;=&#32;22){
+<anchor xml:id="__validar_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$letrasNif&#32;=&#32;[<emphasis role="charliteral">&apos;T&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;R&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;W&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;G&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;Y&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;F&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;P&apos;</emphasis>,&#32;
+<anchor xml:id="__validar_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;D&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;X&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;B&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;N&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;J&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;Z&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;Q&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;V&apos;</emphasis>,&#32;
+<anchor xml:id="__validar_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;H&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;L&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;K&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;E&apos;</emphasis>];
+<anchor xml:id="__validar_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($letrasNif[$numero&#32;%&#32;23]&#32;==&#32;$letra){
+<anchor xml:id="__validar_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$esCorrecto&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="__validar_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$esCorrecto;
+<anchor xml:id="__validar_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00081"/><link linkend="_class_validar_1a3aa59f416560da1fa48cf48aa16a356b">00081</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a3aa59f416560da1fa48cf48aa16a356b">dni</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$dni&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^\d{8}[a-zA-Z]$/&apos;</emphasis>,&#32;$dni)){
+<anchor xml:id="__validar_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__validar_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!Validar::letraDni(((<emphasis role="keywordtype">int</emphasis>)&#32;substr($dni,&#32;0,&#32;8)),&#32;strtoupper(substr($dni,&#32;-1)))){
+<anchor xml:id="__validar_8php_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$dni;
+<anchor xml:id="__validar_8php_source_1l00091"/>00091 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00098"/><link linkend="_class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2">00098</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2">mail</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$mail&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(filter_var($mail,&#32;FILTER_VALIDATE_EMAIL)){
+<anchor xml:id="__validar_8php_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$mail;
+<anchor xml:id="__validar_8php_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__validar_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00113"/><link linkend="_class_validar_1a8f42bdd26eb04e93a1df3274c5025ab9">00113</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a8f42bdd26eb04e93a1df3274c5025ab9">telefono</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$telefono&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^[9876]{1}[0-9]{8}$/&apos;</emphasis>,&#32;$telefono)){
+<anchor xml:id="__validar_8php_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$telefono;
+<anchor xml:id="__validar_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00127"/><link linkend="_class_validar_1aed1c76ecf2364c8505209397d951498e">00127</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1aed1c76ecf2364c8505209397d951498e">direccion</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$direccion&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/(([A-ZÑÁÉÍÓÚa-zñáéíóúü])+\s*){1,10}(\d*\s*)(-*\s*\d*([A-ZÑÁÉÍÓÚa-zñáéíóúü])*\s*)(-*\s*\d*)$/&apos;</emphasis>,&#32;$direccion)){
+<anchor xml:id="__validar_8php_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$direccion;
+<anchor xml:id="__validar_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00140"/><link linkend="_class_validar_1a04495c43d130363240cb4b1db22a6d0e">00140</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a04495c43d130363240cb4b1db22a6d0e">provincia</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$provincia&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(empty($provincia)&#32;||&#32;ctype_space($provincia)){
+<anchor xml:id="__validar_8php_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$provincia;
+<anchor xml:id="__validar_8php_source_1l00146"/>00146 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00147"/>00147 &#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__validar_8php_source_1l00148"/>00148 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;Función&#32;privada&#32;para&#32;comprobar&#32;que&#32;la&#32;fecha&#32;introducida&#32;no&#32;es&#32;mayor&#32;que&#32;</emphasis>
+<anchor xml:id="__validar_8php_source_1l00149"/>00149 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;la&#32;fecha&#32;actual</emphasis>
+<anchor xml:id="__validar_8php_source_1l00150"/>00150 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;</emphasis>
+<anchor xml:id="__validar_8php_source_1l00151"/>00151 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;int&#32;$dia&#32;introducido</emphasis>
+<anchor xml:id="__validar_8php_source_1l00152"/>00152 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;int&#32;$mes&#32;introducido</emphasis>
+<anchor xml:id="__validar_8php_source_1l00153"/>00153 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;int&#32;$anno&#32;introducido</emphasis>
+<anchor xml:id="__validar_8php_source_1l00154"/>00154 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;boolean&#32;verdadero&#32;o&#32;falso&#32;según&#32;el&#32;resultado&#32;</emphasis>
+<anchor xml:id="__validar_8php_source_1l00155"/>00155 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__validar_8php_source_1l00156"/>00156 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;esCorrectaFecha($dia,&#32;$mes,&#32;$anno){
+<anchor xml:id="__validar_8php_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(date_create($anno.<emphasis role="charliteral">&apos;-&apos;</emphasis>.$mes.<emphasis role="charliteral">&apos;-&apos;</emphasis>.$dia)&#32;&lt;=&#32;date_create());
+<anchor xml:id="__validar_8php_source_1l00158"/>00158 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00159"/>00159 &#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__validar_8php_source_1l00160"/>00160 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;Funcion&#32;privada&#32;valida&#32;que&#32;los&#32;días&#32;introducidos&#32;se&#32;corresponden&#32;con&#32;el&#32;</emphasis>
+<anchor xml:id="__validar_8php_source_1l00161"/>00161 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;mes&#32;introducido&#32;y&#32;llama&#32;a&#32;otra&#32;función&#32;que&#32;verifica&#32;si&#32;la&#32;fecha&#32;es&#32;menor</emphasis>
+<anchor xml:id="__validar_8php_source_1l00162"/>00162 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;o&#32;igual&#32;que&#32;la&#32;fecha&#32;actual</emphasis>
+<anchor xml:id="__validar_8php_source_1l00163"/>00163 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;</emphasis>
+<anchor xml:id="__validar_8php_source_1l00164"/>00164 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;int&#32;$anno&#32;introducido</emphasis>
+<anchor xml:id="__validar_8php_source_1l00165"/>00165 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;int&#32;$mes&#32;introducido</emphasis>
+<anchor xml:id="__validar_8php_source_1l00166"/>00166 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;int&#32;$dia&#32;introducido</emphasis>
+<anchor xml:id="__validar_8php_source_1l00167"/>00167 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;boolean&#32;verdadero&#32;o&#32;falso&#32;según&#32;el&#32;resultado</emphasis>
+<anchor xml:id="__validar_8php_source_1l00168"/>00168 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__validar_8php_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;esCorrectoDia($anno,&#32;$mes,&#32;$dia){
+<anchor xml:id="__validar_8php_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(preg_match(<emphasis role="stringliteral">&apos;/^((0[469]|11))$/&apos;</emphasis>,&#32;$mes)){
+<anchor xml:id="__validar_8php_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(preg_match(<emphasis role="stringliteral">&apos;/^(0([1-9])|[1-2][\d]|30)$/&apos;</emphasis>,&#32;$dia)){
+<anchor xml:id="__validar_8php_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Validar::esCorrectaFecha($dia,&#32;$mes,&#32;$anno);
+<anchor xml:id="__validar_8php_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(preg_match(<emphasis role="stringliteral">&apos;/^((02))$/&apos;</emphasis>,&#32;$mes)){
+<anchor xml:id="__validar_8php_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(preg_match(<emphasis role="stringliteral">&apos;/^(0([1-9])|[1-2][\d])$/&apos;</emphasis>,&#32;$dia)){
+<anchor xml:id="__validar_8php_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(preg_match(<emphasis role="stringliteral">&apos;/^(29)$/&apos;</emphasis>,&#32;$dia)){
+<anchor xml:id="__validar_8php_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((($anno&#32;%&#32;4&#32;===&#32;0)&#32;&amp;&amp;&#32;($anno&#32;%&#32;100&#32;!==&#32;0))&#32;||&#32;($anno&#32;%&#32;400&#32;===&#32;0)){
+<anchor xml:id="__validar_8php_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Validar::esCorrectaFecha($dia,&#32;$mes,&#32;$anno);
+<anchor xml:id="__validar_8php_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__validar_8php_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Validar::esCorrectaFecha($dia,&#32;$mes,&#32;$anno);
+<anchor xml:id="__validar_8php_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;
+<anchor xml:id="__validar_8php_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(preg_match(<emphasis role="stringliteral">&apos;/^((0[13578]|1[02]))$/&apos;</emphasis>,&#32;$mes)){
+<anchor xml:id="__validar_8php_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(preg_match(<emphasis role="stringliteral">&apos;/^(0([1-9])|[1-2][\d]|3[01])$/&apos;</emphasis>,&#32;$dia)){
+<anchor xml:id="__validar_8php_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Validar::esCorrectaFecha($dia,&#32;$mes,&#32;$anno);
+<anchor xml:id="__validar_8php_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="__validar_8php_source_1l00189"/>00189 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00198"/><link linkend="_class_validar_1adfeb2ff1ba30827a6b23d9d25b1f2d58">00198</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1adfeb2ff1ba30827a6b23d9d25b1f2d58">fecha</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$fecha&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^((\d){4}[\-]([0]?[1-9]|1[0-2])[\-]([0]?([1-9])|[1-2][\d]|3[0-1]))$/&apos;</emphasis>,&#32;$fecha)){
+<anchor xml:id="__validar_8php_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__validar_8php_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$aux&#32;=&#32;explode(<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;$fecha);
+<anchor xml:id="__validar_8php_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!checkdate((<emphasis role="keywordtype">int</emphasis>)&#32;$aux[1],&#32;(<emphasis role="keywordtype">int</emphasis>)&#32;$aux[2],&#32;(<emphasis role="keywordtype">int</emphasis>)&#32;$aux[0])){
+<anchor xml:id="__validar_8php_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__validar_8php_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$aux&#32;=&#32;explode(<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;$fecha);
+<anchor xml:id="__validar_8php_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!Validar::esCorrectoDia($aux[0],&#32;$aux[1],&#32;$aux[2])){
+<anchor xml:id="__validar_8php_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$fecha;
+<anchor xml:id="__validar_8php_source_1l00214"/>00214 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00221"/><link linkend="_class_validar_1ab64de9f6fe5eef644364ec51d18d909f">00221</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1ab64de9f6fe5eef644364ec51d18d909f">clave</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$clave&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^(?=(?:.*\d))(?=(?:.*[A-Za-z]))\S{6,8}$/&apos;</emphasis>,&#32;$clave)){
+<anchor xml:id="__validar_8php_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$clave;
+<anchor xml:id="__validar_8php_source_1l00227"/>00227 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00234"/><link linkend="_class_validar_1ae8437101b01206f21ea93e49db07b381">00234</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1ae8437101b01206f21ea93e49db07b381">especie</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$especie&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^[A-ZÑÁÉÍÓÚ]{1}[a-zñáéíóúü\s]{1,49}$/&apos;</emphasis>,&#32;$especie)){
+<anchor xml:id="__validar_8php_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$especie;
+<anchor xml:id="__validar_8php_source_1l00240"/>00240 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00247"/><link linkend="_class_validar_1a692b2249239ab61c7676585b731d1ca1">00247</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a692b2249239ab61c7676585b731d1ca1">migracion</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$migracion&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^(Primavera|Verano|Otoño|Invierno|No)$/&apos;</emphasis>,&#32;$migracion)){
+<anchor xml:id="__validar_8php_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$migracion;
+<anchor xml:id="__validar_8php_source_1l00253"/>00253 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00260"/><link linkend="_class_validar_1a16beab39cf0798455de6e0d5d75931ef">00260</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a16beab39cf0798455de6e0d5d75931ef">codigoE</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$codigo&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^[^AEIOUÁÉÍÓÚÑáéíóúña-z]{1}\d{4}$/&apos;</emphasis>,&#32;$codigo)){
+<anchor xml:id="__validar_8php_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$codigo;
+<anchor xml:id="__validar_8php_source_1l00266"/>00266 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00273"/><link linkend="_class_validar_1a2c74bfb0c547619f49904540b46728a1">00273</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a2c74bfb0c547619f49904540b46728a1">peso</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$peso&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;/^(\d|\d{2}|\d{3}|\d{4}|(1\d{4})|20000)[\s]?$$/&apos;</emphasis>,&#32;$peso)){
+<anchor xml:id="__validar_8php_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$peso;
+<anchor xml:id="__validar_8php_source_1l00279"/>00279 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00286"/><link linkend="_class_validar_1a55615485091ff613768c224a921c3466">00286</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_validar_1a55615485091ff613768c224a921c3466">dimensiones</link>($variable){
+<anchor xml:id="__validar_8php_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$dimensiones&#32;=&#32;<link linkend="_class_validar_1aa5fa99918a02509d6c7f454acc02c9af">Validar::camposTexto</link>($variable);
+<anchor xml:id="__validar_8php_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!preg_match&#32;(<emphasis role="stringliteral">&apos;^(\d|\d{2}|([12]\d{2})|300)(\s\/\s)(\d|\d{2}|([12]\d{2})|300)[\s]?$/&apos;</emphasis>,&#32;$dimensiones)){
+<anchor xml:id="__validar_8php_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__validar_8php_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$dimensiones;
+<anchor xml:id="__validar_8php_source_1l00292"/>00292 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__validar_8php_source_1l00293"/>00293 }
+</programlisting></section>

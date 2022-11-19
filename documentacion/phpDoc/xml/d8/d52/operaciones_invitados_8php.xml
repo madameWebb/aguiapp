@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d8/d52/operaciones_invitados_8php" kind="file" language="PHP">
+    <compoundname>operacionesInvitados.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d8/d52/operaciones_invitados_8php_1ae008a8566da29494e7dc88f703944051" prot="public" static="no" mutable="no">
+        <type>if(count($_SESSION) !=0 &amp;&amp; $_SESSION[&apos;tipoUsuario&apos;]==&apos;invitados&apos;)</type>
+        <definition>if (count( $_SESSION) !=0 &amp;&amp;$_SESSION[ &apos;tipoUsuario&apos;]==&apos;invitados&apos;) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+        
+        header(&apos;Location: ../php/redirecciones.php&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesInvitados.php" line="52" column="6" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesInvitados.php" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">require<sp/></highlight><highlight class="stringliteral">&apos;clasesPHP/Registro.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>session_start();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Si<sp/>el<sp/>array<sp/>sesion<sp/>tiene<sp/>algo<sp/>y<sp/>el<sp/>tipo<sp/>de<sp/>usuario<sp/>es<sp/>un<sp/>invitado...<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($_SESSION)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tipoUsuario&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;invitados&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$usuario<sp/>=<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;usuario&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Si<sp/>existe<sp/>este<sp/>índice,<sp/>te<sp/>muestro<sp/>las<sp/>Especies<sp/>registradas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isset($_POST[</highlight><highlight class="stringliteral">&apos;especies&apos;</highlight><highlight class="normal">])){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>json_encode(<ref refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" kindref="member">Registro::devolverDatos</ref>(</highlight><highlight class="stringliteral">&quot;select<sp/>*<sp/>from<sp/>especies&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//si<sp/>existe<sp/>este<sp/>otro,<sp/>registro<sp/>tu<sp/>comentario</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isset($_POST[</highlight><highlight class="stringliteral">&apos;comentario&apos;</highlight><highlight class="normal">])){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" kindref="member">Validar::camposTexto</ref>($_POST[</highlight><highlight class="stringliteral">&apos;comentario&apos;</highlight><highlight class="normal">])){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&apos;No<sp/>se<sp/>puede<sp/>registrar<sp/>un<sp/>comentario<sp/>vacío.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$comentario<sp/>=<sp/><ref refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" kindref="member">Validar::camposTexto</ref>($_POST[</highlight><highlight class="stringliteral">&apos;comentario&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$idUsuarioArray<sp/>=<sp/><ref refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" kindref="member">Registro::devolverDatos</ref>(</highlight><highlight class="stringliteral">&quot;select<sp/>id<sp/>from<sp/>invitados<sp/>where<sp/>usuario<sp/>=<sp/>?&quot;</highlight><highlight class="normal">,<sp/>array($usuario-&gt;getUsuario()));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$idUsuario<sp/>=<sp/>$idUsuarioArray[0][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$preparada<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;insert<sp/>into<sp/>comentarios<sp/>(fecha,<sp/>idInvitado,<sp/>especie,<sp/>comentario)<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;values<sp/>(:fecha,<sp/>:idInvitado,<sp/>:especie,<sp/>:comentario)&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$consulta<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;:fecha&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>substr($_POST[</highlight><highlight class="stringliteral">&apos;fecha&apos;</highlight><highlight class="normal">],<sp/>0,<sp/>strrpos($_POST[</highlight><highlight class="stringliteral">&apos;fecha&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;GMT+&apos;</highlight><highlight class="normal">)),<sp/></highlight><highlight class="stringliteral">&apos;:idInvitado&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$idUsuario,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;:especie&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;especie&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;:comentario&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$comentario);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d7/dc8/class_registro_1aae89645791b5bd4bcc53d1c848581fbb" kindref="member">Registro::operarCommit</ref>($preparada,<sp/>$consulta)){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Si<sp/>existe<sp/>este<sp/>índice<sp/>te<sp/>muestro<sp/>tus<sp/>comentarios<sp/>sin<sp/>responder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isset($_POST[</highlight><highlight class="stringliteral">&apos;comentarios&apos;</highlight><highlight class="normal">])){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$idUsuarioArray<sp/>=<sp/><ref refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" kindref="member">Registro::devolverDatos</ref>(</highlight><highlight class="stringliteral">&quot;select<sp/>id<sp/>from<sp/>invitados<sp/>where<sp/>usuario<sp/>=<sp/>?&quot;</highlight><highlight class="normal">,<sp/>array($usuario-&gt;getUsuario()));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$arrayComentarios<sp/>=<sp/><ref refid="d7/dc8/class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522" kindref="member">Registro::devolverDatos</ref>(</highlight><highlight class="stringliteral">&quot;select<sp/>*<sp/>from<sp/>comentarios<sp/>where<sp/>idInvitado<sp/>=<sp/>?&quot;</highlight><highlight class="normal">,<sp/>array($idUsuarioArray[0][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$aux<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">($i<sp/>=<sp/>0;<sp/>$i<sp/>&lt;<sp/>count($arrayComentarios);<sp/>$i++){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(in_array(</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$arrayComentarios[$i])){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$aux[]<sp/>=<sp/>$arrayComentarios[$i];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>json_encode($aux);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52" refid="d8/d52/operaciones_invitados_8php_1ae008a8566da29494e7dc88f703944051" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Y<sp/>si<sp/>no<sp/>te<sp/>redirecciono</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>../php/redirecciones.php&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/operacionesInvitados.php"/>
+  </compounddef>
+</doxygen>

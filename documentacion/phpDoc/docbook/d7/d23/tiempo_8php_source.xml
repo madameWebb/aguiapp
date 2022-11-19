@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_tiempo_8php_source" xml:lang="es">
+<title>tiempo.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/tiempo.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="_tiempo_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="_tiempo_8php_source_1l00002"/>00002 
+<anchor xml:id="_tiempo_8php_source_1l00011"/><link linkend="_tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb">00011</link> <link linkend="_tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb">$apiKeyT</link>&#32;=&#32;<emphasis role="stringliteral">&quot;cbc35f2e21aeb553bcc014213b8791d6&quot;</emphasis>;
+<anchor xml:id="_tiempo_8php_source_1l00012"/><link linkend="_tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3">00012</link> <link linkend="_tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3">$cityId</link>&#32;=&#32;<emphasis role="stringliteral">&quot;3105971&quot;</emphasis>;<emphasis role="comment">//Vigo</emphasis>
+<anchor xml:id="_tiempo_8php_source_1l00013"/>00013 
+<anchor xml:id="_tiempo_8php_source_1l00014"/><link linkend="_tiempo_8php_1a08398f14660ca12324da8b31f495b96c">00014</link> <link linkend="_tiempo_8php_1a08398f14660ca12324da8b31f495b96c">$googleApiUrl</link>&#32;=&#32;<emphasis role="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?id=&quot;</emphasis>&#32;.&#32;<link linkend="_tiempo_8php_1a4c82d04784e895bedbc80441ef41f7a3">$cityId</link>&#32;.&#32;<emphasis role="stringliteral">&quot;&amp;lang=es&amp;units=metric&amp;APPID=&quot;</emphasis>&#32;.&#32;<link linkend="_tiempo_8php_1a15e2c5d08484ef42283a3df667b70dfb">$apiKeyT</link>;
+<anchor xml:id="_tiempo_8php_source_1l00015"/>00015 
+<anchor xml:id="_tiempo_8php_source_1l00016"/><link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">00016</link> <link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>&#32;=&#32;curl_init();<emphasis role="comment">//inicia&#32;la&#32;petición&#32;a&#32;la&#32;api,&#32;entre&#32;paréntisis&#32;puede&#32;ir&#32;algo&#32;opcionalmente</emphasis>
+<anchor xml:id="_tiempo_8php_source_1l00017"/>00017 
+<anchor xml:id="_tiempo_8php_source_1l00018"/>00018 curl_setopt(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>,&#32;CURLOPT_HEADER,&#32;0);
+<anchor xml:id="_tiempo_8php_source_1l00019"/>00019 curl_setopt(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>,&#32;CURLOPT_RETURNTRANSFER,&#32;1);
+<anchor xml:id="_tiempo_8php_source_1l00020"/>00020 curl_setopt(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>,&#32;CURLOPT_URL,&#32;<link linkend="_tiempo_8php_1a08398f14660ca12324da8b31f495b96c">$googleApiUrl</link>);
+<anchor xml:id="_tiempo_8php_source_1l00021"/>00021 curl_setopt(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>,&#32;CURLOPT_FOLLOWLOCATION,&#32;1);
+<anchor xml:id="_tiempo_8php_source_1l00022"/>00022 curl_setopt(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>,&#32;CURLOPT_VERBOSE,&#32;0);
+<anchor xml:id="_tiempo_8php_source_1l00023"/>00023 curl_setopt(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>,&#32;CURLOPT_SSL_VERIFYPEER,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="_tiempo_8php_source_1l00024"/><link linkend="_tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99">00024</link> <link linkend="_tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99">$response</link>&#32;=&#32;curl_exec(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>);&#32;<emphasis role="comment">//ejecuta&#32;la&#32;petición&#32;y&#32;se&#32;recoge&#32;en&#32;una&#32;variable</emphasis>
+<anchor xml:id="_tiempo_8php_source_1l00025"/>00025 
+<anchor xml:id="_tiempo_8php_source_1l00026"/>00026 curl_close(<link linkend="_tiempo_8php_1a696b903bbc5c02914bdd402e91826eca">$ch</link>);
+<anchor xml:id="_tiempo_8php_source_1l00027"/>00027 <emphasis role="comment">//echo&#32;&apos;&lt;pre&gt;&apos;;</emphasis>
+<anchor xml:id="_tiempo_8php_source_1l00028"/>00028 echo&#32;<link linkend="_tiempo_8php_1af4b6fb1bbc77ccc05f10da3b16935b99">$response</link>;
+<anchor xml:id="_tiempo_8php_source_1l00029"/>00029 <emphasis role="comment">//echo&#32;&apos;&lt;/pre&gt;&apos;;</emphasis>
+</programlisting></section>

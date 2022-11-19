@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_especimenes" xml:lang="es">
+<title>Referencia de la Clase Especimenes</title>
+<indexterm><primary>Especimenes</primary></indexterm>
+Diagrama de herencias de Especimenes<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d2/d6c/class_especimenes__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Diagrama de colaboración para Especimenes:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d05/class_especimenes__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_especimenes_1a8093691785372f13bd3d6fb6d27d54ec">__construct</link> ($codigoRegistro, $registrador, $especie, $peso, $dimensiones, $caracteristicas, $fechaRegistro)</para>
+</listitem>
+            <listitem><para><link linkend="_class_especimenes_1a4f24b74ec17e26731b1c3a7f6719a776">agregarEspecie</link> ($especie, $reino, $clase, $orden, $familia, $periodoMigratorio)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Otros miembros heredados    </title>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez Clase para crear Epecímenes, hereda de <link linkend="_class_especie">Especie</link> </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especimen_8php_source_1l00014">14</link> del archivo <link linkend="__especimen_8php_source">Especimen.php</link>.</para>
+</section>
+<section>
+<title>Documentación del constructor y destructor</title>
+<anchor xml:id="_class_especimenes_1a8093691785372f13bd3d6fb6d27d54ec"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Especimenes</secondary></indexterm>
+<indexterm><primary>Especimenes</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $codigoRegistro,  $registrador,  $especie,  $peso,  $dimensiones,  $caracteristicas,  $fechaRegistro)</computeroutput></para>
+<para>Constructor de siete parámetros</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$codigoRegistro</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$registrador</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$especie</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$peso</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$dimensiones</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$caracteristicas</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$fechaRegistro</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>Especimen </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especimen_8php_source_1l00057">57</link> del archivo <link linkend="__especimen_8php_source">Especimen.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_especimenes_1a4f24b74ec17e26731b1c3a7f6719a776"/><section>
+    <title>agregarEspecie()</title>
+<indexterm><primary>agregarEspecie</primary><secondary>Especimenes</secondary></indexterm>
+<indexterm><primary>Especimenes</primary><secondary>agregarEspecie</secondary></indexterm>
+<para><computeroutput>agregarEspecie ( $especie,  $reino,  $clase,  $orden,  $familia,  $periodoMigratorio)</computeroutput></para>
+<para>Agrega especie cuando no ha sido creada previamente, y porque todo especímen pertenece a una especie. Recibe 6 parámetros</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$especie</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$reino</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$clase</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$orden</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$familia</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$periodoMigratorio</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado de <link linkend="_class_especie_1a4f24b74ec17e26731b1c3a7f6719a776">Especie</link>.</para>
+<para>
+Definición en la línea <link linkend="__especimen_8php_source_1l00079">79</link> del archivo <link linkend="__especimen_8php_source">Especimen.php</link>.</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/<link linkend="__especimen_8php">Especimen.php</link></section>
+</section>

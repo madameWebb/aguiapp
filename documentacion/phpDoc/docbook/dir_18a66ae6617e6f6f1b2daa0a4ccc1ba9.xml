@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_18a66ae6617e6f6f1b2daa0a4ccc1ba9" xml:lang="es">
+<title>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA</title>
+<indexterm><primary>Referencia del directorio G:/xamppVZ/htdocs/000_TAREA_CONJUNTA</primary></indexterm>
+Gráfico de dependencias de directorios para 000_TAREA_CONJUNTA:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_18a66ae6617e6f6f1b2daa0a4ccc1ba9_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_067a06abf01e0ec94afcc856d2f72981">ParqueEcologicoBoostrap_V18</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

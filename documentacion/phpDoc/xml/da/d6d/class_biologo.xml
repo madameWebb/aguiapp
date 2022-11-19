@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="da/d6d/class_biologo" kind="class" language="PHP" prot="public">
+    <compoundname>Biologo</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">class</basecompoundref>
+    <basecompoundref refid="d3/dfd/class_persona" prot="public" virt="non-virtual">Persona</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d6d/class_biologo_1abc12a4837b38100202c2f6b126f585f3" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$fechaTitulacion</definition>
+        <argsstring></argsstring>
+        <name>$fechaTitulacion</name>
+        <qualifiedname>Biologo\$fechaTitulacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="19" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d6d/class_biologo_1a1a6ac6267647773697ef43d8c6781257" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$direccion</definition>
+        <argsstring></argsstring>
+        <name>$direccion</name>
+        <qualifiedname>Biologo\$direccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="23" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d6d/class_biologo_1a161f768c1de595d3ce8ee9b13f307a9a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$provincia</definition>
+        <argsstring></argsstring>
+        <name>$provincia</name>
+        <qualifiedname>Biologo\$provincia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="27" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d6d/class_biologo_1abe0d815ab80f1cbb8cb62c2874fe3e2b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$claveAcceso</definition>
+        <argsstring></argsstring>
+        <name>$claveAcceso</name>
+        <qualifiedname>Biologo\$claveAcceso</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="31" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d6d/class_biologo_1ac63e0e0846778d04711d4e8493a6f7f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($nombreApellido, $dni, $fechaTitulacion, $direccion, $provincia, $mail, $telefono, $claveAcceso)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>Biologo\__construct</qualifiedname>
+        <param>
+          <declname>$nombreApellido</declname>
+        </param>
+        <param>
+          <declname>$dni</declname>
+        </param>
+        <param>
+          <declname>$fechaTitulacion</declname>
+        </param>
+        <param>
+          <declname>$direccion</declname>
+        </param>
+        <param>
+          <declname>$provincia</declname>
+        </param>
+        <param>
+          <declname>$mail</declname>
+        </param>
+        <param>
+          <declname>$telefono</declname>
+        </param>
+        <param>
+          <declname>$claveAcceso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor de 8 parámetros, devuelve el objeto de tipo <ref refid="da/d6d/class_biologo" kindref="compound">Biologo</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$nombreApellido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$dni</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$fechaTitulacion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$direccion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$provincia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$mail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$telefono</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$claveAcceso</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="da/d6d/class_biologo" kindref="compound">Biologo</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="46" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1a8825bc56728052bb130a57f428520e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getFechaTitulacion</definition>
+        <argsstring>()</argsstring>
+        <name>getFechaTitulacion</name>
+        <qualifiedname>Biologo\getFechaTitulacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string la fecha de titulación </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="56" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1aff38599e1b7282dbdd4161006eb73fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getDireccion</definition>
+        <argsstring>()</argsstring>
+        <name>getDireccion</name>
+        <qualifiedname>Biologo\getDireccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string la dirección de residencia del biólogo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="62" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1a97c9991e2f9e47e308aafaf670f6bf32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getProvincia</definition>
+        <argsstring>()</argsstring>
+        <name>getProvincia</name>
+        <qualifiedname>Biologo\getProvincia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string la provincia del biólogo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="68" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1a432331ea28feaeec944c62107acf5f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getClaveAcceso</definition>
+        <argsstring>()</argsstring>
+        <name>getClaveAcceso</name>
+        <qualifiedname>Biologo\getClaveAcceso</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string la clave de acceso del biólogo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="74" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1a3fe98e89f61dc27bddf59a59f019c130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setFechaTitulacion</definition>
+        <argsstring>($fechaTitulacion)</argsstring>
+        <name>setFechaTitulacion</name>
+        <qualifiedname>Biologo\setFechaTitulacion</qualifiedname>
+        <param>
+          <declname>$fechaTitulacion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica la fecha de titulación</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$fechaTitulacion</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="84" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1acf6ed8d75cb9d15c4e968d4276097718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setDireccion</definition>
+        <argsstring>($direccion)</argsstring>
+        <name>setDireccion</name>
+        <qualifiedname>Biologo\setDireccion</qualifiedname>
+        <param>
+          <declname>$direccion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica la dirección</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$direccion</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="94" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1a5447697e0f60645b1570c55fa53c0ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setProvincia</definition>
+        <argsstring>($provincia)</argsstring>
+        <name>setProvincia</name>
+        <qualifiedname>Biologo\setProvincia</qualifiedname>
+        <param>
+          <declname>$provincia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica la provincia</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$provincia</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="104" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1a737e0156e38f0b807c7ec0804edf313b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setClaveAcceso</definition>
+        <argsstring>($claveAcceso)</argsstring>
+        <name>setClaveAcceso</name>
+        <qualifiedname>Biologo\setClaveAcceso</qualifiedname>
+        <param>
+          <declname>$claveAcceso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica la clave de acceso</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$claveAcceso</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="114" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mostrarInformacion</definition>
+        <argsstring>()</argsstring>
+        <name>mostrarInformacion</name>
+        <qualifiedname>Biologo\mostrarInformacion</qualifiedname>
+        <reimplements refid="d3/dfd/class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra la información del biólogo</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="122" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="122" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d6d/class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>editarInformacion</definition>
+        <argsstring>()</argsstring>
+        <name>editarInformacion</name>
+        <qualifiedname>Biologo\editarInformacion</qualifiedname>
+        <reimplements refid="d3/dfd/class_persona_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permite la recogida de datos para modificar los campos necesarios</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="163" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="163" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez Clase <ref refid="da/d6d/class_biologo" kindref="compound">Biologo</ref></para>
+</simplesect>
+<ref refid="d3/dfd/class_persona" kindref="compound">Persona</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Biologo</label>
+        <link refid="da/d6d/class_biologo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Persona</label>
+        <link refid="d3/dfd/class_persona"/>
+      </node>
+      <node id="2">
+        <label>class</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Biologo</label>
+        <link refid="da/d6d/class_biologo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Persona</label>
+        <link refid="d3/dfd/class_persona"/>
+      </node>
+      <node id="2">
+        <label>class</label>
+      </node>
+    </collaborationgraph>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" line="15" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php" bodystart="15" bodyend="187"/>
+    <listofallmembers>
+      <member refid="da/d6d/class_biologo_1abe0d815ab80f1cbb8cb62c2874fe3e2b" prot="private" virt="non-virtual"><scope>Biologo</scope><name>$claveAcceso</name></member>
+      <member refid="da/d6d/class_biologo_1a1a6ac6267647773697ef43d8c6781257" prot="private" virt="non-virtual"><scope>Biologo</scope><name>$direccion</name></member>
+      <member refid="da/d6d/class_biologo_1abc12a4837b38100202c2f6b126f585f3" prot="private" virt="non-virtual"><scope>Biologo</scope><name>$fechaTitulacion</name></member>
+      <member refid="da/d6d/class_biologo_1a161f768c1de595d3ce8ee9b13f307a9a" prot="private" virt="non-virtual"><scope>Biologo</scope><name>$provincia</name></member>
+      <member refid="da/d6d/class_biologo_1ac63e0e0846778d04711d4e8493a6f7f9" prot="public" virt="non-virtual"><scope>Biologo</scope><name>__construct</name></member>
+      <member refid="d3/dfd/class_persona_1a8ea2a892653f4a90b68682905c97965f" prot="public" virt="non-virtual" ambiguityscope="Persona::"><scope>Biologo</scope><name>__construct</name></member>
+      <member refid="da/d6d/class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d" prot="public" virt="non-virtual"><scope>Biologo</scope><name>editarInformacion</name></member>
+      <member refid="da/d6d/class_biologo_1a432331ea28feaeec944c62107acf5f1b" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getClaveAcceso</name></member>
+      <member refid="da/d6d/class_biologo_1aff38599e1b7282dbdd4161006eb73fd0" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getDireccion</name></member>
+      <member refid="d3/dfd/class_persona_1a7174a173fa25c24567751085fd41e74a" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getDni</name></member>
+      <member refid="da/d6d/class_biologo_1a8825bc56728052bb130a57f428520e43" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getFechaTitulacion</name></member>
+      <member refid="d3/dfd/class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getMail</name></member>
+      <member refid="d3/dfd/class_persona_1ae2d57a823882316c4e3c66c58b950e69" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getNombreApellido</name></member>
+      <member refid="da/d6d/class_biologo_1a97c9991e2f9e47e308aafaf670f6bf32" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getProvincia</name></member>
+      <member refid="d3/dfd/class_persona_1a5dc8566458b8859d2c6fba633adf726e" prot="public" virt="non-virtual"><scope>Biologo</scope><name>getTelefono</name></member>
+      <member refid="da/d6d/class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2" prot="public" virt="non-virtual"><scope>Biologo</scope><name>mostrarInformacion</name></member>
+      <member refid="da/d6d/class_biologo_1a737e0156e38f0b807c7ec0804edf313b" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setClaveAcceso</name></member>
+      <member refid="da/d6d/class_biologo_1acf6ed8d75cb9d15c4e968d4276097718" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setDireccion</name></member>
+      <member refid="d3/dfd/class_persona_1ad48eec89c13b763a71956306f8bb3d1d" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setDni</name></member>
+      <member refid="da/d6d/class_biologo_1a3fe98e89f61dc27bddf59a59f019c130" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setFechaTitulacion</name></member>
+      <member refid="d3/dfd/class_persona_1ad29599d95c9acdfa9966234fe761bf21" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setMail</name></member>
+      <member refid="d3/dfd/class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setNombreApellido</name></member>
+      <member refid="da/d6d/class_biologo_1a5447697e0f60645b1570c55fa53c0ade" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setProvincia</name></member>
+      <member refid="d3/dfd/class_persona_1a3265463c162b7031c5f0a0592a35d9cf" prot="public" virt="non-virtual"><scope>Biologo</scope><name>setTelefono</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

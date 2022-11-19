@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_biologo" xml:lang="es">
+<title>Referencia de la Clase Biologo</title>
+<indexterm><primary>Biologo</primary></indexterm>
+Diagrama de herencias de Biologo<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/da5/class_biologo__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Diagrama de colaboración para Biologo:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d97/class_biologo__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_biologo_1ac63e0e0846778d04711d4e8493a6f7f9">__construct</link> ($nombreApellido, $dni, $fechaTitulacion, $direccion, $provincia, $mail, $telefono, $claveAcceso)</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1a8825bc56728052bb130a57f428520e43">getFechaTitulacion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1aff38599e1b7282dbdd4161006eb73fd0">getDireccion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1a97c9991e2f9e47e308aafaf670f6bf32">getProvincia</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1a432331ea28feaeec944c62107acf5f1b">getClaveAcceso</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1a3fe98e89f61dc27bddf59a59f019c130">setFechaTitulacion</link> ($fechaTitulacion)</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1acf6ed8d75cb9d15c4e968d4276097718">setDireccion</link> ($direccion)</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1a5447697e0f60645b1570c55fa53c0ade">setProvincia</link> ($provincia)</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1a737e0156e38f0b807c7ec0804edf313b">setClaveAcceso</link> ($claveAcceso)</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez Clase <link linkend="_class_biologo">Biologo</link></para>
+</formalpara>
+<link linkend="_class_persona">Persona</link> </para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00015">15</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<section>
+<title>Documentación del constructor y destructor</title>
+<anchor xml:id="_class_biologo_1ac63e0e0846778d04711d4e8493a6f7f9"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $nombreApellido,  $dni,  $fechaTitulacion,  $direccion,  $provincia,  $mail,  $telefono,  $claveAcceso)</computeroutput></para>
+<para>Constructor de 8 parámetros, devuelve el objeto de tipo <link linkend="_class_biologo">Biologo</link></para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$nombreApellido</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$dni</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$fechaTitulacion</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$direccion</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$provincia</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$mail</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$telefono</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$claveAcceso</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para><link linkend="_class_biologo">Biologo</link> </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00046">46</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d"/><section>
+    <title>editarInformacion()</title>
+<indexterm><primary>editarInformacion</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>editarInformacion</secondary></indexterm>
+<para><computeroutput>editarInformacion ( )</computeroutput></para>
+<para>Permite la recogida de datos para modificar los campos necesarios</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ada450b5eb68e37ce0022cbe40987fb3d">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00163">163</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1a432331ea28feaeec944c62107acf5f1b"/><section>
+    <title>getClaveAcceso()</title>
+<indexterm><primary>getClaveAcceso</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>getClaveAcceso</secondary></indexterm>
+<para><computeroutput>getClaveAcceso ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string la clave de acceso del biólogo </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00074">74</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1aff38599e1b7282dbdd4161006eb73fd0"/><section>
+    <title>getDireccion()</title>
+<indexterm><primary>getDireccion</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>getDireccion</secondary></indexterm>
+<para><computeroutput>getDireccion ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string la dirección de residencia del biólogo </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00062">62</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1a8825bc56728052bb130a57f428520e43"/><section>
+    <title>getFechaTitulacion()</title>
+<indexterm><primary>getFechaTitulacion</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>getFechaTitulacion</secondary></indexterm>
+<para><computeroutput>getFechaTitulacion ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string la fecha de titulación </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00056">56</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1a97c9991e2f9e47e308aafaf670f6bf32"/><section>
+    <title>getProvincia()</title>
+<indexterm><primary>getProvincia</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>getProvincia</secondary></indexterm>
+<para><computeroutput>getProvincia ( )</computeroutput></para>
+<para><formalpara><title>Devuelve</title>
+
+<para>string la provincia del biólogo </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00068">68</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2"/><section>
+    <title>mostrarInformacion()</title>
+<indexterm><primary>mostrarInformacion</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>mostrarInformacion</secondary></indexterm>
+<para><computeroutput>mostrarInformacion ( )</computeroutput></para>
+<para>Muestra la información del biólogo</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado de <link linkend="_class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2">Persona</link>.</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00122">122</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1a737e0156e38f0b807c7ec0804edf313b"/><section>
+    <title>setClaveAcceso()</title>
+<indexterm><primary>setClaveAcceso</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>setClaveAcceso</secondary></indexterm>
+<para><computeroutput>setClaveAcceso ( $claveAcceso)</computeroutput></para>
+<para>Modifica la clave de acceso</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$claveAcceso</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00114">114</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1acf6ed8d75cb9d15c4e968d4276097718"/><section>
+    <title>setDireccion()</title>
+<indexterm><primary>setDireccion</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>setDireccion</secondary></indexterm>
+<para><computeroutput>setDireccion ( $direccion)</computeroutput></para>
+<para>Modifica la dirección</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$direccion</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00094">94</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1a3fe98e89f61dc27bddf59a59f019c130"/><section>
+    <title>setFechaTitulacion()</title>
+<indexterm><primary>setFechaTitulacion</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>setFechaTitulacion</secondary></indexterm>
+<para><computeroutput>setFechaTitulacion ( $fechaTitulacion)</computeroutput></para>
+<para>Modifica la fecha de titulación</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$fechaTitulacion</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00084">84</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<anchor xml:id="_class_biologo_1a5447697e0f60645b1570c55fa53c0ade"/><section>
+    <title>setProvincia()</title>
+<indexterm><primary>setProvincia</primary><secondary>Biologo</secondary></indexterm>
+<indexterm><primary>Biologo</primary><secondary>setProvincia</secondary></indexterm>
+<para><computeroutput>setProvincia ( $provincia)</computeroutput></para>
+<para>Modifica la provincia</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$provincia</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__biologo_8php_source_1l00104">104</link> del archivo <link linkend="__biologo_8php_source">Biologo.php</link>.</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/<link linkend="__biologo_8php">Biologo.php</link></section>
+</section>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_registrarse_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/registrarse.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/registrarse.php</primary></indexterm>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_registrarse_8php_1a0bcf4b31219b04722849def2f1e740b8">comunes</link> ($nombre, $mail, $clave, $errores)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>if(isset($_POST[&apos;registros&apos;]) &amp;&amp;isset($_POST[&apos;tipo&apos;])) <link linkend="_registrarse_8php_1a903d2e177073e23ba3dffee6c9e9decf">else</link></para>
+</listitem>
+            <listitem><para>return <link linkend="_registrarse_8php_1a5df37b7f02e5cdc7d9412b7f872b8e01">false</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_registrarse_8php_1a0bcf4b31219b04722849def2f1e740b8"/><section>
+    <title>comunes()</title>
+<indexterm><primary>comunes</primary><secondary>registrarse.php</secondary></indexterm>
+<indexterm><primary>registrarse.php</primary><secondary>comunes</secondary></indexterm>
+<para><computeroutput>comunes ( $nombre,  $mail,  $clave,  $errores)</computeroutput></para>
+<para>Recibe varios valores y comprueba si son correctos, devuelve el número de errores actualizado</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry></entry><entry>string/boolean</entry><entry>
+<para>$nombre </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>string/boolean</entry><entry>
+<para>$mail </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>string/boolean</entry><entry>
+<para>$clave </para>
+</entry>
+                            </row>
+                            <row>
+<entry>int</entry><entry>$errores</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="_registrarse_8php_source_1l00024">24</link> del archivo <link linkend="_registrarse_8php_source">registrarse.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_registrarse_8php_1a903d2e177073e23ba3dffee6c9e9decf"/><section>
+    <title>else</title>
+<indexterm><primary>else</primary><secondary>registrarse.php</secondary></indexterm>
+<indexterm><primary>registrarse.php</primary><secondary>else</secondary></indexterm>
+<para><computeroutput>if (isset( $_POST[ &apos;registros&apos;]) &amp;&amp;isset( $_POST[ &apos;tipo&apos;])) else</computeroutput></para><emphasis role="strong">Valor inicial:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;No&#32;se&#32;han&#32;introducido&#32;los&#32;datos&apos;</emphasis>
+</programlisting><para>
+Definición en la línea <link linkend="_registrarse_8php_source_1l00122">122</link> del archivo <link linkend="_registrarse_8php_source">registrarse.php</link>.</para>
+</section>
+<anchor xml:id="_registrarse_8php_1a5df37b7f02e5cdc7d9412b7f872b8e01"/><section>
+    <title>false</title>
+<indexterm><primary>false</primary><secondary>registrarse.php</secondary></indexterm>
+<indexterm><primary>registrarse.php</primary><secondary>false</secondary></indexterm>
+<para><computeroutput>return false</computeroutput></para><para>
+Definición en la línea <link linkend="_registrarse_8php_source_1l00124">124</link> del archivo <link linkend="_registrarse_8php_source">registrarse.php</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d7/d69/class_torreta" kind="class" language="PHP" prot="public">
+    <compoundname>Torreta</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/d69/class_torreta_1af0c0f51ccf151ba72fc9dcfe6b397ea2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$idTorreta</definition>
+        <argsstring></argsstring>
+        <name>$idTorreta</name>
+        <qualifiedname>Torreta\$idTorreta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="20" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d69/class_torreta_1a58710278bfe3c47ec05a19b238ca6a42" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$chip</definition>
+        <argsstring></argsstring>
+        <name>$chip</name>
+        <qualifiedname>Torreta\$chip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="24" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d69/class_torreta_1a0899086137a47c1881d617d93e4cd58d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$fechasEntrada</definition>
+        <argsstring></argsstring>
+        <name>$fechasEntrada</name>
+        <qualifiedname>Torreta\$fechasEntrada</qualifiedname>
+        <initializer>= Array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="28" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d69/class_torreta_1a12e28bc50f7dc95e6e000bdfc6c1cd1c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$fechasSalida</definition>
+        <argsstring></argsstring>
+        <name>$fechasSalida</name>
+        <qualifiedname>Torreta\$fechasSalida</qualifiedname>
+        <initializer>= Array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="32" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d69/class_torreta_1a39ec8b69cdf0d370a28a3b252e17cc79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getIdTorreta</definition>
+        <argsstring>()</argsstring>
+        <name>getIdTorreta</name>
+        <qualifiedname>Torreta\getIdTorreta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el id de la <ref refid="d7/d69/class_torreta" kindref="compound">Torreta</ref></para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="38" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a93ba7aea38db5233bb5445bf9f6918b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getChip</definition>
+        <argsstring>()</argsstring>
+        <name>getChip</name>
+        <qualifiedname>Torreta\getChip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el número de registro del especimen</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="46" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a9e3ea400ed1304ea376e3d8dda881a9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getFechasEntrada</definition>
+        <argsstring>()</argsstring>
+        <name>getFechasEntrada</name>
+        <qualifiedname>Torreta\getFechasEntrada</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el registro de las fechas de entrada del especimen</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="54" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a6cb673a9893c891305fa03f460f100fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getFechasSalida</definition>
+        <argsstring>()</argsstring>
+        <name>getFechasSalida</name>
+        <qualifiedname>Torreta\getFechasSalida</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el registro de las fechas de salida del especimen</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="62" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a03c1a29603dd7c9f4ed12172b667bb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agregarFechaEntrada</definition>
+        <argsstring>($fecha)</argsstring>
+        <name>agregarFechaEntrada</name>
+        <qualifiedname>Torreta\agregarFechaEntrada</qualifiedname>
+        <param>
+          <declname>$fecha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Agrega una fecha de entrada al array de fechas de entrada</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$fecha</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="72" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a99d7baf88e389297b60ca2a768b0d4b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>agregarFechaSalida</definition>
+        <argsstring>($fecha)</argsstring>
+        <name>agregarFechaSalida</name>
+        <qualifiedname>Torreta\agregarFechaSalida</qualifiedname>
+        <param>
+          <declname>$fecha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Agrega una fecha de salida al array de fechas de salida</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$fecha</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="82" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a55b697261a342768891b7650bd8668c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>recogerChip</definition>
+        <argsstring>($chip)</argsstring>
+        <name>recogerChip</name>
+        <qualifiedname>Torreta\recogerChip</qualifiedname>
+        <param>
+          <declname>$chip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recoge el número de registro de un especimen</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$fecha</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="92" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d69/class_torreta_1a3072bd4e19a202ea45a4c6b3bb648fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>identificarTorreta</definition>
+        <argsstring>($idTorreta)</argsstring>
+        <name>identificarTorreta</name>
+        <qualifiedname>Torreta\identificarTorreta</qualifiedname>
+        <param>
+          <declname>$idTorreta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Identifica la <ref refid="d7/d69/class_torreta" kindref="compound">Torreta</ref> en uso</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$idTorreta</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="102" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="102" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</simplesect>
+<simplesect kind="see"><para>class Especimen </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" line="16" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php" bodystart="16" bodyend="105"/>
+    <listofallmembers>
+      <member refid="d7/d69/class_torreta_1a58710278bfe3c47ec05a19b238ca6a42" prot="private" virt="non-virtual"><scope>Torreta</scope><name>$chip</name></member>
+      <member refid="d7/d69/class_torreta_1a0899086137a47c1881d617d93e4cd58d" prot="private" virt="non-virtual"><scope>Torreta</scope><name>$fechasEntrada</name></member>
+      <member refid="d7/d69/class_torreta_1a12e28bc50f7dc95e6e000bdfc6c1cd1c" prot="private" virt="non-virtual"><scope>Torreta</scope><name>$fechasSalida</name></member>
+      <member refid="d7/d69/class_torreta_1af0c0f51ccf151ba72fc9dcfe6b397ea2" prot="private" virt="non-virtual"><scope>Torreta</scope><name>$idTorreta</name></member>
+      <member refid="d7/d69/class_torreta_1a03c1a29603dd7c9f4ed12172b667bb7b" prot="public" virt="non-virtual"><scope>Torreta</scope><name>agregarFechaEntrada</name></member>
+      <member refid="d7/d69/class_torreta_1a99d7baf88e389297b60ca2a768b0d4b4" prot="public" virt="non-virtual"><scope>Torreta</scope><name>agregarFechaSalida</name></member>
+      <member refid="d7/d69/class_torreta_1a93ba7aea38db5233bb5445bf9f6918b1" prot="public" virt="non-virtual"><scope>Torreta</scope><name>getChip</name></member>
+      <member refid="d7/d69/class_torreta_1a9e3ea400ed1304ea376e3d8dda881a9f" prot="public" virt="non-virtual"><scope>Torreta</scope><name>getFechasEntrada</name></member>
+      <member refid="d7/d69/class_torreta_1a6cb673a9893c891305fa03f460f100fd" prot="public" virt="non-virtual"><scope>Torreta</scope><name>getFechasSalida</name></member>
+      <member refid="d7/d69/class_torreta_1a39ec8b69cdf0d370a28a3b252e17cc79" prot="public" virt="non-virtual"><scope>Torreta</scope><name>getIdTorreta</name></member>
+      <member refid="d7/d69/class_torreta_1a3072bd4e19a202ea45a4c6b3bb648fb5" prot="public" virt="non-virtual"><scope>Torreta</scope><name>identificarTorreta</name></member>
+      <member refid="d7/d69/class_torreta_1a55b697261a342768891b7650bd8668c6" prot="public" virt="non-virtual"><scope>Torreta</scope><name>recogerChip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,222 @@
+.TH "Especie" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Especie
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Heredado por \fBEspecimenes\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBagregarEspecie\fP ($especie, $reino, $clase, $orden, $familia, $periodoMigratorio)"
+.br
+.in -1c
+.SS "Métodos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static \fBgetEspecie\fP ()"
+.br
+.ti -1c
+.RI "static \fBgetReino\fP ()"
+.br
+.ti -1c
+.RI "static \fBgetClase\fP ()"
+.br
+.ti -1c
+.RI "static \fBgetOrden\fP ()"
+.br
+.ti -1c
+.RI "static \fBgetFamilia\fP ()"
+.br
+.ti -1c
+.RI "static \fBgetPeriodoMigratorio\fP ()"
+.br
+.ti -1c
+.RI "static \fBgetPoblacion\fP ()"
+.br
+.ti -1c
+.RI "static \fBsetPoblacion\fP ($poblacion)"
+.br
+.ti -1c
+.RI "static \fBsumarPoblacion\fP ()"
+.br
+.ti -1c
+.RI "static \fBrestarPoblacion\fP ()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Proyecto Parque Eocológico
+.PP
+\fBVersión\fP
+.RS 4
+pq-_V18 @autor Virginia M\&. García Álvarez Crea una especie con 7 parámetros, sin constructor, ya que los atributos se le asignan después 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB15\fP del archivo \fBEspecie\&.php\fP\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "agregarEspecie ( $especie,  $reino,  $clase,  $orden,  $familia,  $periodoMigratorio)"
+Agrega los parámetros a la \fBEspecie\fP creada
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$especie\fP 
+.br
+\fI$reino\fP 
+.br
+\fI$clase\fP 
+.br
+\fI$orden\fP 
+.br
+\fI$familia\fP 
+.br
+\fI$periodoMigratorio\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado en \fBEspecimenes\fP\&.
+.PP
+Definición en la línea \fB58\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getClase ()\fC [static]\fP"
+muestra la clase de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB87\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getEspecie ()\fC [static]\fP"
+muestra el nombre de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB71\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getFamilia ()\fC [static]\fP"
+muestra la familia de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB103\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getOrden ()\fC [static]\fP"
+muestra el orden de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB95\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getPeriodoMigratorio ()\fC [static]\fP"
+muestra el periodo migratorio de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB111\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getPoblacion ()\fC [static]\fP"
+muestra la población en el parque de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB119\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static getReino ()\fC [static]\fP"
+muestra el reino de la especie
+.PP
+\fBDevuelve\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB79\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static restarPoblacion ()\fC [static]\fP"
+Resta individuos a la especie 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB148\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static setPoblacion ( $poblacion)\fC [static]\fP"
+modifica la población de la especie
+.PP
+\fBParámetros\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB129\fP del archivo \fBEspecie\&.php\fP\&.
+.SS "static sumarPoblacion ()\fC [static]\fP"
+Agrega individuos a la especie
+.PP
+\fBParámetros\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB139\fP del archivo \fBEspecie\&.php\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

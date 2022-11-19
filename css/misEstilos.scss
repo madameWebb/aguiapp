@@ -1,0 +1,225 @@
+///////////////////////////////
+// Mis colores
+///////////////////////////////
+
+//Principales
+$colorFondo: #f7d6d0;
+$naranjaP: #ed650d; 
+$naranjaPc: #f48239;
+$verdeP: #1a6904;
+$verdePc: #269a06;
+$oroP: #fbb824;
+$oroPc: #e8a104;
+$marronP: #823404;
+$marronPc: #b34806;
+
+//Complementarios
+$naranjaCazul: #0d95ed;
+$verdeCindigo: #530469;
+$oroCazul: #2467fb;
+$marronCazul: #045282;
+
+//Enfasis
+$naranjaEama: #edd50d;
+$naranjaErojo: #ed0d25;
+$verdeEfuxia: #f779f7;
+$verdeEverde: #4c6904;
+$oroEverde: #24fb4c;
+$oroEmagenta: #fb24d2;
+$marronEoroViejo: #827304;
+$marronEbrown: #692004;
+
+///////////////////////////////
+// Modificaciones en bootstrap
+///////////////////////////////
+//Colores principales
+$primary: $naranjaP;
+$secondary: $verdeP;
+$success: $marronPc;
+$info: $naranjaCazul;
+
+//enfasis
+$warning: $oroP;
+$danger: $naranjaErojo;
+$light: $oroEverde;
+$dark: $marronP;
+
+//otras cosas
+$enable-gradients: true;
+$carousel-control-color: $verdePc;
+$carousel-control-opacity: 0;
+$carousel-indicator-active-bg: $verdePc;
+
+$body-color: $marronP;
+$dropdown-link-color: $marronEbrown;
+$list-group-color: $marronEbrown;
+$kbd-bg: $marronEbrown;
+
+
+$popover-header-color: $info;
+$popover-body-color: $secondary;
+
+$utilities: (
+  "viewport-width": (
+      property: width,
+      class: vw,
+      values: (
+        25: 25vw,
+        30: 30vw,
+        40: 40vw,
+        50: 50vw,
+        60: 60vw,
+        75: 75vw,
+        80: 80vw,
+        100: 100vw
+        )
+    ),
+  "viewport-height": (
+      property: height,
+      class: vh,
+      values: (
+        20: 20vh,
+        25: 25vh,
+        30: 30vh,
+        35: 35vh,
+        40: 40vh,
+        45: 45vh,
+        50: 50vh,
+        55: 55vh,
+        60: 60vh,
+        65: 65vh,
+        70: 70vh,
+        75: 75vh,
+        80: 80vh,
+        85: 85vh,
+        100: 100vh
+        )
+    ),
+);
+
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+
+$popover-bg: color-contrast($popover-body-color);
+$popover-header-bg: shade-color($popover-bg, 6%);
+
+$form-floating-label-opacity:     .10 !important;
+
+//Este es el que queda por encima una vez que se visitó
+$accordion-button-bg:  tint-color($component-active-bg, 58%);
+$accordion-button-active-color: $kbd-bg;
+$accordion-color: $kbd-bg;
+$accordion-button-active-bg: tint-color($component-active-bg, 80%);
+
+$breadcrumb-active-color:           $gray-900;
+
+.bg-naranjaCazulT{
+    background-color: #0d95ed40 !important;
+}
+.bg-fondo {
+    background-color: $colorFondo !important;
+}
+.bg-miColor{
+    background-color: tint-color($dark, 10%) !important;
+}
+.bg-rojo {
+    background-color: $red-300 !important;
+}
+.bg-azul{
+    background-color: $blue-200 !important;
+}
+.bg-verde{
+    background-color: $green-300 !important;
+}
+.text-personalizado {
+    --bs-text-opacity: 1;
+    color: $oroP !important;
+}
+.text-personalizado2 {
+    --bs-text-opacity: 1;
+    color: $marronP !important;    
+}
+.text-personalizado3 {
+    --bs-text-opacity: 1;
+    color: $marronEoroViejo !important;    
+}
+.text-personalizado4 {
+    --bs-text-opacity:1;
+    color: $verdeCindigo;
+}
+.text-personalizado4h {
+    --bs-text-opacity:1;
+    color: $verdeCindigo;
+    &:hover {
+        --bs-text-opacity:1;
+        color: $verdeP;
+    }
+}
+.text-personalizado5 {
+    --bs-text-opacity:1;
+    color: $verdeEfuxia !important;
+}
+
+.link-personalizado {
+    cursor: pointer;
+    --bs-text-opacity: 1;
+    color: $marronCazul !important;    
+    &:hover{
+        color: $oroCazul !important;
+    }
+}
+.placeholder::placeholder{
+    color: $green-100 !important;
+}
+.cuerpo {
+    overflow-x: hidden;
+}
+.dimensiones {
+    width: auto;
+    height: 100vh;
+}  
+.imgFondo {
+    background-image: url("../images/logo25.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.imgCabecera {
+    background-image: url("../images/imgen2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.imgUsuarios {
+    width: 28%;
+    &:hover {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 22%;
+        width: 55%;
+        z-index: 1100;
+    }
+}
+.miModal{
+    position: fixed;
+    height: 300vh;
+    top: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    overflow-x: hidden;
+    outline: 0;
+}
+// .miTabla{
+//     flex-direction: column;
+//     align-items: center;
+//     &>tr{
+//         justify-content: space-around;
+//         &>th, &>td{
+//             padding: .5rem;
+//         }
+//     }
+// }
+@import "../bootstrap/scss/bootstrap";

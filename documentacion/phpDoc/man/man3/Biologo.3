@@ -1,0 +1,231 @@
+.TH "Biologo" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Biologo
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Herencias class y \fBPersona\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($nombreApellido, $dni, $fechaTitulacion, $direccion, $provincia, $mail, $telefono, $claveAcceso)"
+.br
+.ti -1c
+.RI "\fBgetFechaTitulacion\fP ()"
+.br
+.ti -1c
+.RI "\fBgetDireccion\fP ()"
+.br
+.ti -1c
+.RI "\fBgetProvincia\fP ()"
+.br
+.ti -1c
+.RI "\fBgetClaveAcceso\fP ()"
+.br
+.ti -1c
+.RI "\fBsetFechaTitulacion\fP ($fechaTitulacion)"
+.br
+.ti -1c
+.RI "\fBsetDireccion\fP ($direccion)"
+.br
+.ti -1c
+.RI "\fBsetProvincia\fP ($provincia)"
+.br
+.ti -1c
+.RI "\fBsetClaveAcceso\fP ($claveAcceso)"
+.br
+.ti -1c
+.RI "\fBmostrarInformacion\fP ()"
+.br
+.ti -1c
+.RI "\fBeditarInformacion\fP ()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Proyecto Parque Eocológico
+.PP
+\fBVersión\fP
+.RS 4
+pq-_V18 @autor Virginia M\&. García Álvarez Clase \fBBiologo\fP
+.RE
+.PP
+\fBPersona\fP 
+.PP
+Definición en la línea \fB15\fP del archivo \fBBiologo\&.php\fP\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "__construct ( $nombreApellido,  $dni,  $fechaTitulacion,  $direccion,  $provincia,  $mail,  $telefono,  $claveAcceso)"
+Constructor de 8 parámetros, devuelve el objeto de tipo \fBBiologo\fP
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$nombreApellido\fP 
+.br
+\fI$dni\fP 
+.br
+\fI$fechaTitulacion\fP 
+.br
+\fI$direccion\fP 
+.br
+\fI$provincia\fP 
+.br
+\fI$mail\fP 
+.br
+\fI$telefono\fP 
+.br
+\fI$claveAcceso\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+\fBBiologo\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB46\fP del archivo \fBBiologo\&.php\fP\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "editarInformacion ()"
+Permite la recogida de datos para modificar los campos necesarios
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado de \fBPersona\fP\&.
+.PP
+Definición en la línea \fB163\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "getClaveAcceso ()"
+
+.PP
+\fBDevuelve\fP
+.RS 4
+string la clave de acceso del biólogo 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB74\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "getDireccion ()"
+
+.PP
+\fBDevuelve\fP
+.RS 4
+string la dirección de residencia del biólogo 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB62\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "getFechaTitulacion ()"
+
+.PP
+\fBDevuelve\fP
+.RS 4
+string la fecha de titulación 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB56\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "getProvincia ()"
+
+.PP
+\fBDevuelve\fP
+.RS 4
+string la provincia del biólogo 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB68\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "mostrarInformacion ()"
+Muestra la información del biólogo
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Reimplementado de \fBPersona\fP\&.
+.PP
+Definición en la línea \fB122\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "setClaveAcceso ( $claveAcceso)"
+Modifica la clave de acceso
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$claveAcceso\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB114\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "setDireccion ( $direccion)"
+Modifica la dirección
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$direccion\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB94\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "setFechaTitulacion ( $fechaTitulacion)"
+Modifica la fecha de titulación
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$fechaTitulacion\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB84\fP del archivo \fBBiologo\&.php\fP\&.
+.SS "setProvincia ( $provincia)"
+Modifica la provincia
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$provincia\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB104\fP del archivo \fBBiologo\&.php\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

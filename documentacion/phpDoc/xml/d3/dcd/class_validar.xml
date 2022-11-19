@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d3/dcd/class_validar" kind="class" language="PHP" prot="public">
+    <compoundname>Validar</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static camposTexto</definition>
+        <argsstring>($variable)</argsstring>
+        <name>camposTexto</name>
+        <qualifiedname>Validar\camposTexto</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Limpia los campos de texto de cualqiuer caracter extraño y elimina los espacios en blanco al principio y al final</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contiene el dato a limpiar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean el dato o false si el campo está vacío </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="21" column="28" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="21" bodyend="27"/>
+        <referencedby refid="d3/dcd/class_validar_1ab64de9f6fe5eef644364ec51d18d909f" compoundref="d5/de0/_validar_8php" startline="221" endline="227">clave</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a16beab39cf0798455de6e0d5d75931ef" compoundref="d5/de0/_validar_8php" startline="260" endline="266">codigoE</referencedby>
+        <referencedby refid="d1/d7c/comprobar_codigo_8php_1a24ecad83d3153a6b6859e890dc3c7293" compoundref="d1/d7c/comprobar_codigo_8php" startline="19" endline="32">comprobarCodigo</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a55615485091ff613768c224a921c3466" compoundref="d5/de0/_validar_8php" startline="286" endline="292">dimensiones</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1aed1c76ecf2364c8505209397d951498e" compoundref="d5/de0/_validar_8php" startline="127" endline="133">direccion</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a3aa59f416560da1fa48cf48aa16a356b" compoundref="d5/de0/_validar_8php" startline="81" endline="91">dni</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1ae8437101b01206f21ea93e49db07b381" compoundref="d5/de0/_validar_8php" startline="234" endline="240">especie</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1adfeb2ff1ba30827a6b23d9d25b1f2d58" compoundref="d5/de0/_validar_8php" startline="198" endline="214">fecha</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2" compoundref="d5/de0/_validar_8php" startline="98" endline="105">mail</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a692b2249239ab61c7676585b731d1ca1" compoundref="d5/de0/_validar_8php" startline="247" endline="253">migracion</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a4d15ecb2e671a6af364669cc86a11a36" compoundref="d5/de0/_validar_8php" startline="34" endline="40">nombre</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a2c74bfb0c547619f49904540b46728a1" compoundref="d5/de0/_validar_8php" startline="273" endline="279">peso</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a04495c43d130363240cb4b1db22a6d0e" compoundref="d5/de0/_validar_8php" startline="140" endline="146">provincia</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a8f42bdd26eb04e93a1df3274c5025ab9" compoundref="d5/de0/_validar_8php" startline="113" endline="119">telefono</referencedby>
+        <referencedby refid="d3/dcd/class_validar_1a1d0932ada0413381b868162863f89397" compoundref="d5/de0/_validar_8php" startline="48" endline="54">usuario</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a4d15ecb2e671a6af364669cc86a11a36" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static nombre</definition>
+        <argsstring>($variable)</argsstring>
+        <name>nombre</name>
+        <qualifiedname>Validar\nombre</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que el dato nombre y apellido encajen en un patrón</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>type</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>el dato a validar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean el nombre o false si no encaja en el patrón </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="34" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="34" bodyend="40"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a1d0932ada0413381b868162863f89397" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static usuario</definition>
+        <argsstring>($variable)</argsstring>
+        <name>usuario</name>
+        <qualifiedname>Validar\usuario</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que el dato usuario encaje en un patrón. No puede empezar por un número y debe constar de al menos 3 caracteres, los dos primeros letras.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>type</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>el dato a validar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean el nombre de usuario o false si no encaja en el patrón </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="48" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="48" bodyend="54"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+        <referencedby refid="d7/dc8/class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7" compoundref="da/d2a/_registro_8php" startline="202" endline="234">Registro\verificarClave</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a3aa59f416560da1fa48cf48aa16a356b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static dni</definition>
+        <argsstring>($variable)</argsstring>
+        <name>dni</name>
+        <qualifiedname>Validar\dni</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que el número del DNI encaja en un patrón y comprueba que es un dni real</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NIF completo </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean false o el número si es verdadero </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="81" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="81" bodyend="91"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+        <referencedby refid="d7/dc8/class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7" compoundref="da/d2a/_registro_8php" startline="202" endline="234">Registro\verificarClave</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static mail</definition>
+        <argsstring>($variable)</argsstring>
+        <name>mail</name>
+        <qualifiedname>Validar\mail</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que el mail introducido pueda ser correcto</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mail </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean el mail o false si no es correcto </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="98" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="98" bodyend="105"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+        <referencedby refid="d7/dc8/class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7" compoundref="da/d2a/_registro_8php" startline="202" endline="234">Registro\verificarClave</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a8f42bdd26eb04e93a1df3274c5025ab9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static telefono</definition>
+        <argsstring>($variable)</argsstring>
+        <name>telefono</name>
+        <qualifiedname>Validar\telefono</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que el teléfono introducido pueda se correcto, para lo cual debe empezar por 9, 8, 7 o 6</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>número de teléfono </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean el dato o false si no es verdadero </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="113" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="113" bodyend="119"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1aed1c76ecf2364c8505209397d951498e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static direccion</definition>
+        <argsstring>($variable)</argsstring>
+        <name>direccion</name>
+        <qualifiedname>Validar\direccion</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que la dirección introducida corresponda con un patrón válido y el campo no esté vacio</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le dirección </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean la dirección o false si no es correcto </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="127" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="127" bodyend="133"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a04495c43d130363240cb4b1db22a6d0e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static provincia</definition>
+        <argsstring>($variable)</argsstring>
+        <name>provincia</name>
+        <qualifiedname>Validar\provincia</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valida que la provincia sea correcta y no esté en blanco</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>provincia </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean el campo o false en caso de no ser correcto </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="140" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="140" bodyend="146"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1adfeb2ff1ba30827a6b23d9d25b1f2d58" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static fecha</definition>
+        <argsstring>($variable)</argsstring>
+        <name>fecha</name>
+        <qualifiedname>Validar\fecha</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica qu ela fecha responde a un patrón válido y en ese caso comprueba que la fecha corresponda con un día y mes acordes y que la fecha introducida no sea mayor que la fecha actual</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la fecha introducida </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean verdadero si la fecha es correcta y falso si no lo es </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="198" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="198" bodyend="214"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1ab64de9f6fe5eef644364ec51d18d909f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static clave</definition>
+        <argsstring>($variable)</argsstring>
+        <name>clave</name>
+        <qualifiedname>Validar\clave</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica que la clave introducida responda a un patrón válido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la clave introducida </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean la clave o falso si no es correcta </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="221" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="221" bodyend="227"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1ae8437101b01206f21ea93e49db07b381" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static especie</definition>
+        <argsstring>($variable)</argsstring>
+        <name>especie</name>
+        <qualifiedname>Validar\especie</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica que la especie introducida responda a un patrón válido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="234" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="234" bodyend="240"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a692b2249239ab61c7676585b731d1ca1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static migracion</definition>
+        <argsstring>($variable)</argsstring>
+        <name>migracion</name>
+        <qualifiedname>Validar\migracion</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica que el periodo migratorio introducido responda a un patrón válido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="247" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="247" bodyend="253"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a16beab39cf0798455de6e0d5d75931ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static codigoE</definition>
+        <argsstring>($variable)</argsstring>
+        <name>codigoE</name>
+        <qualifiedname>Validar\codigoE</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica que el código de especie introducido responda a un patrón válido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="260" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="260" bodyend="266"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a2c74bfb0c547619f49904540b46728a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static peso</definition>
+        <argsstring>($variable)</argsstring>
+        <name>peso</name>
+        <qualifiedname>Validar\peso</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica que el peso introducido responda a un patrón válido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="273" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="273" bodyend="279"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a55615485091ff613768c224a921c3466" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static dimensiones</definition>
+        <argsstring>($variable)</argsstring>
+        <name>dimensiones</name>
+        <qualifiedname>Validar\dimensiones</qualifiedname>
+        <param>
+          <declname>$variable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica que las dimensiones introducidas respondan a un patrón válido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="286" column="21" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="286" bodyend="292"/>
+        <references refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" compoundref="d5/de0/_validar_8php" startline="21" endline="27">camposTexto</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d3/dcd/class_validar_1aeb695df29c77808deda64ae1588ff13f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static letraDni</definition>
+        <argsstring>($numero, $letra)</argsstring>
+        <name>letraDni</name>
+        <qualifiedname>Validar\letraDni</qualifiedname>
+        <param>
+          <declname>$numero</declname>
+        </param>
+        <param>
+          <declname>$letra</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Función privada para validar que la letra del DNI es correcta</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$numero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>del DNI </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$letra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>del DNI </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="62" column="29" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="62" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a4e6a408740ae194b786705e07bdf1385" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static esCorrectaFecha</definition>
+        <argsstring>($dia, $mes, $anno)</argsstring>
+        <name>esCorrectaFecha</name>
+        <qualifiedname>Validar\esCorrectaFecha</qualifiedname>
+        <param>
+          <declname>$dia</declname>
+        </param>
+        <param>
+          <declname>$mes</declname>
+        </param>
+        <param>
+          <declname>$anno</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="156" column="29" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dcd/class_validar_1a79606c94d5b6c86bc94aa94bc2360520" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static esCorrectoDia</definition>
+        <argsstring>($anno, $mes, $dia)</argsstring>
+        <name>esCorrectoDia</name>
+        <qualifiedname>Validar\esCorrectoDia</qualifiedname>
+        <param>
+          <declname>$anno</declname>
+        </param>
+        <param>
+          <declname>$mes</declname>
+        </param>
+        <param>
+          <declname>$dia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="169" column="29" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="169" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez Clase para validar cualquier tipo de dato que se le pase </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" line="13" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/Validar.php" bodystart="13" bodyend="293"/>
+    <listofallmembers>
+      <member refid="d3/dcd/class_validar_1aa5fa99918a02509d6c7f454acc02c9af" prot="public" virt="non-virtual"><scope>Validar</scope><name>camposTexto</name></member>
+      <member refid="d3/dcd/class_validar_1ab64de9f6fe5eef644364ec51d18d909f" prot="public" virt="non-virtual"><scope>Validar</scope><name>clave</name></member>
+      <member refid="d3/dcd/class_validar_1a16beab39cf0798455de6e0d5d75931ef" prot="public" virt="non-virtual"><scope>Validar</scope><name>codigoE</name></member>
+      <member refid="d3/dcd/class_validar_1a55615485091ff613768c224a921c3466" prot="public" virt="non-virtual"><scope>Validar</scope><name>dimensiones</name></member>
+      <member refid="d3/dcd/class_validar_1aed1c76ecf2364c8505209397d951498e" prot="public" virt="non-virtual"><scope>Validar</scope><name>direccion</name></member>
+      <member refid="d3/dcd/class_validar_1a3aa59f416560da1fa48cf48aa16a356b" prot="public" virt="non-virtual"><scope>Validar</scope><name>dni</name></member>
+      <member refid="d3/dcd/class_validar_1a4e6a408740ae194b786705e07bdf1385" prot="private" virt="non-virtual"><scope>Validar</scope><name>esCorrectaFecha</name></member>
+      <member refid="d3/dcd/class_validar_1a79606c94d5b6c86bc94aa94bc2360520" prot="private" virt="non-virtual"><scope>Validar</scope><name>esCorrectoDia</name></member>
+      <member refid="d3/dcd/class_validar_1ae8437101b01206f21ea93e49db07b381" prot="public" virt="non-virtual"><scope>Validar</scope><name>especie</name></member>
+      <member refid="d3/dcd/class_validar_1adfeb2ff1ba30827a6b23d9d25b1f2d58" prot="public" virt="non-virtual"><scope>Validar</scope><name>fecha</name></member>
+      <member refid="d3/dcd/class_validar_1aeb695df29c77808deda64ae1588ff13f" prot="private" virt="non-virtual"><scope>Validar</scope><name>letraDni</name></member>
+      <member refid="d3/dcd/class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2" prot="public" virt="non-virtual"><scope>Validar</scope><name>mail</name></member>
+      <member refid="d3/dcd/class_validar_1a692b2249239ab61c7676585b731d1ca1" prot="public" virt="non-virtual"><scope>Validar</scope><name>migracion</name></member>
+      <member refid="d3/dcd/class_validar_1a4d15ecb2e671a6af364669cc86a11a36" prot="public" virt="non-virtual"><scope>Validar</scope><name>nombre</name></member>
+      <member refid="d3/dcd/class_validar_1a2c74bfb0c547619f49904540b46728a1" prot="public" virt="non-virtual"><scope>Validar</scope><name>peso</name></member>
+      <member refid="d3/dcd/class_validar_1a04495c43d130363240cb4b1db22a6d0e" prot="public" virt="non-virtual"><scope>Validar</scope><name>provincia</name></member>
+      <member refid="d3/dcd/class_validar_1a8f42bdd26eb04e93a1df3274c5025ab9" prot="public" virt="non-virtual"><scope>Validar</scope><name>telefono</name></member>
+      <member refid="d3/dcd/class_validar_1a1d0932ada0413381b868162863f89397" prot="public" virt="non-virtual"><scope>Validar</scope><name>usuario</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

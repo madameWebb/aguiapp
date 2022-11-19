@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_especie" xml:lang="es">
+<title>Referencia de la Clase Especie</title>
+<indexterm><primary>Especie</primary></indexterm>
+Diagrama de herencias de Especie<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d87/class_especie__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_especie_1a4f24b74ec17e26731b1c3a7f6719a776">agregarEspecie</link> ($especie, $reino, $clase, $orden, $familia, $periodoMigratorio)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Métodos públicos estáticos    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_especie_1ac84a8bd3cf89a32f165f6817de4f5232">getEspecie</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1a833ba25687a77d8e5eed0573a78d62a6">getReino</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1aeba4e7bddeb1e67c0eb12b6c3a1ab47f">getClase</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1ab5d4a0c2716582a6d775f137c958fe3d">getOrden</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1a37700a0e9a0a977c34b915cf6e9ce38b">getFamilia</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1ab8a562625ee57e974886656655fcddde">getPeriodoMigratorio</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1aed60a16f5fe67375aae45739f4c303a4">getPoblacion</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1a65af7704af00f28ca302c1c26d70a634">setPoblacion</link> ($poblacion)</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1a00bb1e1275d894b016b23afcefebd9cc">sumarPoblacion</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_especie_1a9c51801438566f0610595b40bd71c34f">restarPoblacion</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Proyecto Parque Eocológico</para>
+
+<para><formalpara><title>Versión</title>
+
+<para>pq-_V18 @autor Virginia M. García Álvarez Crea una especie con 7 parámetros, sin constructor, ya que los atributos se le asignan después </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00015">15</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_especie_1a4f24b74ec17e26731b1c3a7f6719a776"/><section>
+    <title>agregarEspecie()</title>
+<indexterm><primary>agregarEspecie</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>agregarEspecie</secondary></indexterm>
+<para><computeroutput>agregarEspecie ( $especie,  $reino,  $clase,  $orden,  $familia,  $periodoMigratorio)</computeroutput></para>
+<para>Agrega los parámetros a la <link linkend="_class_especie">Especie</link> creada</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$especie</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$reino</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$clase</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$orden</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$familia</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>string</entry><entry>$periodoMigratorio</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Reimplementado en <link linkend="_class_especimenes_1a4f24b74ec17e26731b1c3a7f6719a776">Especimenes</link>.</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00058">58</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1aeba4e7bddeb1e67c0eb12b6c3a1ab47f"/><section>
+    <title>getClase()</title>
+<indexterm><primary>getClase</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getClase</secondary></indexterm>
+<para><computeroutput>static getClase ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra la clase de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00087">87</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1ac84a8bd3cf89a32f165f6817de4f5232"/><section>
+    <title>getEspecie()</title>
+<indexterm><primary>getEspecie</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getEspecie</secondary></indexterm>
+<para><computeroutput>static getEspecie ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra el nombre de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00071">71</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1a37700a0e9a0a977c34b915cf6e9ce38b"/><section>
+    <title>getFamilia()</title>
+<indexterm><primary>getFamilia</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getFamilia</secondary></indexterm>
+<para><computeroutput>static getFamilia ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra la familia de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00103">103</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1ab5d4a0c2716582a6d775f137c958fe3d"/><section>
+    <title>getOrden()</title>
+<indexterm><primary>getOrden</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getOrden</secondary></indexterm>
+<para><computeroutput>static getOrden ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra el orden de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00095">95</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1ab8a562625ee57e974886656655fcddde"/><section>
+    <title>getPeriodoMigratorio()</title>
+<indexterm><primary>getPeriodoMigratorio</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getPeriodoMigratorio</secondary></indexterm>
+<para><computeroutput>static getPeriodoMigratorio ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra el periodo migratorio de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00111">111</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1aed60a16f5fe67375aae45739f4c303a4"/><section>
+    <title>getPoblacion()</title>
+<indexterm><primary>getPoblacion</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getPoblacion</secondary></indexterm>
+<para><computeroutput>static getPoblacion ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra la población en el parque de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00119">119</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1a833ba25687a77d8e5eed0573a78d62a6"/><section>
+    <title>getReino()</title>
+<indexterm><primary>getReino</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>getReino</secondary></indexterm>
+<para><computeroutput>static getReino ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>muestra el reino de la especie</para>
+
+<para><formalpara><title>Devuelve</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00079">79</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1a9c51801438566f0610595b40bd71c34f"/><section>
+    <title>restarPoblacion()</title>
+<indexterm><primary>restarPoblacion</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>restarPoblacion</secondary></indexterm>
+<para><computeroutput>static restarPoblacion ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Resta individuos a la especie 
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00148">148</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1a65af7704af00f28ca302c1c26d70a634"/><section>
+    <title>setPoblacion()</title>
+<indexterm><primary>setPoblacion</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>setPoblacion</secondary></indexterm>
+<para><computeroutput>static setPoblacion ( $poblacion)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>modifica la población de la especie</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00129">129</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<anchor xml:id="_class_especie_1a00bb1e1275d894b016b23afcefebd9cc"/><section>
+    <title>sumarPoblacion()</title>
+<indexterm><primary>sumarPoblacion</primary><secondary>Especie</secondary></indexterm>
+<indexterm><primary>Especie</primary><secondary>sumarPoblacion</secondary></indexterm>
+<para><computeroutput>static sumarPoblacion ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Agrega individuos a la especie</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definición en la línea <link linkend="__especie_8php_source_1l00139">139</link> del archivo <link linkend="__especie_8php_source">Especie.php</link>.</para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/<link linkend="__especie_8php">Especie.php</link></section>
+</section>

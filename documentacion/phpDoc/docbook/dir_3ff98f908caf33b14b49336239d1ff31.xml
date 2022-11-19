@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_3ff98f908caf33b14b49336239d1ff31" xml:lang="es">
+<title>Referencia del directorio G:/xamppVZ</title>
+<indexterm><primary>Referencia del directorio G:/xamppVZ</primary></indexterm>
+Gráfico de dependencias de directorios para xamppVZ:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_3ff98f908caf33b14b49336239d1ff31_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_a5b0a9dc330cc554753250a3ba14fde6">htdocs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

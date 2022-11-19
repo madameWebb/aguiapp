@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__biologo_8php_source" xml:lang="es">
+<title>Biologo.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Biologo.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__biologo_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__biologo_8php_source_1l00015"/><link linkend="_class_biologo">00015</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_biologo">Biologo</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_class_persona">Persona</link>{
+<anchor xml:id="__biologo_8php_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$fechaTitulacion;
+<anchor xml:id="__biologo_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$direccion;
+<anchor xml:id="__biologo_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$provincia;
+<anchor xml:id="__biologo_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$claveAcceso;
+<anchor xml:id="__biologo_8php_source_1l00046"/><link linkend="_class_biologo_1ac63e0e0846778d04711d4e8493a6f7f9">00046</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1ac63e0e0846778d04711d4e8493a6f7f9">__construct</link>($nombreApellido,&#32;$dni,&#32;$fechaTitulacion,&#32;$direccion,&#32;$provincia,&#32;$mail,&#32;$telefono,&#32;$claveAcceso)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::__construct($nombreApellido,&#32;$dni,&#32;$mail,&#32;$telefono);
+<anchor xml:id="__biologo_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;fechaTitulacion&#32;=&#32;$fechaTitulacion;
+<anchor xml:id="__biologo_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;direccion&#32;=&#32;$direccion;
+<anchor xml:id="__biologo_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;provincia&#32;=&#32;$provincia;
+<anchor xml:id="__biologo_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;claveAcceso&#32;=&#32;$claveAcceso;
+<anchor xml:id="__biologo_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00056"/><link linkend="_class_biologo_1a8825bc56728052bb130a57f428520e43">00056</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1a8825bc56728052bb130a57f428520e43">getFechaTitulacion</link>()&#32;{
+<anchor xml:id="__biologo_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;fechaTitulacion;
+<anchor xml:id="__biologo_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00062"/><link linkend="_class_biologo_1aff38599e1b7282dbdd4161006eb73fd0">00062</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1aff38599e1b7282dbdd4161006eb73fd0">getDireccion</link>()&#32;{
+<anchor xml:id="__biologo_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;direccion;
+<anchor xml:id="__biologo_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00068"/><link linkend="_class_biologo_1a97c9991e2f9e47e308aafaf670f6bf32">00068</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1a97c9991e2f9e47e308aafaf670f6bf32">getProvincia</link>()&#32;{
+<anchor xml:id="__biologo_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;provincia;
+<anchor xml:id="__biologo_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00074"/><link linkend="_class_biologo_1a432331ea28feaeec944c62107acf5f1b">00074</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1a432331ea28feaeec944c62107acf5f1b">getClaveAcceso</link>()&#32;{
+<anchor xml:id="__biologo_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;claveAcceso;
+<anchor xml:id="__biologo_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00084"/><link linkend="_class_biologo_1a3fe98e89f61dc27bddf59a59f019c130">00084</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1a3fe98e89f61dc27bddf59a59f019c130">setFechaTitulacion</link>($fechaTitulacion)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;fechaTitulacion&#32;=&#32;$fechaTitulacion;
+<anchor xml:id="__biologo_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00094"/><link linkend="_class_biologo_1acf6ed8d75cb9d15c4e968d4276097718">00094</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1acf6ed8d75cb9d15c4e968d4276097718">setDireccion</link>($direccion)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;direccion&#32;=&#32;$direccion;
+<anchor xml:id="__biologo_8php_source_1l00096"/>00096 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00104"/><link linkend="_class_biologo_1a5447697e0f60645b1570c55fa53c0ade">00104</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1a5447697e0f60645b1570c55fa53c0ade">setProvincia</link>($provincia)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;provincia&#32;=&#32;$provincia;
+<anchor xml:id="__biologo_8php_source_1l00106"/>00106 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00114"/><link linkend="_class_biologo_1a737e0156e38f0b807c7ec0804edf313b">00114</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1a737e0156e38f0b807c7ec0804edf313b">setClaveAcceso</link>($claveAcceso)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;claveAcceso&#32;=&#32;$claveAcceso;
+<anchor xml:id="__biologo_8php_source_1l00116"/>00116 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00122"/><link linkend="_class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2">00122</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</link>(){
+<anchor xml:id="__biologo_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;?&gt;
+<anchor xml:id="__biologo_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;table&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;tablaB&quot;</emphasis>&gt;
+<anchor xml:id="__biologo_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tbody&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;tbodyB&quot;</emphasis>&gt;
+<anchor xml:id="__biologo_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Nombre:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;parent::getNombreApellido();?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;NIF:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;parent::getDni();?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Email:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;parent::getMail();?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Teléfono:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;parent::getTelefono();?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Dirección:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;direccion;?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Provincia:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;provincia;?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;Fecha&#32;de&#32;titulación:&#32;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;td&gt;&lt;?php&#32;echo&#32;$this-&gt;fechaTitulacion;?&gt;&lt;/td&gt;
+<anchor xml:id="__biologo_8php_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tr&gt;
+<anchor xml:id="__biologo_8php_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/tbody&gt;
+<anchor xml:id="__biologo_8php_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/table&gt;
+<anchor xml:id="__biologo_8php_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&lt;?php
+<anchor xml:id="__biologo_8php_source_1l00157"/>00157 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00163"/><link linkend="_class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d">00163</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</link>()&#32;{
+<anchor xml:id="__biologo_8php_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::editarInformacion();
+<anchor xml:id="__biologo_8php_source_1l00165"/>00165 &#32;&#32;&#32;&#32;?&gt;
+<anchor xml:id="__biologo_8php_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;direccion&quot;</emphasis>/&gt;Dirección:&#32;
+<anchor xml:id="__biologo_8php_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;text&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;direccion&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;$this-&gt;direccion;?&gt;&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;off&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__biologo_8php_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;provincia&quot;</emphasis>/&gt;Provincia:&#32;
+<anchor xml:id="__biologo_8php_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;select&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;provincia&quot;</emphasis>&gt;
+<anchor xml:id="__biologo_8php_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;option&#32;value=<emphasis role="stringliteral">&quot;&quot;</emphasis>&gt;Escoje&#32;una&#32;opción&lt;/option&gt;
+<anchor xml:id="__biologo_8php_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;option&#32;value=<emphasis role="stringliteral">&quot;La&#32;Coruña&quot;</emphasis>&lt;?php&#32;<emphasis role="keywordflow">if</emphasis>&#32;($this-&gt;provincia&#32;==&#32;<emphasis role="stringliteral">&apos;La&#32;Coruña&apos;</emphasis>)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&quot;selected=\&quot;selected\&quot;&quot;</emphasis>;}&#32;?&gt;&gt;La&#32;Coruña&lt;/option&gt;
+<anchor xml:id="__biologo_8php_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;option&#32;value=<emphasis role="stringliteral">&quot;Lugo&quot;</emphasis>&lt;?php&#32;<emphasis role="keywordflow">if</emphasis>&#32;($this-&gt;provincia&#32;==&#32;<emphasis role="stringliteral">&apos;Lugo&apos;</emphasis>)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&quot;selected=\&quot;selected\&quot;&quot;</emphasis>;}&#32;?&gt;&gt;Lugo&lt;/option&gt;
+<anchor xml:id="__biologo_8php_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;option&#32;value=<emphasis role="stringliteral">&quot;Orense&quot;</emphasis>&lt;?php&#32;<emphasis role="keywordflow">if</emphasis>&#32;($this-&gt;provincia&#32;==&#32;<emphasis role="stringliteral">&apos;Orense&apos;</emphasis>)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&quot;selected=\&quot;selected\&quot;&quot;</emphasis>;}&#32;?&gt;&gt;Orense&lt;/option&gt;
+<anchor xml:id="__biologo_8php_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;option&#32;value=<emphasis role="stringliteral">&quot;Pontevedra&quot;</emphasis>&lt;?php&#32;<emphasis role="keywordflow">if</emphasis>&#32;($this-&gt;provincia&#32;==&#32;<emphasis role="stringliteral">&apos;Pontevedra&apos;</emphasis>)&#32;{
+<anchor xml:id="__biologo_8php_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&quot;selected=\&quot;selected\&quot;&quot;</emphasis>;}&#32;?&gt;&gt;Pontevedra&lt;/option&gt;
+<anchor xml:id="__biologo_8php_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/select&gt;&lt;/p&gt;
+<anchor xml:id="__biologo_8php_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;fechaTitulacion&quot;</emphasis>/&gt;Fecha&#32;de&#32;titulación:&#32;
+<anchor xml:id="__biologo_8php_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;date&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;fechaTitulacion&quot;</emphasis>&#32;value=<emphasis role="stringliteral">&quot;&lt;?php&#32;echo&#32;$this-&gt;fechaTitulacion;?&gt;&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__biologo_8php_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;&lt;label&#32;<emphasis role="keywordflow">for</emphasis>=<emphasis role="stringliteral">&quot;claveM&quot;</emphasis>/&gt;Clave:&#32;
+<anchor xml:id="__biologo_8php_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&quot;password&quot;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;claveM&quot;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;contraseña&quot;</emphasis>&#32;autocomplete=<emphasis role="stringliteral">&quot;new-password&quot;</emphasis>/&gt;&lt;/p&gt;
+<anchor xml:id="__biologo_8php_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&lt;?php&#32;&#32;
+<anchor xml:id="__biologo_8php_source_1l00185"/>00185 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__biologo_8php_source_1l00186"/>00186 
+<anchor xml:id="__biologo_8php_source_1l00187"/>00187 }
+</programlisting></section>

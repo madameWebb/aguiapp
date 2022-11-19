@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="d3/dfd/class_persona" kind="class" language="PHP" prot="public">
+    <compoundname>Persona</compoundname>
+    <derivedcompoundref refid="da/d6d/class_biologo" prot="public" virt="non-virtual">Biologo</derivedcompoundref>
+    <derivedcompoundref refid="dc/d97/class_invitado" prot="public" virt="non-virtual">Invitado</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/dfd/class_persona_1a8729585872136ab5e0b69b2d274a3c3f" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$nombreApellido</definition>
+        <argsstring></argsstring>
+        <name>$nombreApellido</name>
+        <qualifiedname>Persona\$nombreApellido</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="25" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dfd/class_persona_1aee9b50bd27322da677c326223fdbf8ac" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$dni</definition>
+        <argsstring></argsstring>
+        <name>$dni</name>
+        <qualifiedname>Persona\$dni</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="29" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dfd/class_persona_1ac409786c163a1974d1e24a6767a95166" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$mail</definition>
+        <argsstring></argsstring>
+        <name>$mail</name>
+        <qualifiedname>Persona\$mail</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="33" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dfd/class_persona_1acd62096556368059d52e5a594bf1378d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$telefono</definition>
+        <argsstring></argsstring>
+        <name>$telefono</name>
+        <qualifiedname>Persona\$telefono</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="37" column="13" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/dfd/class_persona_1a8ea2a892653f4a90b68682905c97965f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($nombreApellido, $dni, $mail, $telefono)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>Persona\__construct</qualifiedname>
+        <reimplementedby refid="dc/d97/class_invitado_1a8c5bbbf29457335a0fdef323ddecd72e">__construct</reimplementedby>
+        <param>
+          <declname>$nombreApellido</declname>
+        </param>
+        <param>
+          <declname>$dni</declname>
+        </param>
+        <param>
+          <declname>$mail</declname>
+        </param>
+        <param>
+          <declname>$telefono</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor de 4 parámetros, recibe como parámetros los datos solicitados.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$nombreApellido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$dni</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$mail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$telefono</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d3/dfd/class_persona" kindref="compound">Persona</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="48" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ae2d57a823882316c4e3c66c58b950e69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getNombreApellido</definition>
+        <argsstring>()</argsstring>
+        <name>getNombreApellido</name>
+        <qualifiedname>Persona\getNombreApellido</qualifiedname>
+        <reimplementedby refid="dc/d97/class_invitado_1ae2d57a823882316c4e3c66c58b950e69">getNombreApellido</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el nombre y el apellido de la persona</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="59" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1a7174a173fa25c24567751085fd41e74a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getDni</definition>
+        <argsstring>()</argsstring>
+        <name>getDni</name>
+        <qualifiedname>Persona\getDni</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el NIF de la persona</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="67" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getMail</definition>
+        <argsstring>()</argsstring>
+        <name>getMail</name>
+        <qualifiedname>Persona\getMail</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el mail de la persona</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="75" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1a5dc8566458b8859d2c6fba633adf726e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTelefono</definition>
+        <argsstring>()</argsstring>
+        <name>getTelefono</name>
+        <qualifiedname>Persona\getTelefono</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el teléfono de la persona</para>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="83" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setNombreApellido</definition>
+        <argsstring>($nombreApellido)</argsstring>
+        <name>setNombreApellido</name>
+        <qualifiedname>Persona\setNombreApellido</qualifiedname>
+        <reimplementedby refid="dc/d97/class_invitado_1ac3c2873ffa8ad60b4f2742ac569087f7">setNombreApellido</reimplementedby>
+        <param>
+          <declname>$nombreApellido</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica el atributo nombreApellido</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$nombreApellido</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="93" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ad48eec89c13b763a71956306f8bb3d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setDni</definition>
+        <argsstring>($dni)</argsstring>
+        <name>setDni</name>
+        <qualifiedname>Persona\setDni</qualifiedname>
+        <param>
+          <declname>$dni</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica el atributo dni</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$dni</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="103" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ad29599d95c9acdfa9966234fe761bf21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setMail</definition>
+        <argsstring>($mail)</argsstring>
+        <name>setMail</name>
+        <qualifiedname>Persona\setMail</qualifiedname>
+        <reimplementedby refid="dc/d97/class_invitado_1ad29599d95c9acdfa9966234fe761bf21">setMail</reimplementedby>
+        <param>
+          <declname>$mail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica el atributo mail</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$mail</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="113" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1a3265463c162b7031c5f0a0592a35d9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setTelefono</definition>
+        <argsstring>($telefono)</argsstring>
+        <name>setTelefono</name>
+        <qualifiedname>Persona\setTelefono</qualifiedname>
+        <param>
+          <declname>$telefono</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modifica el atributo teléfono</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$telefono</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="123" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ada450b5eb68e37ce0022cbe40987fb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>editarInformacion</definition>
+        <argsstring>()</argsstring>
+        <name>editarInformacion</name>
+        <qualifiedname>Persona\editarInformacion</qualifiedname>
+        <reimplementedby refid="da/d6d/class_biologo_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</reimplementedby>
+        <reimplementedby refid="dc/d97/class_invitado_1ada450b5eb68e37ce0022cbe40987fb3d">editarInformacion</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra un formulario para la modificación de los datos guardados</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="131" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="131" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dfd/class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mostrarInformacion</definition>
+        <argsstring>()</argsstring>
+        <name>mostrarInformacion</name>
+        <qualifiedname>Persona\mostrarInformacion</qualifiedname>
+        <reimplementedby refid="da/d6d/class_biologo_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</reimplementedby>
+        <reimplementedby refid="dc/d97/class_invitado_1ada503a905ffc49d2e3b6991b7f94d2a2">mostrarInformacion</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra los datos guardados por el objeto</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="147" column="14" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="147" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Proyecto Parque Eocológico</para>
+<para><simplesect kind="version"><para>pq-_V18 @autor Virginia M. García Álvarez </para>
+</simplesect>
+<simplesect kind="see"><para>class <ref refid="da/d6d/class_biologo" kindref="compound">Biologo</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>class <ref refid="dc/d97/class_invitado" kindref="compound">Invitado</ref> Clase <ref refid="d3/dfd/class_persona" kindref="compound">Persona</ref>, para crear objetos de tipo persona </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Biologo</label>
+        <link refid="da/d6d/class_biologo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Invitado</label>
+        <link refid="dc/d97/class_invitado"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Persona</label>
+        <link refid="d3/dfd/class_persona"/>
+      </node>
+    </inheritancegraph>
+    <location file="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" line="21" column="1" bodyfile="G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/persona/Persona.php" bodystart="21" bodyend="171"/>
+    <listofallmembers>
+      <member refid="d3/dfd/class_persona_1aee9b50bd27322da677c326223fdbf8ac" prot="private" virt="non-virtual"><scope>Persona</scope><name>$dni</name></member>
+      <member refid="d3/dfd/class_persona_1ac409786c163a1974d1e24a6767a95166" prot="private" virt="non-virtual"><scope>Persona</scope><name>$mail</name></member>
+      <member refid="d3/dfd/class_persona_1a8729585872136ab5e0b69b2d274a3c3f" prot="private" virt="non-virtual"><scope>Persona</scope><name>$nombreApellido</name></member>
+      <member refid="d3/dfd/class_persona_1acd62096556368059d52e5a594bf1378d" prot="private" virt="non-virtual"><scope>Persona</scope><name>$telefono</name></member>
+      <member refid="d3/dfd/class_persona_1a8ea2a892653f4a90b68682905c97965f" prot="public" virt="non-virtual"><scope>Persona</scope><name>__construct</name></member>
+      <member refid="d3/dfd/class_persona_1ada450b5eb68e37ce0022cbe40987fb3d" prot="public" virt="non-virtual"><scope>Persona</scope><name>editarInformacion</name></member>
+      <member refid="d3/dfd/class_persona_1a7174a173fa25c24567751085fd41e74a" prot="public" virt="non-virtual"><scope>Persona</scope><name>getDni</name></member>
+      <member refid="d3/dfd/class_persona_1ae4923d9ec6cf4408080fc1c37e20e0ba" prot="public" virt="non-virtual"><scope>Persona</scope><name>getMail</name></member>
+      <member refid="d3/dfd/class_persona_1ae2d57a823882316c4e3c66c58b950e69" prot="public" virt="non-virtual"><scope>Persona</scope><name>getNombreApellido</name></member>
+      <member refid="d3/dfd/class_persona_1a5dc8566458b8859d2c6fba633adf726e" prot="public" virt="non-virtual"><scope>Persona</scope><name>getTelefono</name></member>
+      <member refid="d3/dfd/class_persona_1ada503a905ffc49d2e3b6991b7f94d2a2" prot="public" virt="non-virtual"><scope>Persona</scope><name>mostrarInformacion</name></member>
+      <member refid="d3/dfd/class_persona_1ad48eec89c13b763a71956306f8bb3d1d" prot="public" virt="non-virtual"><scope>Persona</scope><name>setDni</name></member>
+      <member refid="d3/dfd/class_persona_1ad29599d95c9acdfa9966234fe761bf21" prot="public" virt="non-virtual"><scope>Persona</scope><name>setMail</name></member>
+      <member refid="d3/dfd/class_persona_1ac3c2873ffa8ad60b4f2742ac569087f7" prot="public" virt="non-virtual"><scope>Persona</scope><name>setNombreApellido</name></member>
+      <member refid="d3/dfd/class_persona_1a3265463c162b7031c5f0a0592a35d9cf" prot="public" virt="non-virtual"><scope>Persona</scope><name>setTelefono</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Parque Ecológico: Fichero Fuente G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/recogerUsuario.php</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logoAnimado.svg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Parque Ecológico<span id="projectnumber">&#160;V18</span>
+   </div>
+   <div id="projectbrief">Aplicación webb para gestionar parques naturales</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_934f46a345653ef2b3014a1b37a162c1.html">G:</a></li><li class="navelem"><a class="el" href="../../dir_3ff98f908caf33b14b49336239d1ff31.html">xamppVZ</a></li><li class="navelem"><a class="el" href="../../dir_a5b0a9dc330cc554753250a3ba14fde6.html">htdocs</a></li><li class="navelem"><a class="el" href="../../dir_18a66ae6617e6f6f1b2daa0a4ccc1ba9.html">000_TAREA_CONJUNTA</a></li><li class="navelem"><a class="el" href="../../dir_067a06abf01e0ec94afcc856d2f72981.html">ParqueEcologicoBoostrap_V18</a></li><li class="navelem"><a class="el" href="../../dir_5782b46b58fb37adcb3eeb68588d3901.html">php</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">recogerUsuario.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d96/recoger_usuario_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    require <span class="stringliteral">&#39;clasesPHP/Registro.php&#39;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    session_start();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">//Aquí se crean los objetos Invitado o Biologo, para operar con ellos donde</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">//sea conveniente.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//Si hay algo en la sesión</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span> (count($_SESSION) != 0){</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">//Y existen estos índices</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span>(isset($_SESSION[<span class="stringliteral">&#39;usuario&#39;</span>]) &amp;&amp; isset($_SESSION[<span class="stringliteral">&#39;tipoUsuario&#39;</span>]) &amp;&amp; isset($_POST[<span class="stringliteral">&#39;recoger&#39;</span>])){</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            $usuario = $_SESSION[<span class="stringliteral">&#39;usuario&#39;</span>];</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="comment">//Se comprueba que tipo de usuario es y se obra en consecuencia</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">if</span>($usuario instanceof <a class="code hl_class" href="../../dc/d97/class_invitado.html">Invitado</a>){</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                $recogido = [<span class="stringliteral">&#39;tipoUsuario&#39;</span> =&gt; <span class="stringliteral">&#39;invitado&#39;</span>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    <span class="stringliteral">&#39;nombreApellido&#39;</span> =&gt; $usuario-&gt;getNombreApellido(),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    <span class="stringliteral">&#39;usuario&#39;</span> =&gt; $usuario-&gt;getUsuario(),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                    <span class="stringliteral">&#39;mail&#39;</span> =&gt; $usuario-&gt;getMail(),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    <span class="stringliteral">&#39;claveAcceso&#39;</span> =&gt; <span class="keyword">null</span>];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="comment">//Se codifica en json para pasarselo a JS</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                echo json_encode($recogido);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="comment">//si es un biólogo, se hace lo propio</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span>($usuario instanceof <a class="code hl_class" href="../../da/d6d/class_biologo.html">Biologo</a>){</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                $recogido = [<span class="stringliteral">&#39;tipoUsuario&#39;</span> =&gt; <span class="stringliteral">&#39;biologo&#39;</span>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    <span class="stringliteral">&#39;nombreApellido&#39;</span> =&gt; $usuario-&gt;getNombreApellido(),</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    <span class="stringliteral">&#39;dni&#39;</span> =&gt; $usuario-&gt;getDni(),</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <span class="stringliteral">&#39;mail&#39;</span> =&gt; $usuario-&gt;getMail(),</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    <span class="stringliteral">&#39;telefono&#39;</span> =&gt; $usuario-&gt;getTelefono(),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    <span class="stringliteral">&#39;direccion&#39;</span> =&gt; $usuario-&gt;getDireccion(),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    <span class="stringliteral">&#39;provincia&#39;</span> =&gt; $usuario-&gt;getProvincia(),</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    <span class="stringliteral">&#39;fechaTitulacion&#39;</span> =&gt; $usuario-&gt;getFechaTitulacion(),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    <span class="stringliteral">&#39;claveAcceso&#39;</span> =&gt; <span class="keyword">null</span>];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                echo json_encode($recogido);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="comment">//Y si no te redirecciono</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            header(<span class="stringliteral">&#39;Location: ../php/redirecciones.php&#39;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../db/d96/recoger_usuario_8php.html#aff07e60e2dd63704cd2c8b884cb06be8">   49</a></span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">//Y si no te redirecciono</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        header(<span class="stringliteral">&#39;Location: ../php/redirecciones.php&#39;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
+<div class="ttc" id="aclass_biologo_html"><div class="ttname"><a href="../../da/d6d/class_biologo.html">Biologo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d8f/_biologo_8php_source.html#l00015">Biologo.php:15</a></div></div>
+<div class="ttc" id="aclass_invitado_html"><div class="ttname"><a href="../../dc/d97/class_invitado.html">Invitado</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d88/_invitado_8php_source.html#l00016">Invitado.php:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_login_8php_source" xml:lang="es">
+<title>login.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/login.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="_login_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="_login_8php_source_1l00002"/>00002 
+<anchor xml:id="_login_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;include&#32;<emphasis role="stringliteral">&apos;clasesPHP/Registro.php&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;
+<anchor xml:id="_login_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="comment">//Se&#32;inicia&#32;la&#32;sesion</emphasis>
+<anchor xml:id="_login_8php_source_1l00014"/>00014 &#32;&#32;&#32;&#32;session_set_cookie_params(0);
+<anchor xml:id="_login_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;session_start();
+<anchor xml:id="_login_8php_source_1l00024"/><link linkend="_login_8php_1abf38aefdd61588b76917d66782f97788">00024</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_login_8php_1abf38aefdd61588b76917d66782f97788">comprobarClave</link>($usuario,&#32;$clave,&#32;$tipoLogin,&#32;$tipoUsuario){
+<anchor xml:id="_login_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!<link linkend="_class_registro_1a0fe9616fbc1399e34e0b429ce50e23f7">Registro::verificarClave</link>($usuario,&#32;$clave)){
+<anchor xml:id="_login_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;La&#32;contraseña&#32;no&#32;es&#32;correcta&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$auxReg&#32;=&#32;<link linkend="_class_registro_1a13be3667d2ba06febbac356fdd724855">Registro::devolverUsuario</link>($tipoUsuario,&#32;$tipoLogin,&#32;array($usuario));
+<anchor xml:id="_login_8php_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($auxReg){
+<anchor xml:id="_login_8php_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$_SESSION[<emphasis role="stringliteral">&apos;tipoLogin&apos;</emphasis>]&#32;=&#32;$tipoLogin;
+<anchor xml:id="_login_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$_SESSION[<emphasis role="stringliteral">&apos;tipoUsuario&apos;</emphasis>]&#32;=&#32;$tipoUsuario;
+<anchor xml:id="_login_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$_SESSION[<emphasis role="stringliteral">&apos;claveI&apos;</emphasis>]&#32;=&#32;$clave;
+<anchor xml:id="_login_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$_SESSION[<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>]&#32;=&#32;$auxReg;
+<anchor xml:id="_login_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;true&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="comment">//Si&#32;existe&#32;el&#32;índice&#32;&apos;datos&apos;&#32;en&#32;el&#32;Array&#32;$_POST...</emphasis>
+<anchor xml:id="_login_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($_POST[<emphasis role="stringliteral">&apos;datos&apos;</emphasis>])){
+<anchor xml:id="_login_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$login&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_login_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$datos&#32;=&#32;json_decode($_POST[<emphasis role="stringliteral">&apos;datos&apos;</emphasis>],&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_login_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$tipoUsuario&#32;=&#32;$datos[<emphasis role="stringliteral">&apos;tipoUsuario&apos;</emphasis>];
+<anchor xml:id="_login_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$tipoLogin&#32;=&#32;$datos[<emphasis role="stringliteral">&apos;tipoLogin&apos;</emphasis>];
+<anchor xml:id="_login_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(isset($datos[<emphasis role="stringliteral">&apos;clave&apos;</emphasis>])){
+<anchor xml:id="_login_8php_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$claveR&#32;=&#32;<link linkend="_class_validar_1ab64de9f6fe5eef644364ec51d18d909f">Validar::clave</link>($datos[<emphasis role="stringliteral">&apos;clave&apos;</emphasis>]);
+<anchor xml:id="_login_8php_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$claveR&#32;=&#32;<emphasis role="stringliteral">&apos;&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$errores&#32;=&#32;0;
+<anchor xml:id="_login_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Si&#32;el&#32;tipo&#32;de&#32;usuario&#32;es&#32;invitado,&#32;hace&#32;una&#32;cosa</emphasis>
+<anchor xml:id="_login_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($tipoUsuario&#32;==&#32;<emphasis role="stringliteral">&apos;invitados&apos;</emphasis>){
+<anchor xml:id="_login_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>){
+<anchor xml:id="_login_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario&#32;=&#32;<link linkend="_class_validar_1a1d0932ada0413381b868162863f89397">Validar::usuario</link>($datos[<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>]);
+<anchor xml:id="_login_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$usuario){&#32;
+<anchor xml:id="_login_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;nombre&#32;de&#32;usuario&#32;no&#32;es&#32;correcto.&#32;&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$errores++;
+<anchor xml:id="_login_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>($tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;mail&apos;</emphasis>){
+<anchor xml:id="_login_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$mail&#32;=&#32;<link linkend="_class_validar_1a3c84d75078fbadfe7a0b4ec9a9c032e2">Validar::mail</link>($datos[<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>]);
+<anchor xml:id="_login_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$mail){&#32;
+<anchor xml:id="_login_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;mail&#32;de&#32;usuario&#32;no&#32;es&#32;correcto.&#32;&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$errores++;
+<anchor xml:id="_login_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_login_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$claveR){
+<anchor xml:id="_login_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;La&#32;contraseña&#32;no&#32;es&#32;correcta.&#32;&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$errores++;
+<anchor xml:id="_login_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($errores&#32;==&#32;0){
+<anchor xml:id="_login_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>){
+<anchor xml:id="_login_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Si&#32;el&#32;usuario&#32;no&#32;está&#32;registrado&#32;ya&#32;no&#32;se&#32;comprueba&#32;la&#32;contraseña</emphasis>
+<anchor xml:id="_login_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&apos;select&#32;*&#32;from&#32;invitados&#32;where&#32;usuario&#32;=&#32;?&apos;</emphasis>,array($usuario))){
+<anchor xml:id="_login_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;usuario&#32;no&#32;está&#32;registrado&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_login_8php_1abf38aefdd61588b76917d66782f97788">comprobarClave</link>($usuario,&#32;$claveR,&#32;$tipoLogin,&#32;$tipoUsuario);
+<anchor xml:id="_login_8php_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>($tipoLogin&#32;==&#32;<emphasis role="stringliteral">&apos;mail&apos;</emphasis>){
+<anchor xml:id="_login_8php_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&apos;select&#32;*&#32;from&#32;invitados&#32;where&#32;mail&#32;=&#32;?&apos;</emphasis>,&#32;array($mail))){
+<anchor xml:id="_login_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;email&#32;no&#32;está&#32;registrado&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_login_8php_1abf38aefdd61588b76917d66782f97788">comprobarClave</link>($mail,&#32;$claveR,&#32;$tipoLogin,&#32;$tipoUsuario);
+<anchor xml:id="_login_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;La&#32;identificación&#32;no&#32;se&#32;ha&#32;realizado&#32;correctamente&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Si&#32;es&#32;Biólogo,&#32;hace&#32;otra</emphasis>
+<anchor xml:id="_login_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($tipoUsuario&#32;==&#32;<emphasis role="stringliteral">&apos;biologos&apos;</emphasis>){
+<anchor xml:id="_login_8php_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$usuario&#32;=&#32;<link linkend="_class_validar_1a3aa59f416560da1fa48cf48aa16a356b">Validar::dni</link>($datos[<emphasis role="stringliteral">&apos;usuario&apos;</emphasis>]);
+<anchor xml:id="_login_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$usuario){
+<anchor xml:id="_login_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;usuario&#32;no&#32;es&#32;correcto.&#32;&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$errores++;
+<anchor xml:id="_login_8php_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!$claveR){
+<anchor xml:id="_login_8php_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;La&#32;contraseña&#32;no&#32;es&#32;correcta.&#32;&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$errores++;
+<anchor xml:id="_login_8php_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>($errores&#32;==&#32;0){
+<anchor xml:id="_login_8php_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!<link linkend="_class_registro_1a28d5a0c3fe3a9478cfee8132c5c9e522">Registro::devolverDatos</link>(<emphasis role="stringliteral">&apos;select&#32;*&#32;from&#32;biologos&#32;where&#32;dni&#32;=&#32;?&apos;</emphasis>,&#32;array($usuario))){
+<anchor xml:id="_login_8php_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;El&#32;biologo&#32;no&#32;está&#32;registrado&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_login_8php_1abf38aefdd61588b76917d66782f97788">comprobarClave</link>($usuario,&#32;$claveR,&#32;$tipoLogin,&#32;$tipoUsuario);
+<anchor xml:id="_login_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_login_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;echo&#32;<emphasis role="stringliteral">&apos;La&#32;identificación&#32;no&#32;se&#32;ha&#32;realizado&#32;correctamente&apos;</emphasis>;
+<anchor xml:id="_login_8php_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_login_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;}
+</programlisting></section>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: login.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: login.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*
+ * Proyecto Parque Eocológico
+ * 
+ * @version pq-_V18
+ * @autor Virginia M. García Álvarez
+ */
+
+/**
+ * Inicializado a 0, cuenta si hay errores en los campos del login
+ * 
+ * @type integer
+ */
+var contadorErrores = 0;
+/**
+ * Recoge los valores de los campos del formulario de acceso.
+ * 
+ * @return {undefined}
+ */
+function recogerCampos(){
+    let usuario = document.getElementById('usuario');
+    let clave = document.getElementById('clave');
+    usuario.addEventListener('blur', function(){
+        if(Validar.email(this) || Validar.usuario(this) || Validar.nif(this.value)){
+            esCorrecto('usuario', this.value);
+            contadorErrores = 0;
+        } else {
+            esIncorrecto('usuario');
+            contadorErrores++;
+        }
+    }, false);
+    
+    clave.addEventListener('blur', function(){
+        if((!Validar.clave(this))){
+            esIncorrecto('clave');
+            contadorErrores++;
+        } else {
+            esCorrecto('clave', this.value);
+            contadorErrores = 0;
+        }
+    }, false);
+}
+/**
+ * Vigila dónde se produce el evento click en la página.
+ * 
+ * @return {undefined}
+ */
+function vigilarClickLogin(){
+    document.getElementById('loguearse').addEventListener('click', function(){
+        if(!sonValidosCampos('usuario') || !sonValidosCampos('clave') || contadorErrores !== 0) {
+            Pagina.escribirTlcdedc('mostrarError', 'Todos los campos deben estar debidamente cumplimentados');
+        } else {
+            let tipoLogin = definirTipoLogin(usuario);
+            document.getElementById('mostrarError').innerHTML = '';
+            //Comunicar al servidor
+            comunicarLogin(tipoLogin, usuario.value, clave.value);
+        }
+    }, false);
+    document.getElementById('inicio').addEventListener('click', function(){
+        window.location.href = 'index.html';
+    }, false);
+    document.getElementById('registro').addEventListener('click', function(){
+        window.location.href = 'registro.html';
+    }, false);
+    document.getElementById('volver').addEventListener('click', function(){
+        window.location.href = 'index.html';
+    }, false);
+    document.getElementById('logo').addEventListener('click', function(){
+        Pagina.modificarClases(null, 'navbarSupportedContent', 'show', null, null);
+    }, false);
+    document.getElementById('login').addEventListener('click', function(){
+        Pagina.modificarClases(null, 'navbarSupportedContent', 'show', null, null);
+    }, false);
+    document.getElementsByTagName('main').item(0).addEventListener('click', function(){
+        Pagina.modificarClases(null, 'navbarSupportedContent', 'show');
+    }, false);
+}
+/**
+ * Da valores de estilo y atributos a los input si no son correctos
+ * 
+ * @param {string} idInput id del input
+ * 
+ * @return {undefined}
+ */
+function esIncorrecto(idInput){
+    document.getElementById(idInput).setAttribute('placeholder', idInput + ' incorrecto/a');
+    document.getElementById(idInput).classList.add('is-invalid');
+    document.getElementById(idInput).style.backgroundColor = 'pink';
+}
+/**
+ * Da valores de estilo y atributos a los input si son correctos
+ * 
+ * @param {string} idInput ide del input
+ * @param {string} valor que es recogido
+ * 
+ * @return {undefined}
+ */
+function esCorrecto(idInput, valor){
+    document.getElementById(idInput).style.backgroundColor = '';
+    document.getElementById(idInput).value = valor;
+    document.getElementById(idInput).classList.remove('is-invalid');
+}
+/**
+ * Devuelve verdadero o falso si los campos son válidos
+ * 
+ * @param {string} campo id del campo del formulario
+ * 
+ * @return {Boolean}
+ */
+function sonValidosCampos(campo){
+    let sonValidos;
+    if(document.getElementById(campo) !== null){
+        if(document.getElementById(campo).value === '' ||
+                document.getElementById(campo) === 0){
+            sonValidos = false; 
+        } else {
+            sonValidos = true;
+        }
+    }
+    return sonValidos;
+}
+/**
+ * Define como se está logueando el usuario según el parámetro introducido
+ * 
+ * @param {string} variable recibida, contiene un mail, nombre de usuario o dni
+ * 
+ * @return {string}
+ */
+function definirTipoLogin(variable){
+    let tipoLogin; 
+    if(Validar.email(variable)){
+        tipoLogin = 'mail';
+    }else if(Validar.usuario(variable)){
+        tipoLogin = 'usuario';
+    } else {
+        tipoLogin = 'dni';
+    }
+    return tipoLogin;
+}
+/**
+ * Recoge el usuario logueado y lo guarda en localStorage
+ * 
+ * @return {Boolean}
+ */
+function recogerUsuario(){
+    let usuarioRecogido = new XMLHttpRequest();
+     usuarioRecogido.onreadystatechange = function(){
+        if(this.readyState === 4 &amp;&amp; this.status === 200){
+            if(this.responseText === 'false'){
+                let padre = document.getElementById('mostrarError');
+                padre.appendChild(document.createElement('p'));
+                padre.getElementsByTagName('p').item(0).style.color = 'red';
+                padre.appendChild(document.createTextNode('Ha ocurrido un error'));
+            } else {
+                crearSiEsTrue(this.responseText);
+            } 
+        }
+    };
+    Registro.comunicarServidor(usuarioRecogido, 'php/recogerUsuario.php', 'recoger=');
+}
+/**
+ * Crea el objeto usuario si este existe en la base de datos.
+ * 
+ * @param {datosRecibidos} datosRecibidos del formulario de login
+ * 
+ * @return {undefined}  
+ */
+function crearSiEsTrue(datosRecibidos){
+    let objetoUsuario;
+        let datos = datosRecibidos;
+        let arrayDatos = new Map();
+        let auxiliar = datos.slice(1);
+        let auxiliar2 = auxiliar.split('}');
+        let auxiliar0 = auxiliar2[0].replaceAll('"', '');
+        let auxiliar3 = auxiliar0.split(',');
+        for(let i = 0; i &lt; auxiliar3.length; i++){
+            let aux = auxiliar3[i].split(':');
+            arrayDatos.set(aux[0], aux[1]);
+        }
+        if(arrayDatos.get('tipoUsuario') === 'invitado'){
+            objetoUsuario = new Invitado(arrayDatos.get('nombreApellido'),
+                arrayDatos.get('usuario'),
+                arrayDatos.get('mail'),
+                clave = localStorage.length > 0 ? localStorage['clave'] : null);
+                
+        }
+        if(arrayDatos.get('tipoUsuario') === 'biologo'){
+            objetoUsuario = new Biologo(arrayDatos.get('nombreApellido'),
+                arrayDatos.get('dni'),
+                arrayDatos.get('mail'),
+                arrayDatos.get('telefono'),
+                arrayDatos.get('direccion'),
+                arrayDatos.get('provincia'),
+                arrayDatos.get('fechaTitulacion'),
+                clave = localStorage.length > 0 ? localStorage['clave'] : null);
+        }
+        localStorage.setItem('objetoUsuario', JSON.stringify(objetoUsuario));
+}
+/**
+ * Comunica el login al servidor, el cual verifica que exista el usuario.
+ * Si es true guarda los datos en localStorage
+ * 
+ * @param {string} tipoLogin
+ * @param {string} usuario
+ * @param {string} clave
+ * 
+ * @return {undefined}  
+ */
+function comunicarLogin(tipoLogin, usuario, clave){
+    let tipoUsuario;
+    let comunicaLogin = new XMLHttpRequest();
+    if(tipoLogin === 'dni') tipoUsuario = 'biologos';
+    else tipoUsuario = 'invitados';
+    let datos = new Object();
+    datos.tipoLogin = tipoLogin;
+    datos.usuario = usuario;
+    datos.clave = clave;
+    datos.tipoUsuario = tipoUsuario;
+    let pasarDatos =JSON.stringify(datos);
+    comunicaLogin.onreadystatechange = function(){
+        if(this.readyState === 4 &amp;&amp; this.status === 200){
+            if(this.responseText === 'true'){
+                recogerUsuario();
+                console.log(localStorage);
+                localStorage.setItem('usuario', usuario);
+                localStorage.setItem('clave', clave);
+                localStorage.setItem('tipoUsuario', tipoUsuario);
+                document.getElementById('formLogin').reset(); 
+                Pagina.crearBarraProgreso('barraProgreso');
+                document.getElementsByTagName('main').item(0).getElementsByTagName('div').item(0).removeChild(document.getElementById('formLogin'));
+                setTimeout(function(){
+                    window.location.href = './php/redirecciones.php';
+                }, 3000);
+            } else {
+                Pagina.escribirTlcdedc('mostrarError', this.responseText);
+            }
+        }
+    };
+    Registro.comunicarServidor(comunicaLogin, 'php/login.php', 'datos=' + pasarDatos);
+}
+/**
+ * Inicia las funcionalidades de la página
+ * 
+ * @return {undefined}
+ */
+function iniciarLogin(){
+    Pagina.comprobarSesion();
+    Pagina.escribirNoScript('primerD');
+    Pagina.escribrirNav('login');
+    Pagina.escribirTiempo('./php/tiempo.php');
+    Pagina.escribirFooter();
+    Pagina.escribirModal();
+    Pagina.modificarClases('informacion', 'navbarSupportedContent', 'show');
+    recogerCampos();
+    vigilarClickLogin();
+}
+window.addEventListener('load', iniciarLogin, false);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Biologo.html">Biologo</a></li><li><a href="Especie.html">Especie</a></li><li><a href="Especimen.html">Especimen</a></li><li><a href="Invitado.html">Invitado</a></li><li><a href="Pagina.html">Pagina</a></li><li><a href="Registro.html">Registro</a></li><li><a href="Torreta.html">Torreta</a></li><li><a href="Validar.html">Validar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#camposB">camposB</a></li><li><a href="global.html#camposModificados">camposModificados</a></li><li><a href="global.html#camposU">camposU</a></li><li><a href="global.html#cargarComentarios">cargarComentarios</a></li><li><a href="global.html#cargarContenido">cargarContenido</a></li><li><a href="global.html#cargarRegistro">cargarRegistro</a></li><li><a href="global.html#cargarUltimas">cargarUltimas</a></li><li><a href="global.html#clan">clan</a></li><li><a href="global.html#clanArray">clanArray</a></li><li><a href="global.html#comprobarCampos">comprobarCampos</a></li><li><a href="global.html#comprobarCamposB">comprobarCamposB</a></li><li><a href="global.html#comprobarCamposI">comprobarCamposI</a></li><li><a href="global.html#comprobarDatos">comprobarDatos</a></li><li><a href="global.html#comprobarFormulario">comprobarFormulario</a></li><li><a href="global.html#comunesClan">comunesClan</a></li><li><a href="global.html#comunicarDatos">comunicarDatos</a></li><li><a href="global.html#comunicarLogin">comunicarLogin</a></li><li><a href="global.html#construirCondiciones">construirCondiciones</a></li><li><a href="global.html#construirFormulario">construirFormulario</a></li><li><a href="global.html#contadorErrores">contadorErrores</a></li><li><a href="global.html#continuar">continuar</a></li><li><a href="global.html#crearBoton">crearBoton</a></li><li><a href="global.html#crearCaracImg">crearCaracImg</a></li><li><a href="global.html#crearContComentarios">crearContComentarios</a></li><li><a href="global.html#crearContenedor">crearContenedor</a></li><li><a href="global.html#crearFormularioEspecies">crearFormularioEspecies</a></li><li><a href="global.html#crearFormularioEspecimenes">crearFormularioEspecimenes</a></li><li><a href="global.html#crearFormularioInicial">crearFormularioInicial</a></li><li><a href="global.html#crearFormularios">crearFormularios</a></li><li><a href="global.html#crearSiEsTrue">crearSiEsTrue</a></li><li><a href="global.html#darAtributosForm">darAtributosForm</a></li><li><a href="global.html#definirTipoLogin">definirTipoLogin</a></li><li><a href="global.html#dirigirEnlaces">dirigirEnlaces</a></li><li><a href="global.html#editarDatosPersonales">editarDatosPersonales</a></li><li><a href="global.html#ejecutarPagina">ejecutarPagina</a></li><li><a href="global.html#eliminarCuenta">eliminarCuenta</a></li><li><a href="global.html#enviarComentario">enviarComentario</a></li><li><a href="global.html#enviarServidor">enviarServidor</a></li><li><a href="global.html#esCorrecto">esCorrecto</a></li><li><a href="global.html#escucharArrepentidos">escucharArrepentidos</a></li><li><a href="global.html#escucharComentarios">escucharComentarios</a></li><li><a href="global.html#escucharInfoTorretas">escucharInfoTorretas</a></li><li><a href="global.html#escucharModal">escucharModal</a></li><li><a href="global.html#escucharVolverP">escucharVolverP</a></li><li><a href="global.html#esIncorrecto">esIncorrecto</a></li><li><a href="global.html#guardarObjeto">guardarObjeto</a></li><li><a href="global.html#guardarValidos">guardarValidos</a></li><li><a href="global.html#hacerComentario">hacerComentario</a></li><li><a href="global.html#individuo">individuo</a></li><li><a href="global.html#individuoArray">individuoArray</a></li><li><a href="global.html#iniciar">iniciar</a></li><li><a href="global.html#iniciarLogin">iniciarLogin</a></li><li><a href="global.html#iniciarRegistro">iniciarRegistro</a></li><li><a href="global.html#llamarFormularios">llamarFormularios</a></li><li><a href="global.html#mostrarDatosPersonales">mostrarDatosPersonales</a></li><li><a href="global.html#mostrarMiCuenta">mostrarMiCuenta</a></li><li><a href="global.html#mostrarRespuesta">mostrarRespuesta</a></li><li><a href="global.html#pasarServidor">pasarServidor</a></li><li><a href="global.html#recogerCampos">recogerCampos</a></li><li><a href="global.html#recogerUsuario">recogerUsuario</a></li><li><a href="global.html#registro">registro</a></li><li><a href="global.html#sonValidosCampos">sonValidosCampos</a></li><li><a href="global.html#torreta">torreta</a></li><li><a href="global.html#torretaArray">torretaArray</a></li><li><a href="global.html#usuario">usuario</a></li><li><a href="global.html#usuarioCopia">usuarioCopia</a></li><li><a href="global.html#verificarCampos">verificarCampos</a></li><li><a href="global.html#verificarCamposB">verificarCamposB</a></li><li><a href="global.html#verificarFormulario">verificarFormulario</a></li><li><a href="global.html#verificarTodo">verificarTodo</a></li><li><a href="global.html#vigilarClickComunes">vigilarClickComunes</a></li><li><a href="global.html#vigilarClickLogin">vigilarClickLogin</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri May 20 2022 11:40:46 GMT+0200 (hora de verano de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

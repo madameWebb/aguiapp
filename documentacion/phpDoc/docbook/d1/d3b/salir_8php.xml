@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_salir_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/salir.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/salir.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_salir_8php_1a225c97fed59859305527ec69c6c2d0db">$navegadorUsuario</link> = strtoupper($_SERVER[&apos;HTTP_USER_AGENT&apos;])</para>
+</listitem>
+            <listitem><para><link linkend="_salir_8php_1a5b9ad1d0a31ab6fe0394f42797d32360">$firefox</link> = &apos;FIREFOX&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_salir_8php_1a2d0a783cef704239a1f021870b0fba8f">$encontrado</link> = strpos($firefox, $navegadorUsuario)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_salir_8php_1a2d0a783cef704239a1f021870b0fba8f"/><section>
+    <title>$encontrado</title>
+<indexterm><primary>$encontrado</primary><secondary>salir.php</secondary></indexterm>
+<indexterm><primary>salir.php</primary><secondary>$encontrado</secondary></indexterm>
+<para><computeroutput>$encontrado = strpos($firefox, $navegadorUsuario)</computeroutput></para><para>
+Definición en la línea <link linkend="_salir_8php_source_1l00014">14</link> del archivo <link linkend="_salir_8php_source">salir.php</link>.</para>
+</section>
+<anchor xml:id="_salir_8php_1a5b9ad1d0a31ab6fe0394f42797d32360"/><section>
+    <title>$firefox</title>
+<indexterm><primary>$firefox</primary><secondary>salir.php</secondary></indexterm>
+<indexterm><primary>salir.php</primary><secondary>$firefox</secondary></indexterm>
+<para><computeroutput>$firefox = &apos;FIREFOX&apos;</computeroutput></para><para>
+Definición en la línea <link linkend="_salir_8php_source_1l00013">13</link> del archivo <link linkend="_salir_8php_source">salir.php</link>.</para>
+</section>
+<anchor xml:id="_salir_8php_1a225c97fed59859305527ec69c6c2d0db"/><section>
+    <title>$navegadorUsuario</title>
+<indexterm><primary>$navegadorUsuario</primary><secondary>salir.php</secondary></indexterm>
+<indexterm><primary>salir.php</primary><secondary>$navegadorUsuario</secondary></indexterm>
+<para><computeroutput>$navegadorUsuario = strtoupper($_SERVER[&apos;HTTP_USER_AGENT&apos;])</computeroutput></para><para>
+Definición en la línea <link linkend="_salir_8php_source_1l00012">12</link> del archivo <link linkend="_salir_8php_source">salir.php</link>.</para>
+</section>
+</section>
+</section>

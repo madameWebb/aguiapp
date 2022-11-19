@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_recoger_usuario_8php" xml:lang="es">
+<title>Referencia del Archivo G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/recogerUsuario.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/recogerUsuario.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>if(count($_SESSION) !=0) <link linkend="_recoger_usuario_8php_1aff07e60e2dd63704cd2c8b884cb06be8">else</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_recoger_usuario_8php_1aff07e60e2dd63704cd2c8b884cb06be8"/><section>
+    <title>else</title>
+<indexterm><primary>else</primary><secondary>recogerUsuario.php</secondary></indexterm>
+<indexterm><primary>recogerUsuario.php</primary><secondary>else</secondary></indexterm>
+<para><computeroutput>if (count( $_SESSION) !=0) else</computeroutput></para><emphasis role="strong">Valor inicial:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;header(<emphasis role="stringliteral">&apos;Location:&#32;../php/redirecciones.php&apos;</emphasis>)
+</programlisting><para>
+Definición en la línea <link linkend="_recoger_usuario_8php_source_1l00049">49</link> del archivo <link linkend="_recoger_usuario_8php_source">recogerUsuario.php</link>.</para>
+</section>
+</section>
+</section>

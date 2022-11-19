@@ -1,0 +1,315 @@
+.TH "Validar" 3 "Viernes, 20 de Mayo de 2022" "Version V18" "Parque Ecológico" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Validar
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static \fBcamposTexto\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBnombre\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBusuario\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBdni\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBmail\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBtelefono\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBdireccion\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBprovincia\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBfecha\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBclave\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBespecie\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBmigracion\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBcodigoE\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBpeso\fP ($variable)"
+.br
+.ti -1c
+.RI "static \fBdimensiones\fP ($variable)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Proyecto Parque Eocológico
+.PP
+\fBVersión\fP
+.RS 4
+pq-_V18 @autor Virginia M\&. García Álvarez Clase para validar cualquier tipo de dato que se le pase 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB13\fP del archivo \fBValidar\&.php\fP\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "static camposTexto ( $variable)\fC [static]\fP"
+Limpia los campos de texto de cualqiuer caracter extraño y elimina los espacios en blanco al principio y al final
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP contiene el dato a limpiar 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean el dato o false si el campo está vacío 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB21\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static clave ( $variable)\fC [static]\fP"
+Verifica que la clave introducida responda a un patrón válido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP la clave introducida 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean la clave o falso si no es correcta 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB221\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static codigoE ( $variable)\fC [static]\fP"
+Verifica que el código de especie introducido responda a un patrón válido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB260\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static dimensiones ( $variable)\fC [static]\fP"
+Verifica que las dimensiones introducidas respondan a un patrón válido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB286\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static direccion ( $variable)\fC [static]\fP"
+Valida que la dirección introducida corresponda con un patrón válido y el campo no esté vacio
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP le dirección 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean la dirección o false si no es correcto 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB127\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static dni ( $variable)\fC [static]\fP"
+Valida que el número del DNI encaja en un patrón y comprueba que es un dni real
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP NIF completo 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean false o el número si es verdadero 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB81\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static especie ( $variable)\fC [static]\fP"
+Verifica que la especie introducida responda a un patrón válido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB234\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static fecha ( $variable)\fC [static]\fP"
+Verifica qu ela fecha responde a un patrón válido y en ese caso comprueba que la fecha corresponda con un día y mes acordes y que la fecha introducida no sea mayor que la fecha actual
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP la fecha introducida 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean verdadero si la fecha es correcta y falso si no lo es 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB198\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static mail ( $variable)\fC [static]\fP"
+Valida que el mail introducido pueda ser correcto
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP mail 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean el mail o false si no es correcto 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB98\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static migracion ( $variable)\fC [static]\fP"
+Verifica que el periodo migratorio introducido responda a un patrón válido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB247\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static nombre ( $variable)\fC [static]\fP"
+Valida que el dato nombre y apellido encajen en un patrón
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP el dato a validar 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean el nombre o false si no encaja en el patrón 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB34\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static peso ( $variable)\fC [static]\fP"
+Verifica que el peso introducido responda a un patrón válido
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB273\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static provincia ( $variable)\fC [static]\fP"
+Valida que la provincia sea correcta y no esté en blanco
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP provincia 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean el campo o false en caso de no ser correcto 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB140\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static telefono ( $variable)\fC [static]\fP"
+Valida que el teléfono introducido pueda se correcto, para lo cual debe empezar por 9, 8, 7 o 6
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP número de teléfono 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean el dato o false si no es verdadero 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB113\fP del archivo \fBValidar\&.php\fP\&.
+.SS "static usuario ( $variable)\fC [static]\fP"
+Valida que el dato usuario encaje en un patrón\&. No puede empezar por un número y debe constar de al menos 3 caracteres, los dos primeros letras\&.
+.PP
+\fBParámetros\fP
+.RS 4
+\fI$variable\fP el dato a validar 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+boolean el nombre de usuario o false si no encaja en el patrón 
+.RE
+.PP
+
+.PP
+Definición en la línea \fB48\fP del archivo \fBValidar\&.php\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Parque Ecológico del código fuente\&.

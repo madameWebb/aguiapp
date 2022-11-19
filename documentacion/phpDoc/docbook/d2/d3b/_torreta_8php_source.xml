@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__torreta_8php_source" xml:lang="es">
+<title>Torreta.php</title>
+<indexterm><primary>G:/xamppVZ/htdocs/000_TAREA_CONJUNTA/ParqueEcologicoBoostrap_V18/php/clasesPHP/especies/Torreta.php</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered"><anchor xml:id="__torreta_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__torreta_8php_source_1l00012"/>00012 require&#32;<emphasis role="stringliteral">&apos;Especimen.php&apos;</emphasis>;
+<anchor xml:id="__torreta_8php_source_1l00013"/>00013 <emphasis role="comment">/*&#32;*</emphasis>
+<anchor xml:id="__torreta_8php_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;Clase&#32;Torreta</emphasis>
+<anchor xml:id="__torreta_8php_source_1l00015"/>00015 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="__torreta_8php_source_1l00016"/><link linkend="_class_torreta">00016</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_torreta">Torreta</link>{
+<anchor xml:id="__torreta_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$idTorreta;
+<anchor xml:id="__torreta_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$chip;
+<anchor xml:id="__torreta_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$fechasEntrada&#32;=&#32;Array();
+<anchor xml:id="__torreta_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$fechasSalida&#32;=&#32;Array();
+<anchor xml:id="__torreta_8php_source_1l00038"/><link linkend="_class_torreta_1a39ec8b69cdf0d370a28a3b252e17cc79">00038</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a39ec8b69cdf0d370a28a3b252e17cc79">getIdTorreta</link>()&#32;{
+<anchor xml:id="__torreta_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;idTorreta;
+<anchor xml:id="__torreta_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00046"/><link linkend="_class_torreta_1a93ba7aea38db5233bb5445bf9f6918b1">00046</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a93ba7aea38db5233bb5445bf9f6918b1">getChip</link>()&#32;{
+<anchor xml:id="__torreta_8php_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;chip;
+<anchor xml:id="__torreta_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00054"/><link linkend="_class_torreta_1a9e3ea400ed1304ea376e3d8dda881a9f">00054</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a9e3ea400ed1304ea376e3d8dda881a9f">getFechasEntrada</link>()&#32;{
+<anchor xml:id="__torreta_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;fechasEntrada;
+<anchor xml:id="__torreta_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00062"/><link linkend="_class_torreta_1a6cb673a9893c891305fa03f460f100fd">00062</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a6cb673a9893c891305fa03f460f100fd">getFechasSalida</link>()&#32;{
+<anchor xml:id="__torreta_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;fechasSalida;
+<anchor xml:id="__torreta_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00072"/><link linkend="_class_torreta_1a03c1a29603dd7c9f4ed12172b667bb7b">00072</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a03c1a29603dd7c9f4ed12172b667bb7b">agregarFechaEntrada</link>($fecha){
+<anchor xml:id="__torreta_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array_push($this-&gt;fechasEntrada,&#32;$fecha);
+<anchor xml:id="__torreta_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00082"/><link linkend="_class_torreta_1a99d7baf88e389297b60ca2a768b0d4b4">00082</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a99d7baf88e389297b60ca2a768b0d4b4">agregarFechaSalida</link>($fecha)&#32;{
+<anchor xml:id="__torreta_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array_push($this-&gt;fechasSalida,&#32;$fecha);
+<anchor xml:id="__torreta_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00092"/><link linkend="_class_torreta_1a55b697261a342768891b7650bd8668c6">00092</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a55b697261a342768891b7650bd8668c6">recogerChip</link>($chip){
+<anchor xml:id="__torreta_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;chip&#32;=&#32;$chip;
+<anchor xml:id="__torreta_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00102"/><link linkend="_class_torreta_1a3072bd4e19a202ea45a4c6b3bb648fb5">00102</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_class_torreta_1a3072bd4e19a202ea45a4c6b3bb648fb5">identificarTorreta</link>($idTorreta){
+<anchor xml:id="__torreta_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;idTorreta&#32;=&#32;$idTorreta;
+<anchor xml:id="__torreta_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__torreta_8php_source_1l00105"/>00105 }
+</programlisting></section>
